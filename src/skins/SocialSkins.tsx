@@ -332,6 +332,7 @@ export function RedbookSkin(p: Props) {
   const { items } = useContent(p, "发现");
   const [page, setPage] = useState<"发现" | "我" | "搜索">("发现");
   const [searchQuery, setSearchQuery] = useState("");
+  const [historyVisible, setHistoryVisible] = useState(true);
   const [searchFrom, setSearchFrom] = useState<"发现" | "我">("发现");
   const openSearch = () => {
     setSearchFrom(page === "我" ? "我" : "发现");
@@ -388,12 +389,12 @@ export function RedbookSkin(p: Props) {
           <section className="redbook-search-history">
             <div className="redbook-search-section-title">
               <strong>历史记录</strong>
-              <button aria-label="清空搜索记录" onClick={() => setSearchQuery("")}>
+              <button aria-label="清空搜索记录" onClick={() => setHistoryVisible(false)}>
                 <Trash2 size={19} />
               </button>
             </div>
             <div className="redbook-search-chips">
-              {recentSearches.map((term) => (
+              {historyVisible && recentSearches.map((term) => (
                 <button key={term} onClick={() => setSearchQuery(term)}>{term}</button>
               ))}
             </div>
@@ -501,7 +502,7 @@ export function RedbookSkin(p: Props) {
                   </button>
                 );
               })}
-              <button aria-label="搜索" onClick={() => setPage("搜索")}><Search size={20} /></button>
+              <button aria-label="搜索" onClick={openSearch}><Search size={20} /></button>
             </nav>
             <div className="redbook-profile-categories">
               <strong>笔记 1989</strong><span>专辑 4</span><span>合集 2</span>
