@@ -182,7 +182,7 @@ export function NeteaseSkin(p: Props) {
                 <div className="netease-peer-profile-head"><Avatar name={friendName} src={friendAvatar} round /><div><h2>{friendName}</h2><small>网易云音乐用户</small></div></div>
                 <div className="netease-peer-profile-stats"><span>关注 <b>1</b></span><span>粉丝 <b>1</b></span></div>
                 <h3>笔记</h3>
-                <div className="netease-peer-notes">{peerNotes.map((note) => <article className="netease-peer-note" key={note.id}><time>{note.time}</time><p>{note.body}</p>{meta(note, "comment") && <div className="netease-peer-comment"><Avatar name={accountName} src={accountAvatar} round /><div><strong>{accountName}</strong><p>{meta(note, "comment")}</p></div></div>}</article>)}</div>
+                <div className="netease-peer-notes">{peerNotes.map((note) => { const songTitle = meta(note, "songTitle"); const noteText = songTitle ? note.body.replace(`《${songTitle}》`, "").trim() : note.body; const coverArt = meta(note, "coverArt"); return <article className="netease-peer-note" key={note.id}><time>{note.time}</time>{noteText && <p>{noteText}</p>}{songTitle && <div className="netease-song-share netease-note-song-share"><img className="netease-song-cover-art" src={coverArt} alt={`${songTitle}封面`} /><div className="netease-song-footer"><div className="netease-song-info"><strong>{songTitle}</strong><small><span>单曲</span> · {meta(note, "artist")}</small></div><PlayCircle className="netease-song-play" size={22} aria-label="单曲分享" /></div></div>}{meta(note, "comment") && <div className="netease-peer-comment"><Avatar name={accountName} src={accountAvatar} round /><div><strong>{accountName}</strong><p>{meta(note, "comment")}</p></div></div>}</article>; })}</div>
               </section>
             </>
           ) : dmOpen ? (
@@ -602,6 +602,7 @@ export function NetflixSkin(p: Props) {
     </div>
   );
 }
+
 
 
 
