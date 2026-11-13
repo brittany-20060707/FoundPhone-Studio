@@ -6,6 +6,8 @@ import {
   Bookmark,
   Camera,
   ChevronRight,
+  ChevronLeft,
+  Trash2,
   Grid,
   Hash,
   Heart,
@@ -429,7 +431,7 @@ export function RedbookSkin(p: Props) {
               <button className="selected">发现</button>
               <button>北京</button>
             </nav>
-            <button className="redbook-header-icon" aria-label="搜索">
+            <button className="redbook-header-icon" aria-label="搜索" onClick={() => setPage("搜索")}>
               <Search size={22} />
             </button>
           </header>
