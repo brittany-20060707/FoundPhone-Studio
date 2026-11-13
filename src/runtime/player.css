@@ -14,39 +14,7 @@
   margin: 0;
 }
 .story-runtime .phone-shell {
-  width: 407px;
-  height: 866px;
-  padding: 7px;
   margin: auto;
-  border-radius: 55px;
-  transform: scale(var(--phone-scale, 0.84));
-  transform-origin: center center;
-}
-.story-runtime .phone-screen {
-  width: 100%;
-  height: 100%;
-  border-radius: 50px;
-}
-/* Keep the launcher's 393×852 design canvas intact while the whole device scales. */
-.story-runtime .ios18 .interactive-home .home-pages {
-  overflow-x: auto;
-  overflow-y: hidden;
-}
-.story-runtime .ios18 .interactive-home .home-app-grid {
-  flex: 0 0 393px;
-  width: 393px;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  grid-template-rows: repeat(6, 99px);
-  grid-auto-rows: 99px;
-  gap: 0;
-  height: 594px;
-  min-height: 594px;
-  max-height: none;
-  overflow: hidden;
-}
-.story-runtime .ios18 .interactive-home .dock {
-  height: 94px;
-  min-height: 94px;
 }
 @media (max-width: 430px) {
   .story-runtime {

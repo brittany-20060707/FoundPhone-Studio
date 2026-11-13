@@ -1,6 +1,3 @@
-Warning: truncated output (original token count: 21884)
-Total output lines: 4294
-
 /* Shared controls, not shared page layouts. Each app owns its page structure. */
 .catalog-skin {
   display: flex;
@@ -2315,7 +2312,445 @@ Total output lines: 4294
   padding: 9px 10px 11px;
 }
 .redbook-top > button {
-  font-siz…1884 tokens truncated…ists > button {
+  font-size: 13px;
+  color: #999;
+  border-bottom: 3px solid transparent;
+  padding: 5px 2px;
+}
+.redbook-top > .selected {
+  color: #111;
+  font-weight: 600;
+  border-color: #ee4155;
+}
+.redbook-masonry {
+  columns: 2;
+  column-gap: 8px;
+  padding: 0 8px 15px;
+}
+.redbook-masonry > button {
+  display: block;
+  width: 100%;
+  padding: 0;
+  background: #fff;
+  border-radius: 8px;
+  text-align: left;
+  margin-bottom: 10px;
+  break-inside: avoid;
+  overflow: hidden;
+}
+.redbook-masonry img,
+.redbook-masonry .catalog-art {
+  width: 100%;
+  height: 175px;
+  object-fit: cover;
+}
+.redbook-masonry > button:nth-child(2n) .catalog-art {
+  height: 205px;
+}
+.redbook-masonry > button > strong {
+  display: block;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.6;
+  padding: 8px 7px;
+}
+.redbook-masonry > button > div:last-child {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 0 7px 10px;
+  color: #999;
+}
+.redbook-masonry .catalog-avatar {
+  width: 17px;
+  height: 17px;
+  font-size: 8px;
+}
+.redbook-masonry small {
+  font-size: 8px;
+}
+.redbook-masonry svg {
+  margin-left: auto;
+  color: #999;
+}
+.pinterest-ui {
+  --app-accent: #bd3545;
+}
+.pinterest-ui .catalog-nav {
+  background: #fff;
+  border: 0;
+}
+.pinterest-pins {
+  columns: 2;
+  column-gap: 10px;
+  padding: 0 10px 20px;
+}
+.pinterest-pins > button {
+  display: block;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+  border-radius: 15px;
+  margin-bottom: 14px;
+  break-inside: avoid;
+  text-align: left;
+}
+.pinterest-pins img,
+.pinterest-pins .catalog-art {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+.pinterest-pins > button:nth-child(2n) .catalog-art {
+  height: 255px;
+}
+.pinterest-pins > button > strong {
+  display: block;
+  font-size: 10px;
+  font-weight: 500;
+  padding: 7px 6px;
+}
+.pinterest-boards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px 10px;
+  padding: 0 12px;
+}
+.pinterest-boards > button {
+  display: block;
+  width: 100%;
+  padding: 0;
+  text-align: left;
+}
+.pinterest-boards img,
+.pinterest-boards .catalog-art {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.pinterest-boards strong {
+  display: block;
+  font-size: 12px;
+  padding: 9px 2px;
+}
+.pinterest-board-title {
+  padding: 0 13px 15px;
+  font-size: 13px;
+  font-weight: 500;
+}
+.reddit-ui {
+  --app-accent: #d96e37;
+}
+.reddit-ui .catalog-nav {
+  border: 0;
+  background: #fff;
+}
+.reddit-community {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 13px;
+  border-bottom: 1px solid #e8e8eb;
+  flex-shrink: 0;
+}
+.reddit-community > svg {
+  color: #e37d3f;
+}
+.reddit-community > button {
+  font-size: 13px;
+  font-weight: 600;
+  padding: 0;
+}
+.reddit-community > select {
+  margin-left: auto;
+  font-size: 9px;
+  padding: 5px;
+  width: 64px;
+  border: 0;
+  background: #f4f4f6;
+}
+.reddit-ui .catalog-scroll {
+  background: #f2f2f4;
+}
+.reddit-post {
+  background: white;
+  margin-bottom: 8px;
+  padding: 13px;
+}
+.reddit-byline {
+  font-size: 8px;
+  color: #888;
+  padding: 0;
+  margin-bottom: 8px;
+}
+.reddit-post h3 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.6;
+  margin-bottom: 6px;
+}
+.reddit-post .social-body {
+  font-size: 11px;
+}
+.reddit-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+  font-size: 10px;
+  color: #777;
+}
+.reddit-actions button {
+  padding: 4px;
+  background: #f0f0f3;
+  border-radius: 15px;
+  font-size: 9px;
+}
+.reddit-actions > button:last-child {
+  margin-left: 8px;
+  padding: 5px 10px;
+}
+.reddit-sub {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  width: 100%;
+  font-size: 12px;
+  justify-content: flex-start;
+}
+.reddit-sub small {
+  color: #aaa;
+  font-size: 9px;
+  margin-left: auto;
+}
+.forum-ui {
+  --app-accent: #4f759d;
+}
+.forum-banner {
+  background: #e9eef5;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 19px 14px;
+  color: #5c7b99;
+}
+.forum-banner strong {
+  font-size: 17px;
+  font-weight: 500;
+}
+.forum-banner > span {
+  margin-left: auto;
+  font-size: 9px;
+  color: #8c9cae;
+}
+.forum-topic {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 16px 13px;
+  border-bottom: 1px solid #e4e8ee;
+}
+.forum-topic > strong {
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.7;
+}
+.forum-topic em {
+  display: inline-block;
+  font-size: 8px;
+  border: 1px solid #89a2bd;
+  color: #6b8aa7;
+  font-style: normal;
+  padding: 0 4px;
+  margin-right: 5px;
+  border-radius: 3px;
+}
+.forum-topic p {
+  font-size: 10px;
+  color: #99a3af;
+  margin: 8px 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.forum-topic > div {
+  display: flex;
+  justify-content: space-between;
+  font-size: 8px;
+  color: #a3adba;
+  gap: 9px;
+}
+.forum-board {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 15px;
+  width: 100%;
+  text-align: left;
+  color: #6687a7;
+  border-bottom: 1px solid #e5e9f0;
+}
+.forum-board > div {
+  flex: 1;
+}
+.forum-board strong {
+  font-size: 12px;
+  font-weight: 500;
+  color: #505b68;
+}
+.forum-board small {
+  display: block;
+  font-size: 9px;
+  color: #9ba7b7;
+  margin-top: 6px;
+}
+.snapchat-ui {
+  --app-accent: #ad9d13;
+  background: #191919;
+  color: #fff;
+}
+.snapchat-ui .catalog-nav {
+  background: #f4e65b;
+  color: #171717;
+  border: 0;
+}
+.snap-content {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  background: #292929;
+  overflow: clip;
+}
+.snap-content > img,
+.snap-content > video,
+.snap-content > .catalog-art {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.snap-author {
+  position: absolute;
+  top: 15px;
+  left: 12px;
+  gap: 7px;
+  color: #fff;
+  font-size: 11px;
+  text-shadow: 0 1px 4px #000;
+}
+.snap-author > .catalog-avatar {
+  width: 30px;
+  height: 30px;
+  font-size: 13px;
+}
+.snap-next {
+  position: absolute;
+  right: 8px;
+  top: 48%;
+  color: #fff;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  background: #0002;
+}
+.snap-caption {
+  position: absolute;
+  bottom: 25px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  padding: 13px;
+  background: #0007;
+  color: #fff;
+  font-size: 12px;
+  line-height: 1.7;
+}
+.snap-chats {
+  background: #fff;
+  height: 100%;
+  overflow: auto;
+  color: #222;
+}
+.snap-chats > button {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  text-align: left;
+  padding: 14px;
+  border-bottom: 1px solid #eee;
+}
+.snap-chats > button > div {
+  flex: 1;
+  min-width: 0;
+}
+.snap-chats strong {
+  font-size: 12px;
+}
+.snap-chats small {
+  display: block;
+  font-size: 9px;
+  color: #aaa;
+  margin-top: 5px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.snap-chats svg {
+  color: #bbb;
+}
+.snapchat-ui .catalog-tabs {
+  background: #fff;
+  color: #222;
+}
+.spotify-ui {
+  background: #111;
+  color: #f2f2f2;
+  --app-accent: #6ada88;
+}
+.spotify-ui .catalog-nav {
+  background: #151515;
+  color: #fff;
+  border-color: #242424;
+}
+.spotify-heading {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 17px 14px 6px;
+}
+.spotify-heading > .catalog-avatar {
+  width: 31px;
+  height: 31px;
+  font-size: 13px;
+  background: #637d69;
+}
+.spotify-heading > button {
+  border-radius: 17px;
+  padding: 7px 13px;
+  background: #2a2a2a;
+  color: #ddd;
+  font-size: 11px;
+}
+.spotify-heading > .selected {
+  background: #72d98e;
+  color: #13371e;
+}
+.spotify-ui .catalog-scroll > h1 {
+  font-size: 23px;
+  margin-top: 19px;
+}
+.spotify-playlists {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  padding: 0 13px 15px;
+}
+.spotify-playlists > button {
   background: #2d2d2d;
   border-radius: 5px;
   display: flex;
@@ -3826,34 +4261,4 @@ Total output lines: 4294
 .netease-draft-song-share { max-width: 100%; margin-top: 10px; padding: 0; overflow: hidden; border: 1px solid #f1eeee; border-radius: 8px; background: #faf9f9; }
 .netease-draft-song-share .netease-song-cover-art { width: 100%; border-radius: 0; }
 .netease-draft-song-share .netease-song-footer { padding: 8px 9px; }
-
-/* Days Matter: a compact countdown list with a pinned milestone. */
-.daysmatter-ui { --daysmatter-blue: #087fba; background: #f3efeb; color: #222; }
-.daysmatter-nav { display: flex; flex: 0 0 43px; align-items: center; justify-content: space-between; gap: 14px; padding: 0 14px; color: white; background: var(--daysmatter-blue); box-shadow: 0 2px 4px #0002; }
-.daysmatter-nav > strong { font-size: 18px; font-weight: 700; }
-.daysmatter-nav > div { display: flex; align-items: center; gap: 18px; color: #fff; }
-.daysmatter-scroll { padding: 0 0 16px; background: linear-gradient(90deg,#75401f 0 8px,#f3efeb 8px calc(100% - 8px),#75401f calc(100% - 8px)); }
-.daysmatter-featured { display: flex; align-items: center; justify-content: space-between; gap: 10px; min-height: 150px; margin: 0 8px; padding: 24px 14px 24px 18px; background: #fff; }
-.daysmatter-featured-copy { min-width: 0; }
-.daysmatter-featured-copy h2 { margin: 0 0 9px; overflow-wrap: anywhere; font-size: 17px; font-weight: 700; }
-.daysmatter-featured-copy p { margin: 0; color: #a0a0a0; font-size: 12px; font-weight: 650; }
-.daysmatter-featured-copy small { display: block; margin-top: 7px; color: #999; font-size: 10px; }
-.daysmatter-featured-count { display: flex; flex: 0 0 auto; align-items: flex-start; gap: 5px; }
-.daysmatter-featured-count strong { font-size: clamp(45px, 16vw, 69px); line-height: .95; font-weight: 750; letter-spacing: -3px; color: #050505; }
-.daysmatter-featured-count span { margin-top: 5px; padding: 4px 6px; border-radius: 5px; color: #fff; background: #f35b60; font-size: 9px; font-weight: 700; }
-.daysmatter-events { padding: 13px 7px 26px; }
-.daysmatter-event { display: grid; grid-template-columns: minmax(0, 1fr) minmax(96px, 31%); align-items: stretch; min-height: 47px; margin: 7px 7px; overflow: hidden; border-radius: 6px; background: #fff; box-shadow: 0 1px 2px #45261217; }
-.daysmatter-event-name { display: flex; min-width: 0; flex-direction: column; justify-content: center; gap: 3px; padding: 7px 9px; }
-.daysmatter-event-name strong { overflow-wrap: anywhere; font-size: 12px; font-weight: 700; }
-.daysmatter-event-name small { color: #999; font-size: 9px; }
-.daysmatter-event-count { display: grid; grid-template-columns: minmax(0, 1fr) 38px; color: #fff; background: #f39417; }
-.daysmatter-event-count strong { display: grid; place-items: center; min-width: 0; font-size: 20px; font-weight: 700; font-variant-numeric: tabular-nums; }
-.daysmatter-event-count span { display: grid; place-items: center; background: #e78309; font-size: 12px; font-weight: 700; }
-.daysmatter-event-count.is-future { background: #448fe1; }
-.daysmatter-event-count.is-future span { background: #317fce; }
-.daysmatter-bottom { display: flex; flex: 0 0 49px; align-items: center; justify-content: space-around; padding: 0 8px; border-top: 1px solid #e7e4e2; background: #fff; color: #b9babe; }
-.daysmatter-bottom > span { position: relative; display: grid; width: 33px; height: 33px; place-items: center; }
-.daysmatter-bottom > .is-active { border-radius: 5px; color: white; background: #1684c4; }
-.daysmatter-planet i { position: absolute; top: 0; right: -1px; width: 12px; height: 12px; border-radius: 50%; background: #20b65a; }
-.daysmatter-user i { position: absolute; top: -1px; right: -1px; display: grid; width: 14px; height: 14px; place-items: center; border-radius: 50%; color: white; background: #efb431; font-size: 9px; font-style: normal; font-weight: 700; }
 

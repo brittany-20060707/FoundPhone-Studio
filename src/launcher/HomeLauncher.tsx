@@ -174,6 +174,7 @@ export function HomeLauncher(p: Props) {
       started: Date.now(),
       active: false,
     };
+    el.setPointerCapture(e.pointerId);
   };
   const moveSwipe = (e: PointerEvent<HTMLDivElement>) => {
     const gesture = swipe.current,
@@ -185,7 +186,6 @@ export function HomeLauncher(p: Props) {
       if (Date.now() - gesture.started >= 450) return;
       if (Math.abs(dx) < 10 || Math.abs(dx) <= Math.abs(dy) * 1.2) return;
       gesture.active = true;
-      el.setPointerCapture(e.pointerId);
       clearTimeout(timer.current);
       drag.current = null;
       suppress.current = true;
