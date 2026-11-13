@@ -4175,3 +4175,20 @@
 .netease-dm-row { display: flex; flex-direction: column; width: 100%; }
 .netease-dm-row .netease-dm-time { width: 100%; text-align: center; }
 
+
+.netease-avatar-link { display: grid; flex: 0 0 auto; place-items: center; padding: 0; border: 0; background: transparent; cursor: pointer; }
+.netease-peer-profile { padding: 0 16px 24px; }
+.netease-peer-profile-head { display: flex; align-items: center; gap: 13px; padding: 18px 0 16px; border-bottom: 1px solid #eee; }
+.netease-peer-profile-head .catalog-avatar { width: 62px; height: 62px; }
+.netease-peer-profile-head h2 { margin: 0 0 4px; font-size: 18px; }
+.netease-peer-profile-head small { color: #999; font-size: 11px; }
+.netease-peer-profile-stats { display: flex; gap: 24px; padding: 14px 0; color: #666; font-size: 12px; }
+.netease-peer-profile > h3 { margin: 10px 0 0; padding: 12px 0; border-bottom: 1px solid #eee; font-size: 14px; }
+.netease-peer-notes { display: flex; flex-direction: column; }
+.netease-peer-note { padding: 16px 0; border-bottom: 1px solid #eee; }
+.netease-peer-note > time { color: #999; font-size: 11px; }
+.netease-peer-note > p { margin: 9px 0 0; white-space: pre-wrap; overflow-wrap: anywhere; color: #222; font-size: 14px; line-height: 1.65; }
+.netease-peer-comment { display: flex; align-items: flex-start; gap: 8px; margin-top: 12px; padding: 10px; border-radius: 9px; background: #f7f7f7; }
+.netease-peer-comment .catalog-avatar { width: 28px; height: 28px; }
+.netease-peer-comment strong { color: #666; font-size: 11px; }
+.netease-peer-comment p { margin: 4px 0 0; white-space: pre-wrap; color: #444; font-size: 12px; line-height: 1.5; }
