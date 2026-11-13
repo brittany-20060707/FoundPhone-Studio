@@ -4171,3 +4171,7 @@
 .netease-song-footer { display: flex; align-items: center; gap: 10px; }
 .netease-song-info small span { color: #d33; }
 
+
+.netease-dm-row { display: flex; flex-direction: column; width: 100%; }
+.netease-dm-row .netease-dm-time { width: 100%; text-align: center; }
+

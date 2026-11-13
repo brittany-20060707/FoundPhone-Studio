@@ -156,7 +156,7 @@ export function NeteaseSkin(p: Props) {
   const [dmOpen, setDmOpen] = useState(false);
   const dmItems = items
     .filter((i) => meta(i, "neteaseType") === "direct-message")
-    .sort((a, b) => a.time.localeCompare(b.time));
+    .sort((a, b) => a.time.localeCompare(b.time) || items.indexOf(a) - items.indexOf(b));
   const tracks = items.filter((i) => !dmItems.includes(i) && !["account", "peer"].includes(meta(i, "neteaseType")));
   const list = folder
     ? tracks.filter((i) => (i.folder || "我的歌单") === folder)
@@ -188,7 +188,7 @@ export function NeteaseSkin(p: Props) {
                   const coverArt = meta(message, "coverArt");
                   const trailingText = isShare && matchedTitle ? message.body.replace(matchedTitle, "").replace(/^分享歌\s*/, "").trim() : "";
                   const songKey = songTitle.includes("虚拟") ? "xuni" : songTitle.includes("找自己") ? "ziji" : songTitle.includes("打钉") ? "dading" : songTitle.toLowerCase().includes("after17") ? "after17" : songTitle.toLowerCase().includes("pain") ? "pain" : "music";
-                  return <div key={message.id}>{showTime && <div className="netease-dm-time">{message.time}</div>}<div className={`netease-dm-message ${message.sender === accountName ? "mine" : "theirs"}`}>
+                  return <div className="netease-dm-row" key={message.id}>{showTime && <div className="netease-dm-time">{message.time}</div>}<div className={`netease-dm-message ${message.sender === accountName ? "mine" : "theirs"}`}>
                     {message.sender !== accountName && <Avatar name={friendName} src={friendAvatar} round />}
                     <div>{isShare ? <><div className="netease-song-share">{coverArt ? <img className="netease-song-cover-art" src={coverArt} alt={`${songTitle}封面`} /> : <div className={`netease-song-cover cover-${songKey}`} aria-hidden="true"><Music size={22} /><span>♫</span></div>}<div className="netease-song-footer"><div className="netease-song-info"><strong>{songTitle}</strong><small><span>单曲</span> · {meta(message, "artist")}</small></div><PlayCircle className="netease-song-play" size={22} aria-label="单曲分享" /></div></div>{trailingText && <p>{trailingText}</p>}</> : <p>{message.body}</p>}</div>
                     {message.sender === accountName && <Avatar name={accountName} src={accountAvatar} round />}
@@ -590,6 +590,7 @@ export function NetflixSkin(p: Props) {
     </div>
   );
 }
+
 
 
 
