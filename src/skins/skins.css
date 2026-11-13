@@ -2436,6 +2436,21 @@
   font-size: 9px;
 }
 .redbook-bottom-nav > button.active { color: #222; font-weight: 700; }
+.redbook-bottom-nav > button { position: relative; }
+.redbook-unread-dot {
+  width: 7px;
+  height: 7px;
+  display: inline-block;
+  border-radius: 50%;
+  background: #ff2442;
+}
+.redbook-bottom-nav .redbook-unread-dot {
+  position: absolute;
+  top: 5px;
+  right: calc(50% - 19px);
+}
+.redbook-notification-copy .redbook-unread-dot { margin-left: 5px; vertical-align: middle; }
+
 .redbook-bottom-nav .redbook-create {
   width: 48px;
   height: 36px;
