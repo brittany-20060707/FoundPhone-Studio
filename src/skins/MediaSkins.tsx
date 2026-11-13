@@ -6,6 +6,7 @@ import {
   Compass,
   Heart,
   Home,
+  LockKeyhole,
   MessageCircle,
   Music,
   PlayCircle,
@@ -236,7 +237,7 @@ export function NeteaseSkin(p: Props) {
             {folder ? (
               <>
                 <button className="netease-playlist-back" onClick={() => setFolder("")}>‹ 我的歌单</button>
-                <div className="netease-open-playlist-heading"><div className="netease-open-playlist-art">👻</div><div><h2>with 👻</h2><small>8 首单曲</small></div></div>
+                <div className="netease-open-playlist-heading"><div className="netease-open-playlist-art">👻</div><div className="netease-open-playlist-copy"><h2>with 👻</h2><small>8 首单曲</small><span className="netease-private-label"><LockKeyhole size={12} />仅自己可见</span></div></div>
               </>
             ) : (
               <>
@@ -248,7 +249,7 @@ export function NeteaseSkin(p: Props) {
                 <h3 className="netease-playlist-title">我的歌单</h3>
                 <div className="netease-my-playlist-grid">
                   <div className="netease-my-playlist" aria-label="我喜欢的音乐"><div className="netease-liked-art"><Heart size={28} fill="currentColor" strokeWidth={0} /></div><div><strong>我喜欢的音乐</strong><small>私人歌单</small></div></div>
-                  <button type="button" className="netease-my-playlist is-open" onClick={() => setFolder("with 👻")}><div className="netease-with-ghost-art">👻</div><div><strong>with 👻</strong><small>8 首单曲</small></div></button>
+                  <button type="button" className="netease-my-playlist is-open" onClick={() => setFolder("with 👻")}><div className="netease-with-ghost-art">👻</div><div className="netease-my-playlist-copy"><strong>with 👻</strong><small>8 首单曲</small><span className="netease-private-label"><LockKeyhole size={12} />仅自己可见</span></div></button>
                 </div>
               </>
             )}
@@ -262,8 +263,9 @@ export function NeteaseSkin(p: Props) {
               }}
             >
               <span>{n + 1}</span>
-              <div>
-                <strong>{i.title}</strong><small>{meta(i, "artist", "单曲")}</small>
+              <img className="netease-track-cover" src={meta(i, "coverArt")} alt={`${i.title}封面`} />
+              <div className="netease-track-copy">
+                <strong>{i.title}</strong><small>{meta(i, "artist", "未知歌手")}</small>
               </div>
             </button>
             <button
@@ -605,6 +607,7 @@ export function NetflixSkin(p: Props) {
     </div>
   );
 }
+
 
 
 
