@@ -184,9 +184,9 @@ export function NeteaseSkin(p: Props) {
                   if (message.kind === "event") return <div className="netease-dm-event" key={message.id}>{showTime && <time>{message.time}</time>}<span>🎧 {message.body}</span><small>点击加入一起听</small></div>;
                   const isShare = meta(message, "songShare") === "true";
                   const matchedTitle = message.body.match(/《[^》]+》/)?.[0];
-                  const songTitle = meta(message, "songTitle", matchedTitle ?? message.body.replace(/^分享歌\s*/, ""));
+                  const songTitle = meta(message, "songTitle", matchedTitle ?? message.body.replace(/^分享(?:歌)?\s*/, ""));
                   const coverArt = meta(message, "coverArt");
-                  const trailingText = isShare && matchedTitle ? message.body.replace(matchedTitle, "").replace(/^分享歌\s*/, "").trim() : "";
+                  const trailingText = isShare && matchedTitle ? message.body.replace(matchedTitle, "").replace(/^分享(?:歌)?\s*/, "").trim() : "";
                   const songKey = songTitle.includes("虚拟") ? "xuni" : songTitle.includes("找自己") ? "ziji" : songTitle.includes("打钉") ? "dading" : songTitle.toLowerCase().includes("after17") ? "after17" : songTitle.toLowerCase().includes("pain") ? "pain" : "music";
                   return <div className="netease-dm-row" key={message.id}>{showTime && <div className="netease-dm-time">{message.time}</div>}<div className={`netease-dm-message ${message.sender === accountName ? "mine" : "theirs"}`}>
                     {message.sender !== accountName && <Avatar name={friendName} src={friendAvatar} round />}
@@ -590,6 +590,7 @@ export function NetflixSkin(p: Props) {
     </div>
   );
 }
+
 
 
 
