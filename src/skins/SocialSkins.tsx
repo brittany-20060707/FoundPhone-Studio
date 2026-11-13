@@ -332,6 +332,11 @@ export function RedbookSkin(p: Props) {
   const { items } = useContent(p, "发现");
   const [page, setPage] = useState<"发现" | "我" | "搜索">("发现");
   const [searchQuery, setSearchQuery] = useState("");
+  const [searchFrom, setSearchFrom] = useState<"发现" | "我">("发现");
+  const openSearch = () => {
+    setSearchFrom(page === "我" ? "我" : "发现");
+    setPage("搜索");
+  };
   const [profileTab, setProfileTab] = useState("收藏");
   const saved = items.filter((item) => item.folder === "收藏");
   const discover = items.filter((item) => item.folder === "发现").slice(0, 4);
@@ -359,7 +364,7 @@ export function RedbookSkin(p: Props) {
     return (
       <div className="catalog-skin redbook-ui redbook-search-ui">
         <header className="redbook-search-header">
-          <button aria-label="返回" onClick={() => setPage("发现")}>
+          <button aria-label="返回" onClick={() => setPage(searchFrom)}>
             <ChevronLeft size={25} />
           </button>
           <form
@@ -431,7 +436,7 @@ export function RedbookSkin(p: Props) {
               <button className="selected">发现</button>
               <button>北京</button>
             </nav>
-            <button className="redbook-header-icon" aria-label="搜索" onClick={() => setPage("搜索")}>
+            <button className="redbook-header-icon" aria-label="搜索" onClick={openSearch}>
               <Search size={22} />
             </button>
           </header>
