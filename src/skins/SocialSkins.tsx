@@ -550,7 +550,7 @@ export function RedbookSkin(p: Props) {
               <Grid size={20} /><span>市集</span>
             </button>
             <button className="redbook-create" aria-label="发布" disabled>＋</button>
-            <button aria-label="消息">
+            <button aria-label="消息" onClick={() => setPage("消息")}>
               <MessageCircle size={20} /><span>消息</span>
             </button>
             <button onClick={() => setPage("我")}>
