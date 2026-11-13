@@ -158,7 +158,7 @@ export function NeteaseSkin(p: Props) {
   const dmItems = items
     .filter((i) => meta(i, "neteaseType") === "direct-message")
     .sort((a, b) => a.time.localeCompare(b.time) || items.indexOf(a) - items.indexOf(b));
-  const tracks = items.filter((i) => !dmItems.includes(i) && !["account", "peer", "peer-note"].includes(meta(i, "neteaseType")));
+  const tracks = items.filter((i) => !dmItems.includes(i) && !["account", "peer", "peer-note", "discover-track"].includes(meta(i, "neteaseType")));
   const list = folder
     ? tracks.filter((i) => (i.folder || "我的歌单") === folder)
     : tracks;
@@ -170,6 +170,7 @@ export function NeteaseSkin(p: Props) {
   const friendAvatar = friendProfile?.avatar ?? "";
   const conversation = dmItems.filter((i) => meta(i, "peer") === friendName);
   const peerNotes = items.filter((i) => meta(i, "neteaseType") === "peer-note");
+  const discoveryTracks = items.filter((i) => meta(i, "neteaseType") === "discover-track");
   return (
     <div className="catalog-skin netease-ui">
       <Header p={p} />
@@ -216,26 +217,18 @@ export function NeteaseSkin(p: Props) {
           )
         ) : (
         <>
-        <SearchBox value={q} set={setQ} />
+        {tab !== "发现" && <SearchBox value={q} set={setQ} />}
         {tab === "发现" ? (
           <>
-            <div className="netease-feature">
-              <Music size={44} />
-              <h2>推荐歌单</h2>
-            </div>
-            <div className="netease-shelves">
-              {groupItems(items, "我的歌单").map((g) => (
-                <button
-                  key={g}
-                  onClick={() => {
-                    setFolder(g);
-                    setTab("我的");
-                  }}
-                >
-                  <Music size={33} />
-                  <strong>{g}</strong>
-                </button>
-              ))}
+            <div className="netease-discovery">
+              <div className="netease-discovery-banner">
+                <div><span>精选推荐</span><h2>欧美听歌时刻</h2><p>几首歌，陪你慢慢听</p></div>
+                {discoveryTracks[0] && <img src={meta(discoveryTracks[0], "coverArt")} alt={`${discoveryTracks[0].title}专辑封面`} />}
+              </div>
+              <section className="netease-discovery-section">
+                <div className="netease-discovery-heading"><h3>欧美推荐</h3><small>{discoveryTracks.length} 首单曲</small></div>
+                <div className="netease-discovery-list">{discoveryTracks.map((song, index) => <article className="netease-discovery-track" key={song.id}><span className="netease-discovery-index">{String(index + 1).padStart(2, "0")}</span><img src={meta(song, "coverArt")} alt={`${song.title}专辑封面`} /><div><strong>{song.title}</strong><small>{meta(song, "artist")} · {meta(song, "album")}</small></div><span className="netease-discovery-label">单曲</span></article>)}</div>
+              </section>
             </div>
           </>
         ) : (
@@ -248,7 +241,7 @@ export function NeteaseSkin(p: Props) {
             <h3>{folder || "我的歌单"}</h3>
           </>
         )}
-        {list.map((i, n) => (
+        {tab !== "发现" && (<>{list.map((i, n) => (
           <div className="netease-track" key={i.id}>
             <button
               onClick={() => {
@@ -271,11 +264,11 @@ export function NeteaseSkin(p: Props) {
             </button>
           </div>
         ))}
-        <Empty items={list} />
+        <Empty items={list} /></>)}
       </>
       )}
       </div>
-      {track && (
+      {track && tab !== "发现" && (
         <TrackPlayer
           item={track}
           p={p}
@@ -602,6 +595,7 @@ export function NetflixSkin(p: Props) {
     </div>
   );
 }
+
 
 
 
