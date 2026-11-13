@@ -8,6 +8,7 @@ import {
   Home,
   MessageCircle,
   Music,
+  PlayCircle,
   Play,
   Plus,
   Search,
@@ -123,7 +124,7 @@ export function SpotifySkin(p: Props) {
         </div>
         <Empty items={list} />
       </div>
-      {track && (
+      {track && tab !== "私信" && (
         <TrackPlayer
           item={track}
           p={p}
@@ -152,13 +153,57 @@ export function NeteaseSkin(p: Props) {
   const { tab, setTab, q, setQ, items } = useContent(p, "发现");
   const [folder, setFolder] = useState(""),
     [track, setTrack] = useTrack(p, items);
+  const [dmOpen, setDmOpen] = useState(false);
+  const dmItems = items
+    .filter((i) => meta(i, "neteaseType") === "direct-message")
+    .sort((a, b) => a.time.localeCompare(b.time));
+  const tracks = items.filter((i) => !dmItems.includes(i) && !["account", "peer"].includes(meta(i, "neteaseType")));
   const list = folder
-    ? items.filter((i) => (i.folder || "我的歌单") === folder)
-    : items;
+    ? tracks.filter((i) => (i.folder || "我的歌单") === folder)
+    : tracks;
+  const account = items.find((i) => meta(i, "neteaseType") === "account");
+  const accountName = account?.title ?? p.owner ?? "我的音乐";
+  const accountAvatar = account?.avatar ?? "";
+  const friendProfile = items.find((i) => meta(i, "neteaseType") === "peer");
+  const friendName = friendProfile?.title ?? "好友";
+  const friendAvatar = friendProfile?.avatar ?? "";
+  const conversation = dmItems.filter((i) => meta(i, "peer") === friendName);
   return (
     <div className="catalog-skin netease-ui">
       <Header p={p} />
       <div className="catalog-scroll">
+        {tab === "私信" ? (
+          dmOpen ? (
+            <>
+              <button className="netease-dm-back" onClick={() => setDmOpen(false)}>‹ 私信</button>
+              <div className="netease-dm-heading"><Avatar name={friendName} src={friendAvatar} round /><strong>{friendName}</strong></div>
+              <div className="netease-dm-thread">
+                {conversation.map((message, index) => {
+                  const previous = conversation[index - 1];
+                  const showTime = !previous || previous.time !== message.time;
+                  if (message.kind === "event") return <div className="netease-dm-event" key={message.id}>{showTime && <time>{message.time}</time>}<span>🎧 {message.body}</span><small>点击加入一起听</small></div>;
+                  const isShare = meta(message, "songShare") === "true";
+                  const matchedTitle = message.body.match(/《[^》]+》/)?.[0];
+                  const songTitle = meta(message, "songTitle", matchedTitle ?? message.body.replace(/^分享歌\s*/, ""));
+                  const coverArt = meta(message, "coverArt");
+                  const trailingText = isShare && matchedTitle ? message.body.replace(matchedTitle, "").replace(/^分享歌\s*/, "").trim() : "";
+                  const songKey = songTitle.includes("虚拟") ? "xuni" : songTitle.includes("找自己") ? "ziji" : songTitle.includes("打钉") ? "dading" : songTitle.toLowerCase().includes("after17") ? "after17" : songTitle.toLowerCase().includes("pain") ? "pain" : "music";
+                  return <div key={message.id}>{showTime && <div className="netease-dm-time">{message.time}</div>}<div className={`netease-dm-message ${message.sender === accountName ? "mine" : "theirs"}`}>
+                    {message.sender !== accountName && <Avatar name={friendName} src={friendAvatar} round />}
+                    <div>{isShare ? <><div className="netease-song-share">{coverArt ? <img className="netease-song-cover-art" src={coverArt} alt={`${songTitle}封面`} /> : <div className={`netease-song-cover cover-${songKey}`} aria-hidden="true"><Music size={22} /><span>♫</span></div>}<div className="netease-song-footer"><div className="netease-song-info"><strong>{songTitle}</strong><small><span>单曲</span> · {meta(message, "artist")}</small></div><PlayCircle className="netease-song-play" size={22} aria-label="单曲分享" /></div></div>{trailingText && <p>{trailingText}</p>}</> : <p>{message.body}</p>}</div>
+                    {message.sender === accountName && <Avatar name={accountName} src={accountAvatar} round />}
+                  </div></div>;
+                })}
+              </div>
+            </>
+          ) : (
+            <>
+              <h2 className="netease-dm-title">私信</h2>
+              {dmItems.length ? <button className="netease-dm-contact" onClick={() => setDmOpen(true)}><Avatar name={friendName} src={friendAvatar} round /><span><strong>{friendName}</strong><small>{conversation.at(-1)?.body ?? ""}</small></span><time>{conversation.at(-1)?.time}</time></button> : <Empty items={[]} />}
+            </>
+          )
+        ) : (
+        <>
         <SearchBox value={q} set={setQ} />
         {tab === "发现" ? (
           <>
@@ -184,8 +229,9 @@ export function NeteaseSkin(p: Props) {
         ) : (
           <>
             <div className="netease-profile">
-              <Avatar name={p.owner ?? "我"} />
-              <h2>{p.owner ?? "我的音乐"}</h2>
+              <Avatar name={accountName} src={accountAvatar} />
+              <h2>{accountName}</h2>
+              {account && <p className="netease-social-stats"><span>关注 <b>1</b> · {friendName}</span><span>粉丝 <b>1</b> · {friendName}</span></p>}
             </div>
             <h3>{folder || "我的歌单"}</h3>
           </>
@@ -214,6 +260,8 @@ export function NeteaseSkin(p: Props) {
           </div>
         ))}
         <Empty items={list} />
+      </>
+      )}
       </div>
       {track && (
         <TrackPlayer
@@ -221,21 +269,21 @@ export function NeteaseSkin(p: Props) {
           p={p}
           onNext={() =>
             setTrack(
-              items[
-                (items.findIndex((i) => i.id === track.id) + 1) % items.length
+              tracks[
+                (tracks.findIndex((i) => i.id === track.id) + 1) % tracks.length
               ],
             )
           }
         />
       )}
       <Tabs
-        tabs={["发现", "我的"]}
+        tabs={["发现", "我的", "私信"]}
         value={tab}
         set={(t) => {
           setTab(t);
           setFolder("");
         }}
-        icons={[<Compass />, <Music />]}
+        icons={[<Compass />, <Music />, <MessageCircle />]}
       />
     </div>
   );
@@ -542,4 +590,6 @@ export function NetflixSkin(p: Props) {
     </div>
   );
 }
+
+
 
