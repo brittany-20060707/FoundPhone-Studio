@@ -12,6 +12,7 @@ import {
   Home,
   MessageCircle,
   Repeat2,
+  Search,
   User,
   Users,
   Share2,
@@ -326,51 +327,139 @@ export function FacebookSkin(p: Props) {
   );
 }
 export function RedbookSkin(p: Props) {
-  const { tab, setTab, q, setQ, items } = useContent(p, "发现");
-  const list =
-    tab === "收藏"
-      ? items.filter((i) => i.favorite)
-      : tab === "关注"
-        ? items.filter((i) => i.folder === "关注")
-        : items;
+  const { items } = useContent(p, "发现");
+  const [page, setPage] = useState<"发现" | "我">("发现");
+  const [profileTab, setProfileTab] = useState("收藏");
+  const saved = items.filter((item) => item.folder === "收藏");
+  const discover = items.filter((item) => item.folder === "发现").slice(0, 4);
+  const avatar = <span className="redbook-avatar" aria-hidden="true">m</span>;
+
   return (
     <div className="catalog-skin redbook-ui">
-      <Header p={p} />
-      <div className="redbook-top">
-        {["关注", "发现", "收藏"].map((t) => (
-          <button
-            key={t}
-            className={tab === t ? "selected" : ""}
-            onClick={() => setTab(t)}
-          >
-            {t}
-          </button>
-        ))}
-      </div>
-      <div className="catalog-scroll">
-        <SearchBox value={q} set={setQ} />
-        <div className="redbook-masonry">
-          {list.map((i) => (
-            <button key={i.id} onClick={() => p.onItem(i)}>
-              <Media item={i} />
-              <strong>{i.title}</strong>
-              <div>
-                <Avatar name={i.sender} />
-                <small>{i.sender}</small>
-                <Heart size={12} />
-                <small>{i.likes}</small>
-              </div>
+      {page === "发现" ? (
+        <>
+          <header className="redbook-discover-header">
+            <button className="redbook-header-icon" aria-label="消息">
+              <MessageCircle size={22} />
             </button>
-          ))}
-        </div>
-        <Empty items={list} />
-      </div>
-      <Tabs
-        tabs={["发现", "收藏"]}
-        value={tab}
-        set={setTab}
-        icons={[<Home />, <Bookmark />]}
-      />
+            <nav className="redbook-discover-tabs" aria-label="发现分类">
+              <button>关注</button>
+              <button className="selected">发现</button>
+              <button>北京</button>
+            </nav>
+            <button className="redbook-header-icon" aria-label="搜索">
+              <Search size={22} />
+            </button>
+          </header>
+          <section className="redbook-discover-grid" aria-label="发现内容">
+            {discover.map((item) => (
+              <article className="redbook-discover-card" key={item.id}>
+                <Media item={item} className="redbook-post-image" />
+                <strong>{item.title}</strong>
+                <div className="redbook-post-byline">
+                  {avatar}
+                  <span>momo</span>
+                  <span className="redbook-like-count">
+                    <Heart size={14} />
+                    {item.likes}
+                  </span>
+                </div>
+              </article>
+            ))}
+          </section>
+          <nav className="redbook-bottom-nav" aria-label="小红书导航">
+            <button className="active" onClick={() => setPage("发现")}>
+              <Home size={20} /><span>首页</span>
+            </button>
+            <button aria-label="市集">
+              <Grid size={20} /><span>市集</span>
+            </button>
+            <button className="redbook-create" aria-label="发布" disabled>＋</button>
+            <button aria-label="消息">
+              <MessageCircle size={20} /><span>消息</span>
+            </button>
+            <button onClick={() => setPage("我")}>
+              <User size={20} /><span>我</span>
+            </button>
+          </nav>
+        </>
+      ) : (
+        <>
+          <header className="redbook-profile-banner">
+            <div className="redbook-profile-toolbar">
+              <button aria-label="菜单">☰</button>
+              <span>
+                <button aria-label="扫一扫"><Grid size={21} /></button>
+                <button aria-label="分享"><Share2 size={22} /></button>
+              </span>
+            </div>
+            <div className="redbook-profile-person">
+              {avatar}
+              <strong>momo</strong>
+            </div>
+          </header>
+          <section className="redbook-profile-panel">
+            <nav className="redbook-profile-tabs" aria-label="个人内容">
+              {["笔记", "🔒 评论", "🔒 收藏", "🔒 赞过"].map((label) => {
+                const value = label.replace("🔒 ", "");
+                return (
+                  <button
+                    key={label}
+                    className={profileTab === value ? "selected" : ""}
+                    onClick={() => setProfileTab(value)}
+                  >
+                    {label}
+                  </button>
+                );
+              })}
+              <button aria-label="搜索"><Search size={20} /></button>
+            </nav>
+            <div className="redbook-profile-categories">
+              <strong>笔记 1989</strong><span>专辑 4</span><span>合集 2</span>
+              <span>评论 3</span><span>话题 15</span><span>地点 28</span>
+            </div>
+            <div className="redbook-profile-saved-scroll">
+              {profileTab === "收藏" ? (
+                <div className="redbook-saved-grid">
+                  {saved.map((item) => (
+                    <button
+                      className="redbook-saved-card"
+                      key={item.id}
+                      onClick={() => p.onItem(item)}
+                    >
+                      <Media item={item} className="redbook-post-image" />
+                      <strong>{item.title}</strong>
+                      <div className="redbook-post-byline">
+                        {avatar}<span>momo</span>
+                        <span className="redbook-like-count">
+                          <Heart size={14} />{item.likes}
+                        </span>
+                      </div>
+                    </button>
+                  ))}
+                </div>
+              ) : (
+                <div className="redbook-profile-empty">暂无内容</div>
+              )}
+            </div>
+          </section>
+          <nav className="redbook-bottom-nav" aria-label="小红书导航">
+            <button onClick={() => setPage("发现")}>
+              <Home size={20} /><span>首页</span>
+            </button>
+            <button aria-label="市集">
+              <Grid size={20} /><span>市集</span>
+            </button>
+            <button className="redbook-create" aria-label="发布" disabled>＋</button>
+            <button aria-label="消息">
+              <MessageCircle size={20} /><span>消息</span>
+            </button>
+            <button className="active" onClick={() => setPage("我")}>
+              <User size={20} /><span>我</span>
+            </button>
+          </nav>
+        </>
+      )}
     </div>
   );
 }

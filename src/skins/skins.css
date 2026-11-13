@@ -2299,80 +2299,277 @@
 }
 .redbook-ui {
   --app-accent: #df354a;
-}
-.redbook-ui .catalog-nav {
-  background: #fff;
-  border: 0;
-}
-.redbook-top {
+  height: 100%;
+  min-height: 0;
   display: flex;
-  justify-content: center;
-  gap: 26px;
-  flex-shrink: 0;
-  padding: 9px 10px 11px;
-}
-.redbook-top > button {
-  font-size: 13px;
-  color: #999;
-  border-bottom: 3px solid transparent;
-  padding: 5px 2px;
-}
-.redbook-top > .selected {
-  color: #111;
-  font-weight: 600;
-  border-color: #ee4155;
-}
-.redbook-masonry {
-  columns: 2;
-  column-gap: 8px;
-  padding: 0 8px 15px;
-}
-.redbook-masonry > button {
-  display: block;
-  width: 100%;
-  padding: 0;
-  background: #fff;
-  border-radius: 8px;
-  text-align: left;
-  margin-bottom: 10px;
-  break-inside: avoid;
+  flex-direction: column;
   overflow: hidden;
+  background: #fff;
+  color: #222;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", sans-serif;
 }
-.redbook-masonry img,
-.redbook-masonry .catalog-art {
-  width: 100%;
-  height: 175px;
-  object-fit: cover;
+.redbook-ui button { color: inherit; }
+.redbook-discover-header {
+  flex: 0 0 54px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 0 14px;
+  background: #fff;
 }
-.redbook-masonry > button:nth-child(2n) .catalog-art {
-  height: 205px;
+.redbook-header-icon { width: 28px; height: 34px; padding: 0; }
+.redbook-discover-tabs { display: flex; align-items: center; justify-content: center; gap: 24px; height: 100%; }
+.redbook-discover-tabs button {
+  position: relative;
+  height: 100%;
+  padding: 0 2px;
+  color: #777;
+  font-size: 15px;
+  font-weight: 600;
 }
-.redbook-masonry > button > strong {
+.redbook-discover-tabs button.selected { color: #222; }
+.redbook-discover-tabs button.selected::after {
+  content: "";
+  position: absolute;
+  left: 14%;
+  right: 14%;
+  bottom: 3px;
+  height: 3px;
+  border-radius: 3px;
+  background: #ed4054;
+}
+.redbook-discover-grid {
+  flex: 1 1 auto;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  gap: 7px;
+  padding: 0 8px 8px;
+  overflow: hidden;
+  overscroll-behavior: none;
+  touch-action: none;
+}
+.redbook-discover-card {
+  min-width: 0;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: #fff;
+  pointer-events: none;
+}
+.redbook-discover-card .redbook-post-image {
   display: block;
-  font-size: 11px;
-  font-weight: 500;
-  line-height: 1.6;
-  padding: 8px 7px;
+  width: 100%;
+  flex: 1 1 auto;
+  min-height: 0;
+  object-fit: cover;
+  border-radius: 7px;
+  background: #f3f3f3;
 }
-.redbook-masonry > button > div:last-child {
+.redbook-discover-card strong {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  min-height: 30px;
+  max-height: 30px;
+  padding: 5px 2px 0;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1.45;
+}
+.redbook-post-byline {
+  flex: 0 0 25px;
+  min-width: 0;
   display: flex;
   align-items: center;
   gap: 5px;
-  padding: 0 7px 10px;
-  color: #999;
+  padding: 2px 2px 4px;
+  color: #888;
+  font-size: 9px;
 }
-.redbook-masonry .catalog-avatar {
-  width: 17px;
-  height: 17px;
-  font-size: 8px;
+.redbook-avatar {
+  width: 20px;
+  height: 20px;
+  flex: 0 0 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #c9c9c9;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: lowercase;
 }
-.redbook-masonry small {
-  font-size: 8px;
-}
-.redbook-masonry svg {
+.redbook-like-count {
+  min-width: 0;
   margin-left: auto;
-  color: #999;
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  white-space: nowrap;
+  color: #777;
 }
+.redbook-bottom-nav {
+  flex: 0 0 54px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.2fr 1fr 1fr;
+  align-items: center;
+  gap: 2px;
+  padding: 2px 10px 3px;
+  border-top: 1px solid #f1f1f1;
+  background: #fff;
+}
+.redbook-bottom-nav > button {
+  min-width: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2px;
+  padding: 0;
+  color: #8b8b8b;
+  font-size: 9px;
+}
+.redbook-bottom-nav > button.active { color: #222; font-weight: 700; }
+.redbook-bottom-nav .redbook-create {
+  width: 48px;
+  height: 36px;
+  justify-self: center;
+  border-radius: 10px;
+  background: #ff2442;
+  color: #fff;
+  font-size: 30px;
+  line-height: 1;
+}
+.redbook-bottom-nav .redbook-create:disabled { opacity: 1; cursor: default; }
+.redbook-profile-banner {
+  flex: 0 0 146px;
+  position: relative;
+  color: #fff;
+  background: #806667;
+}
+.redbook-profile-toolbar {
+  position: absolute;
+  top: 11px;
+  left: 16px;
+  right: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.redbook-profile-toolbar > span { display: flex; align-items: center; gap: 18px; }
+.redbook-profile-toolbar button { padding: 3px; color: #fff; font-size: 23px; }
+.redbook-profile-person {
+  position: absolute;
+  inset: 48px 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+.redbook-profile-person .redbook-avatar { width: 48px; height: 48px; flex-basis: 48px; background: #c6c6c6; font-size: 20px; }
+.redbook-profile-person strong { font-size: 12px; font-weight: 600; }
+.redbook-profile-panel {
+  position: relative;
+  z-index: 1;
+  flex: 1 1 auto;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  margin-top: -13px;
+  border-radius: 18px 18px 0 0;
+  background: #fff;
+  overflow: hidden;
+}
+.redbook-profile-tabs {
+  flex: 0 0 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 7px;
+  border-bottom: 1px solid #f1f1f1;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+.redbook-profile-tabs button {
+  position: relative;
+  flex: 0 0 auto;
+  height: 100%;
+  padding: 0 5px;
+  color: #8a8a8a;
+  font-size: 13px;
+  font-weight: 600;
+}
+.redbook-profile-tabs button.selected { color: #222; }
+.redbook-profile-tabs button.selected::after {
+  content: "";
+  position: absolute;
+  left: 18%;
+  right: 18%;
+  bottom: 4px;
+  height: 3px;
+  border-radius: 3px;
+  background: #ed4054;
+}
+.redbook-profile-categories {
+  flex: 0 0 42px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 0 12px;
+  overflow-x: auto;
+  white-space: nowrap;
+  color: #888;
+  font-size: 12px;
+}
+.redbook-profile-categories strong { color: #333; }
+.redbook-profile-saved-scroll {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  overscroll-behavior: contain;
+  scrollbar-width: none;
+}
+.redbook-saved-grid {
+  columns: 2;
+  column-gap: 7px;
+  padding: 6px 7px 12px;
+}
+.redbook-saved-card {
+  display: block;
+  width: 100%;
+  margin: 0 0 8px;
+  padding: 0;
+  break-inside: avoid;
+  overflow: hidden;
+  border-radius: 5px;
+  background: #fff;
+  text-align: left;
+}
+.redbook-saved-card .redbook-post-image {
+  display: block;
+  width: 100%;
+  height: 172px;
+  object-fit: cover;
+  background: #f1f1f1;
+}
+.redbook-saved-card:nth-child(3n) .redbook-post-image { height: 192px; }
+.redbook-saved-card > strong {
+  display: block;
+  padding: 6px 5px 3px;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1.45;
+}
+.redbook-saved-card .redbook-post-byline { padding: 3px 5px 6px; }
+.redbook-saved-card .redbook-avatar { width: 17px; height: 17px; flex-basis: 17px; font-size: 8px; }
+.redbook-profile-empty { padding: 50px 0; text-align: center; color: #999; font-size: 12px; }
 .pinterest-ui {
   --app-accent: #bd3545;
 }
