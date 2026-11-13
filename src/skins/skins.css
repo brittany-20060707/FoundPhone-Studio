@@ -4214,3 +4214,19 @@
 .netease-discovery-track strong { overflow: hidden; color: #252525; font-size: 12px; font-weight: 600; text-overflow: ellipsis; white-space: nowrap; }
 .netease-discovery-track small { overflow: hidden; color: #999; font-size: 10px; text-overflow: ellipsis; white-space: nowrap; }
 .netease-discovery-label { padding: 3px 5px; border: 1px solid #e6b9bb; border-radius: 4px; color: #c64b53; font-size: 9px; white-space: nowrap; }
+
+.netease-playlist-title { margin: 12px 16px; font-size: 14px; }
+.netease-my-playlist-grid { display: flex; flex-direction: column; gap: 12px; padding: 0 16px 24px; }
+.netease-my-playlist { display: flex; align-items: center; gap: 12px; width: 100%; padding: 0; border: 0; background: transparent; color: inherit; text-align: left; }
+.netease-my-playlist > div:first-child { display: grid; flex: 0 0 62px; width: 62px; height: 62px; place-items: center; overflow: hidden; border-radius: 8px; color: #fff; }
+.netease-liked-art { background: linear-gradient(145deg, #f17478, #c33b53); }
+.netease-with-ghost-art, .netease-open-playlist-art { background: linear-gradient(145deg, #88a6c7, #455b7c); font-size: 29px; }
+.netease-my-playlist > div:last-child { display: flex; min-width: 0; flex-direction: column; gap: 5px; }
+.netease-my-playlist strong { font-size: 13px; font-weight: 550; }
+.netease-my-playlist small { color: #999; font-size: 10px; }
+.netease-my-playlist.is-open { cursor: pointer; }
+.netease-playlist-back { margin: 8px 12px; padding: 4px 0; border: 0; background: none; color: #c33; font-size: 13px; }
+.netease-open-playlist-heading { display: flex; align-items: center; gap: 14px; padding: 18px 16px; }
+.netease-open-playlist-art { display: grid; flex: 0 0 84px; width: 84px; height: 84px; place-items: center; border-radius: 10px; color: #fff; font-size: 36px; }
+.netease-open-playlist-heading h2 { margin: 0 0 6px; font-size: 18px; }
+.netease-open-playlist-heading small { color: #999; font-size: 11px; }

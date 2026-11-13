@@ -161,7 +161,7 @@ export function NeteaseSkin(p: Props) {
   const tracks = items.filter((i) => !dmItems.includes(i) && !["account", "peer", "peer-note", "discover-track"].includes(meta(i, "neteaseType")));
   const list = folder
     ? tracks.filter((i) => (i.folder || "我的歌单") === folder)
-    : tracks;
+    : [];
   const account = items.find((i) => meta(i, "neteaseType") === "account");
   const accountName = account?.title ?? p.owner ?? "我的音乐";
   const accountAvatar = account?.avatar ?? "";
@@ -233,15 +233,28 @@ export function NeteaseSkin(p: Props) {
           </>
         ) : (
           <>
-            <div className="netease-profile">
-              <Avatar name={accountName} src={accountAvatar} />
-              <h2>{accountName}</h2>
-              {account && <p className="netease-social-stats"><span>关注 <b>1</b> · {friendName}</span><span>粉丝 <b>1</b> · {friendName}</span></p>}
-            </div>
-            <h3>{folder || "我的歌单"}</h3>
+            {folder ? (
+              <>
+                <button className="netease-playlist-back" onClick={() => setFolder("")}>‹ 我的歌单</button>
+                <div className="netease-open-playlist-heading"><div className="netease-open-playlist-art">👻</div><div><h2>with 👻</h2><small>8 首单曲</small></div></div>
+              </>
+            ) : (
+              <>
+                <div className="netease-profile">
+                  <Avatar name={accountName} src={accountAvatar} />
+                  <h2>{accountName}</h2>
+                  {account && <p className="netease-social-stats"><span>关注 <b>1</b> · {friendName}</span><span>粉丝 <b>1</b> · {friendName}</span></p>}
+                </div>
+                <h3 className="netease-playlist-title">我的歌单</h3>
+                <div className="netease-my-playlist-grid">
+                  <div className="netease-my-playlist" aria-label="我喜欢的音乐"><div className="netease-liked-art"><Heart size={28} fill="currentColor" strokeWidth={0} /></div><div><strong>我喜欢的音乐</strong><small>私人歌单</small></div></div>
+                  <button type="button" className="netease-my-playlist is-open" onClick={() => setFolder("with 👻")}><div className="netease-with-ghost-art">👻</div><div><strong>with 👻</strong><small>8 首单曲</small></div></button>
+                </div>
+              </>
+            )}
           </>
         )}
-        {tab !== "发现" && (<>{list.map((i, n) => (
+        {tab !== "发现" && folder !== "" && (<>{list.map((i, n) => (
           <div className="netease-track" key={i.id}>
             <button
               onClick={() => {
@@ -250,10 +263,7 @@ export function NeteaseSkin(p: Props) {
             >
               <span>{n + 1}</span>
               <div>
-                <strong>{i.title}</strong>
-                <small>
-                  {i.sender} · {meta(i, "album")}
-                </small>
+                <strong>{i.title}</strong><small>{meta(i, "artist", "单曲")}</small>
               </div>
             </button>
             <button
@@ -595,6 +605,7 @@ export function NetflixSkin(p: Props) {
     </div>
   );
 }
+
 
 
 
