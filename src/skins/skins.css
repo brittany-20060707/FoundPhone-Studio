@@ -2414,15 +2414,6 @@
   white-space: nowrap;
   color: #777;
 }
-.redbook-discover-caption {
-  flex: 0 0 22px;
-  align-self: flex-end;
-  padding: 0 12px 2px;
-  color: #777;
-  font-size: 10px;
-  line-height: 20px;
-  white-space: nowrap;
-}
 .redbook-bottom-nav {
   flex: 0 0 54px;
   display: grid;
