@@ -170,7 +170,15 @@ export function NeteaseSkin(p: Props) {
   const friendName = friendProfile?.title ?? "好友";
   const friendAvatar = friendProfile?.avatar ?? "";
   const conversation = dmItems.filter((i) => meta(i, "peer") === friendName);
-  const peerNotes = items.filter((i) => meta(i, "neteaseType") === "peer-note");
+  const noteTimestamp = (value: string) => {
+    const [datePart, clock = "00:00"] = value.split(/\s+/);
+    const [year, month, day] = datePart.split(/[.-]/).map(Number);
+    const [hour = 0, minute = 0] = clock.split(":").map(Number);
+    return new Date(year, month - 1, day, hour, minute).getTime();
+  };
+  const peerNotes = items
+    .filter((i) => meta(i, "neteaseType") === "peer-note")
+    .sort((a, b) => noteTimestamp(b.time ?? "") - noteTimestamp(a.time ?? ""));
   const accountDrafts = items.filter((i) => meta(i, "neteaseType") === "account-draft");
   const discoveryTracks = items.filter((i) => meta(i, "neteaseType") === "discover-track");
   return (
