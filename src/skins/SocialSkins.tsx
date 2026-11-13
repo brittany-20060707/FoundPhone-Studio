@@ -328,11 +328,93 @@ export function FacebookSkin(p: Props) {
 }
 export function RedbookSkin(p: Props) {
   const { items } = useContent(p, "发现");
-  const [page, setPage] = useState<"发现" | "我">("发现");
+  const [page, setPage] = useState<"发现" | "我" | "搜索">("发现");
+  const [searchQuery, setSearchQuery] = useState("");
   const [profileTab, setProfileTab] = useState("收藏");
   const saved = items.filter((item) => item.folder === "收藏");
   const discover = items.filter((item) => item.folder === "发现").slice(0, 4);
   const avatar = <span className="redbook-avatar" aria-hidden="true">m</span>;
+  const recentSearches = [
+    "两只猫第一次见面怎么相处",
+    "张函瑞17岁应援",
+    "好吃的低热量零食",
+    "近期流行设计师品牌",
+    "卧室编曲监听耳机推荐",
+    "怎么区分是对自己要求太高还是别人真的在否定自己",
+    "秋冬季节香水合集",
+    "胡琴445进行曲",
+  ];
+  const guessSearches = [
+    "青蛙玩偶",
+    "韩国新款小众包包",
+    "叠穿公式",
+    "原住民和新猫怎么磨合",
+    "书单推荐",
+    "固体500卡和液体500卡有区别吗",
+  ];
+
+  if (page === "搜索") {
+    return (
+      <div className="catalog-skin redbook-ui redbook-search-ui">
+        <header className="redbook-search-header">
+          <button aria-label="返回" onClick={() => setPage("发现")}>
+            <ChevronLeft size={25} />
+          </button>
+          <form
+            className="redbook-search-field"
+            onSubmit={(event) => {
+              event.preventDefault();
+            }}
+          >
+            <input
+              aria-label="搜索内容"
+              placeholder="搜索你感兴趣的内容"
+              value={searchQuery}
+              onChange={(event) => setSearchQuery(event.target.value)}
+            />
+            <button type="button" aria-label="拍照搜索"><Camera size={21} /></button>
+            <i />
+            <button className="redbook-search-submit" type="submit">搜索</button>
+          </form>
+        </header>
+        <main className="redbook-search-content">
+          <section className="redbook-search-history">
+            <div className="redbook-search-section-title">
+              <strong>历史记录</strong>
+              <button aria-label="清空搜索记录" onClick={() => setSearchQuery("")}>
+                <Trash2 size={19} />
+              </button>
+            </div>
+            <div className="redbook-search-chips">
+              {recentSearches.map((term) => (
+                <button key={term} onClick={() => setSearchQuery(term)}>{term}</button>
+              ))}
+            </div>
+          </section>
+          <section className="redbook-search-guesses">
+            <div className="redbook-search-section-title">
+              <strong>猜你想搜</strong>
+              <button aria-label="换一换"><span>···</span></button>
+            </div>
+            <div className="redbook-search-guess-grid">
+              {guessSearches.map((term) => (
+                <button key={term} onClick={() => setSearchQuery(term)}>{term}</button>
+              ))}
+            </div>
+          </section>
+        </main>
+        <div className="redbook-search-keyboard" aria-hidden="true">
+          <div className="redbook-search-voice">按住提问 有问必答 ✨<span>🎙</span></div>
+          <div className="redbook-keyboard-row">{["q","w","e","r","t","y","u","i","o","p"].map((key) => <i key={key}>{key}</i>)}</div>
+          <div className="redbook-keyboard-row inset">{["a","s","d","f","g","h","j","k","l"].map((key) => <i key={key}>{key}</i>)}</div>
+          <div className="redbook-keyboard-row">{["⇧","z","x","c","v","b","n","m","⌫"].map((key) => <i key={key}>{key}</i>)}</div>
+          <div className="redbook-keyboard-row bottom">
+            <i>123</i><i>☺</i><i className="space" /><i className="search-key">⌕</i>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="catalog-skin redbook-ui">
@@ -412,7 +494,7 @@ export function RedbookSkin(p: Props) {
                   </button>
                 );
               })}
-              <button aria-label="搜索"><Search size={20} /></button>
+              <button aria-label="搜索" onClick={() => setPage("搜索")}><Search size={20} /></button>
             </nav>
             <div className="redbook-profile-categories">
               <strong>笔记 1989</strong><span>专辑 4</span><span>合集 2</span>
