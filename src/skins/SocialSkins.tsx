@@ -362,7 +362,7 @@ export function RedbookSkin(p: Props) {
   ];
   const commentThreads = [
     { author: "Xin", text: "csh 到底咋进的一班", replies: [
-      ["R.", "实力"],
+      ["R.（我）", "实力"],
       ["路人A", "硬塞的吧 反正记得刚上楼那会被骂惨了"],
       ["天使小比格", "陈春会趴你耳边说的🤣但凡有眼睛的人都知道他是靠实力进的  成团的爱豆不看实力看啥  没实力的上台了表演站桩吗你不是专业的就不要去点评人家  先去补作业吧"],
       ["路人B", "实力"],
@@ -374,7 +374,7 @@ export function RedbookSkin(p: Props) {
       ["路人F", "一直eat不到这个张桂源"],
       ["路人E", "一直eat不到这个张桂源"],
       ["R.", "一直eat这个张桂源"],
-      ["10%", "？", "回复 R."],
+      ["10%", "？", "回复 R.（我）"],
     ]},
     { author: "momo", text: "cyh到底是好是坏啊😬我有点想粉上了", replies: [
       ["R.", "他本人性格非常好的 那时候在试训期还不算是，然后刚从英国回来也不懂    当时心还是很小的时候被诱导了 ，他是非常单纯善良的孩子。"],
@@ -400,7 +400,7 @@ export function RedbookSkin(p: Props) {
         <button className="redbook-like-notification" onClick={() => setPage("帖子详情")}>
           <span className="redbook-notification-icon"><Heart size={22} fill="currentColor" /></span>
           <span className="redbook-notification-copy">
-            <strong>赞和评论</strong>
+            <strong>赞和评论<i className="redbook-unread-dot" /></strong>
             <small>有几人赞了你的评论</small>
             <em>🍐🍑四代敢说贴</em>
           </span>
@@ -569,7 +569,7 @@ export function RedbookSkin(p: Props) {
             </div>
             <div className="redbook-profile-person">
               {avatar}
-              <strong>momo</strong>
+              <strong>R.</strong>
             </div>
           </header>
           <section className="redbook-profile-panel">
@@ -625,8 +625,8 @@ export function RedbookSkin(p: Props) {
               <Grid size={20} /><span>市集</span>
             </button>
             <button className="redbook-create" aria-label="发布" disabled>＋</button>
-            <button aria-label="消息">
-              <MessageCircle size={20} /><span>消息</span>
+            <button aria-label="消息" onClick={() => setPage("消息")}>
+              <MessageCircle size={20} /><span>消息</span><i className="redbook-unread-dot" />
             </button>
             <button className="active" onClick={() => setPage("我")}>
               <User size={20} /><span>我</span>
