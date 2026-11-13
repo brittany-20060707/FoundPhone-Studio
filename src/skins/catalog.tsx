@@ -47,6 +47,7 @@ export const catalogSkins = {
   forum: skin(social, "ForumSkin"),
   snapchat: skin(social, "SnapchatSkin"),
   spotify: skin(media, "SpotifySkin"),
+  daysmatter: skin(media, "DaysMatterSkin"),
   netease: skin(media, "NeteaseSkin"),
   youtube: skin(media, "YouTubeSkin"),
   bilibili: skin(media, "BilibiliSkin"),
@@ -57,3 +58,4 @@ export const catalogSkins = {
   taobao: skin(commerce, "TaobaoSkin"),
   delivery: skin(commerce, "DeliverySkin"),
 };
+
