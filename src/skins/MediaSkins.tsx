@@ -159,7 +159,7 @@ export function NeteaseSkin(p: Props) {
   const dmItems = items
     .filter((i) => meta(i, "neteaseType") === "direct-message")
     .sort((a, b) => a.time.localeCompare(b.time) || items.indexOf(a) - items.indexOf(b));
-  const tracks = items.filter((i) => !dmItems.includes(i) && !["account", "peer", "peer-note", "discover-track"].includes(meta(i, "neteaseType")));
+  const tracks = items.filter((i) => !dmItems.includes(i) && !["account", "peer", "peer-note", "account-draft", "discover-track"].includes(meta(i, "neteaseType")));
   const list = folder
     ? tracks.filter((i) => (i.folder || "我的歌单") === folder)
     : [];
@@ -171,6 +171,7 @@ export function NeteaseSkin(p: Props) {
   const friendAvatar = friendProfile?.avatar ?? "";
   const conversation = dmItems.filter((i) => meta(i, "peer") === friendName);
   const peerNotes = items.filter((i) => meta(i, "neteaseType") === "peer-note");
+  const accountDrafts = items.filter((i) => meta(i, "neteaseType") === "account-draft");
   const discoveryTracks = items.filter((i) => meta(i, "neteaseType") === "discover-track");
   return (
     <div className="catalog-skin netease-ui">
@@ -251,6 +252,18 @@ export function NeteaseSkin(p: Props) {
                   <div className="netease-my-playlist" aria-label="我喜欢的音乐"><div className="netease-liked-art"><Heart size={28} fill="currentColor" strokeWidth={0} /></div><div><strong>我喜欢的音乐</strong><small>私人歌单</small></div></div>
                   <button type="button" className="netease-my-playlist is-open" onClick={() => setFolder("with 👻")}><div className="netease-with-ghost-art">👻</div><div className="netease-my-playlist-copy"><strong>with 👻</strong><small>8 首单曲</small><span className="netease-private-label"><LockKeyhole size={12} />仅自己可见</span></div></button>
                 </div>
+                {accountDrafts.length > 0 && <section className="netease-drafts">
+                  <div className="netease-drafts-heading"><h3>笔记草稿箱</h3><span className="netease-draft-dot" aria-label="有未发布草稿" /><small>{accountDrafts.length} 条未发布</small></div>
+                  {accountDrafts.map((draft) => {
+                    const songTitle = meta(draft, "songTitle");
+                    const noteText = songTitle ? draft.body.replace(`《${songTitle}》`, "").trim() : draft.body;
+                    return <article className="netease-draft-item" key={draft.id}>
+                      <div className="netease-draft-meta"><span>未发布</span><time>{draft.time}</time></div>
+                      {noteText && <p>{noteText}</p>}
+                      {songTitle && <div className="netease-song-share netease-draft-song-share"><img className="netease-song-cover-art" src={meta(draft, "coverArt")} alt={`${songTitle}封面`} /><div className="netease-song-footer"><div className="netease-song-info"><strong>{songTitle}</strong><small><span>单曲</span> · {meta(draft, "artist")}</small></div><PlayCircle className="netease-song-play" size={22} aria-label="单曲分享" /></div></div>}
+                    </article>;
+                  })}
+                </section>}
               </>
             )}
           </>
