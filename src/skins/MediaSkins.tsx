@@ -2,18 +2,24 @@ import { AudioPlayer, useTrack } from "../audio";
 import { useSkinState } from "../skinState";
 import {
   Bookmark,
+  CalendarDays,
+  Camera,
   Check,
   Compass,
   Heart,
   Home,
   LockKeyhole,
+  Menu,
   MessageCircle,
+  MoreHorizontal,
   Music,
+  Orbit,
   PlayCircle,
   Play,
   Plus,
   Search,
   SkipForward,
+  Star,
   User,
   Users,
   Video,
@@ -150,6 +156,67 @@ export function SpotifySkin(p: Props) {
     </div>
   );
 }
+
+function countdownDays(date: string, now = new Date()) {
+  const [year, month, day] = date.split("-").map(Number);
+  const target = Date.UTC(year, month - 1, day);
+  const today = Date.UTC(now.getFullYear(), now.getMonth(), now.getDate());
+  return Math.round((today - target) / 86_400_000);
+}
+
+function dateLabel(date: string) {
+  const [year, month, day] = date.split("-").map(Number);
+  const weekday = ["日", "一", "二", "三", "四", "五", "六"][
+    new Date(Date.UTC(year, month - 1, day)).getUTCDay()
+  ];
+  return `${year}-${month}-${day} 星期${weekday}`;
+}
+
+export function DaysMatterSkin(p: Props) {
+  const events = p.items.filter((item) => meta(item, "daysMatterType") === "event");
+  const pinned = events.find((item) => meta(item, "pinned") === "true") ?? events[0];
+  const pinnedDate = pinned?.time ?? "";
+  const pinnedDelta = pinnedDate ? countdownDays(pinnedDate) : 0;
+
+  return (
+    <div className="catalog-skin daysmatter-ui">
+      <header className="daysmatter-nav">
+        <Menu size={23} aria-hidden="true" />
+        <strong>Days Matter</strong>
+        <div><Camera size={22} aria-hidden="true" /><Plus size={25} aria-hidden="true" /></div>
+      </header>
+      <div className="catalog-scroll daysmatter-scroll">
+        {pinned && <section className="daysmatter-featured">
+          <div className="daysmatter-featured-copy">
+            <h2>{pinned.title}</h2>
+            <p>目标日：{dateLabel(pinnedDate)}</p>
+            <small>{pinnedDelta >= 0 ? `已经 ${pinnedDelta} 天` : `还有 ${Math.abs(pinnedDelta)} 天`}</small>
+          </div>
+          <div className="daysmatter-featured-count"><strong>{Math.abs(pinnedDelta)}</strong><span>Days</span></div>
+        </section>}
+        <section className="daysmatter-events" aria-label="纪念日列表">
+          {events.map((event) => {
+            const date = event.time ?? "";
+            const delta = countdownDays(date);
+            const count = Math.abs(delta);
+            return <article className="daysmatter-event" key={event.id}>
+              <div className="daysmatter-event-name"><strong>{event.title} {delta < 0 ? "还有" : "已经"}</strong><small>{dateLabel(date)}</small></div>
+              <div className={`daysmatter-event-count ${delta < 0 ? "is-future" : ""}`}><strong>{count}</strong><span>天</span></div>
+            </article>;
+          })}
+        </section>
+      </div>
+      <nav className="daysmatter-bottom" aria-label="Days Matter navigation">
+        <span className="is-active" aria-label="倒数日"><CalendarDays size={22} /></span>
+        <span aria-label="纪念日收藏"><Star size={21} /></span>
+        <span className="daysmatter-planet" aria-label="探索"><Orbit size={23} /><i /></span>
+        <span className="daysmatter-user" aria-label="我的"><User size={22} /><i>!</i></span>
+        <span aria-label="更多"><MoreHorizontal size={23} /></span>
+      </nav>
+    </div>
+  );
+}
+
 export function NeteaseSkin(p: Props) {
   const { tab, setTab, q, setQ, items } = useContent(p, "发现");
   const [folder, setFolder] = useState(""),
