@@ -422,7 +422,7 @@ export function RedbookSkin(p: Props) {
           <h2>🍐🍑四代敢说贴</h2>
           <p className="redbook-thread-intro">大家有什么想说的可以说出来 <span>#tf四代</span></p>
           <div className="redbook-thread-cover"><span>四代敢说贴</span></div>
-          <div className="redbook-thread-stats">评论 {commentThreads.length}　赞和收藏</div>
+          <div className="redbook-thread-stats">评论 {commentThreads.length} · 赞和收藏</div>
           <div className="redbook-thread-comments">
             {commentThreads.map((thread, index) => (
               <section className="redbook-comment-thread" key={thread.author + index}>
