@@ -435,7 +435,7 @@ export function RedbookSkin(p: Props) {
             <nav className="redbook-discover-tabs" aria-label="发现分类">
               <button>关注</button>
               <button className="selected">发现</button>
-              <button>北京</button>
+              <button>重庆</button>
             </nav>
             <button className="redbook-header-icon" aria-label="搜索" onClick={openSearch}>
               <Search size={22} />
@@ -457,6 +457,7 @@ export function RedbookSkin(p: Props) {
               </article>
             ))}
           </section>
+          <div className="redbook-discover-caption">陈奕恒左奇函又出去幸福了</div>
           <nav className="redbook-bottom-nav" aria-label="小红书导航">
             <button className="active" onClick={() => setPage("发现")}>
               <Home size={20} /><span>首页</span>
