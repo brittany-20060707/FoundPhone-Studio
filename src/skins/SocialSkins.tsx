@@ -330,7 +330,7 @@ export function FacebookSkin(p: Props) {
 }
 export function RedbookSkin(p: Props) {
   const { items } = useContent(p, "发现");
-  const [page, setPage] = useState<"发现" | "我" | "搜索">("发现");
+  const [page, setPage] = useState<"发现" | "我" | "搜索" | "消息" | "帖子详情">("发现");
   const [searchQuery, setSearchQuery] = useState("");
   const [historyVisible, setHistoryVisible] = useState(true);
   const [searchFrom, setSearchFrom] = useState<"发现" | "我">("发现");
@@ -360,6 +360,90 @@ export function RedbookSkin(p: Props) {
     "书单推荐",
     "固体500卡和液体500卡有区别吗",
   ];
+  const commentThreads = [
+    { author: "Xin", text: "csh 到底咋进的一班", replies: [
+      ["R.", "实力"],
+      ["路人A", "硬塞的吧 反正记得刚上楼那会被骂惨了"],
+      ["天使小比格", "陈春会趴你耳边说的🤣但凡有眼睛的人都知道他是靠实力进的  成团的爱豆不看实力看啥  没实力的上台了表演站桩吗你不是专业的就不要去点评人家  先去补作业吧"],
+      ["路人B", "实力"],
+    ]},
+    { author: "ella", text: "二班感情看着比一班好，一班感觉都是小团体，硬凑在一起的", replies: [
+      ["R.", "有小团体不代表关系不好。尊重个性和差异不也是体现大家包容度和友善的方式吗，大家私下吵架都是没两天就会和好的朋友，一班和其他代的相处模式可能确实不一样，但是没有必要说感情不好吧。"],
+    ]},
+    { author: "10%", text: "一直eat不到这个张桂源", replies: [
+      ["路人F", "一直eat不到这个张桂源"],
+      ["路人E", "一直eat不到这个张桂源"],
+      ["R.", "一直eat这个张桂源"],
+      ["10%", "？", "回复 R."],
+    ]},
+    { author: "momo", text: "cyh到底是好是坏啊😬我有点想粉上了", replies: [
+      ["R.", "他本人性格非常好的 那时候在试训期还不算是，然后刚从英国回来也不懂    当时心还是很小的时候被诱导了 ，他是非常单纯善良的孩子。"],
+      ["路人C", "和ss有接触是真的，但是存在ss恶意引导造谣吧"],
+    ]},
+    { author: "555", text: "看物料 感觉一班有几位挺精的", replies: [
+      ["xuxu", "都有谁啊"],
+      ["Queen", "他们在竞争诶  为了热度卖也是不是坏事啊  人家知道要抓热度往上爬啊"],
+    ]},
+    { author: "念念", text: "居然有人觉得zhr是皇子吗", replies: [
+      ["用户10086", "感觉纯血上楼一路遭受各种不公平待遇吧，公司捧谁也很明显，他唱歌实力完全是断层级别啊但是一直被压着"],
+      ["0707", "纳尼？"],
+    ]},
+  ];
+
+  if (page === "消息") {
+    return (
+      <div className="catalog-skin redbook-ui redbook-messages-ui">
+        <header className="redbook-simple-header">
+          <button aria-label="返回首页" onClick={() => setPage("发现")}><ChevronLeft size={24} /></button>
+          <strong>消息</strong><span />
+        </header>
+        <button className="redbook-like-notification" onClick={() => setPage("帖子详情")}>
+          <span className="redbook-notification-icon"><Heart size={22} fill="currentColor" /></span>
+          <span className="redbook-notification-copy">
+            <strong>赞和评论</strong>
+            <small>有几人赞了你的评论</small>
+            <em>🍐🍑四代敢说贴</em>
+          </span>
+          <ChevronRight size={18} />
+        </button>
+      </div>
+    );
+  }
+
+  if (page === "帖子详情") {
+    return (
+      <div className="catalog-skin redbook-ui redbook-thread-ui">
+        <header className="redbook-simple-header">
+          <button aria-label="返回消息" onClick={() => setPage("消息")}><ChevronLeft size={24} /></button>
+          <strong>笔记详情</strong><span />
+        </header>
+        <main className="redbook-thread-scroll">
+          <div className="redbook-thread-author">{avatar}<strong>momo</strong><button>关注</button></div>
+          <h2>🍐🍑四代敢说贴</h2>
+          <p className="redbook-thread-intro">大家有什么想说的可以说出来 <span>#tf四代</span></p>
+          <div className="redbook-thread-cover"><span>四代敢说贴</span></div>
+          <div className="redbook-thread-stats">评论 {commentThreads.length}　赞和收藏</div>
+          <div className="redbook-thread-comments">
+            {commentThreads.map((thread, index) => (
+              <section className="redbook-comment-thread" key={thread.author + index}>
+                <div className="redbook-comment-main">
+                  <span className="redbook-comment-avatar">{thread.author.slice(0, 1)}</span>
+                  <div><strong>⭐️ {thread.author}</strong><p>{thread.text}</p><small>回复</small></div>
+                </div>
+                <div className="redbook-comment-replies">
+                  {thread.replies.map(([name, text, to], replyIndex) => (
+                    <div className="redbook-comment-reply" key={name + replyIndex}>
+                      <strong>{name}</strong>{to && <small> 回复 {to}</small>}：{text}
+                    </div>
+                  ))}
+                </div>
+              </section>
+            ))}
+          </div>
+        </main>
+      </div>
+    );
+  }
 
   if (page === "搜索") {
     return (
