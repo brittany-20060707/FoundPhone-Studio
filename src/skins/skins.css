@@ -4843,12 +4843,28 @@
 }
 
 .weibo-music-player {
-  flex: 0 0 82px;
-  height: 82px;
-  padding: 4px 10px;
+  flex: 0 0 112px;
+  height: 112px;
+  padding: 5px 10px 4px;
   overflow: hidden;
   background: #fff;
   border-bottom: 1px solid #eee;
+}
+.weibo-music-controls {
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  color: #777;
+  font-size: 11px;
+}
+.weibo-music-controls button {
+  padding: 4px 12px;
+  border-radius: 14px;
+  background: #e88a38;
+  color: #fff;
+  font-size: 11px;
 }
 .weibo-music-player iframe {
   display: block;
