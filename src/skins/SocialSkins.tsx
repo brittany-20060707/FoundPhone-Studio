@@ -113,7 +113,7 @@ export function WeiboSkin(p: Props) {
         {tab === "我" ? (
           <div className="weibo-profile">
             <Avatar name={p.owner ?? "我"} />
-            <h2>{p.owner ?? "我"}</h2>
+            <h2>{items[0]?.sender ?? p.owner ?? "我"}</h2>
             <span>@count1essfaults · {items.length} 条微博</span>
           </div>
         ) : (
