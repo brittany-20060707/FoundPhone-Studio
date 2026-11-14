@@ -20,7 +20,7 @@ import {
   Share2,
   ThumbsUp,
 } from "lucide-react";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import type { Item } from "../schema";
 import {
   Avatar,
@@ -96,25 +96,40 @@ export function WeiboSkin(p: Props) {
   const [unlocked, setUnlocked] = useState(false);
   const [pin, setPin] = useState("");
   const [error, setError] = useState(false);
-  const [playerAttempt, setPlayerAttempt] = useState(0);
+  const [playError, setPlayError] = useState(false);
+  const audioRef = useRef<HTMLAudioElement>(null);
+  const audioSrc = `${import.meta.env.BASE_URL}audio/${encodeURIComponent("卢广仲 - 太阳与地球 (Sun & Earth).mp3")}`;
+
+  const playSong = () => {
+    const audio = audioRef.current;
+    if (!audio) return;
+    setPlayError(false);
+    audio.play().catch(() => setPlayError(true));
+  };
+
   const enterDigit = (digit: string) => {
     if (pin.length >= 4) return;
     const next = pin + digit;
     setPin(next);
     setError(false);
     if (next.length === 4) {
-      if (next === "0511") setUnlocked(true);
-      else {
+      if (next === "0511") {
+        // Keep the media element mounted before and after unlocking so this
+        // trusted keypad click can start same-page audio playback.
+        playSong();
+        setUnlocked(true);
+      } else {
         setError(true);
         setPin("");
       }
     }
   };
-  if (!unlocked) {
-    return (
-      <div className="catalog-skin weibo-ui">
-        <Header p={p} />
-        
+
+  return (
+    <div className="catalog-skin weibo-ui">
+      <Header p={p} />
+      <audio ref={audioRef} src={audioSrc} preload="none" controls={unlocked} />
+      {!unlocked ? (
         <div className="weibo-lock-screen">
           <div className="weibo-lock-icon" aria-hidden="true">🔒</div>
           <h2>微博已锁定</h2>
@@ -142,35 +157,39 @@ export function WeiboSkin(p: Props) {
             ))}
           </div>
         </div>
-      </div>
-    );
-  }
-  return (
-    <div className="catalog-skin weibo-ui">
-      <Header p={p} />
-      <div className="weibo-music-player"><div className="weibo-music-controls"><span>网易云音乐 · 太阳与地球</span><div><button type="button" onClick={() => setPlayerAttempt((n) => n + 1)}>▶ 重试播放</button><a href="https://music.163.com/song?id=2745752426" target="_blank" rel="noreferrer">在网易云打开</a></div></div><iframe key={playerAttempt} title="网易云音乐歌曲播放器" src="https://music.163.com/outchain/player?type=2&id=2745752426&auto=1&height=66" allow="autoplay; encrypted-media" loading="eager" /></div>
-      <div className="catalog-scroll">
-        <div className="weibo-profile">
-          <Avatar name="count1essfaults" src={items[0]?.avatar} />
-          <div className="weibo-profile-info">
-            <h2>count1essfaults</h2>
-            <span>ID: count1essfaults</span>
-            <small>{items.length} 条微博</small>
+      ) : (
+        <>
+          <div className="weibo-music-player">
+            <div className="weibo-music-controls">
+              <span>卢广仲 · 太阳与地球（Sun &amp; Earth）</span>
+              <button type="button" onClick={playSong}>▶ 播放歌曲</button>
+            </div>
+            {playError && <p role="status">播放被浏览器拦截，请点击播放器中的播放键。</p>}
           </div>
-        </div>
-        {items.map((i) => (
-          <article className="weibo-post" key={i.id}>
-            <PostHeader p={p} item={i} showTime />
-            <button className="social-body" onClick={() => p.onItem(i)}>
-              {meta(i, "private") === "true" && <small className="weibo-private">🔒 仅自己可见</small>}
-              <p>{i.body}</p>
-              {i.media && <Media item={i} />}
-            </button>
-            <WeiboActions p={p} item={i} />
-          </article>
-        ))}
-        <Empty items={items} />
-      </div>
+          <div className="catalog-scroll">
+            <div className="weibo-profile">
+              <Avatar name="count1essfaults" src={items[0]?.avatar} />
+              <div className="weibo-profile-info">
+                <h2>count1essfaults</h2>
+                <span>ID: count1essfaults</span>
+                <small>{items.length} 条微博</small>
+              </div>
+            </div>
+            {items.map((i) => (
+              <article className="weibo-post" key={i.id}>
+                <PostHeader p={p} item={i} showTime />
+                <button className="social-body" onClick={() => p.onItem(i)}>
+                  {meta(i, "private") === "true" && <small className="weibo-private">🔒 仅自己可见</small>}
+                  <p>{i.body}</p>
+                  {i.media && <Media item={i} />}
+                </button>
+                <WeiboActions p={p} item={i} />
+              </article>
+            ))}
+            <Empty items={items} />
+          </div>
+        </>
+      )}
     </div>
   );
 }
