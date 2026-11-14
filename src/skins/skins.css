@@ -4937,3 +4937,51 @@
   border-radius: 8px;
   background: #fff;
 }
+
+.file-grid > .file-audio-entry {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 26px;
+  align-items: center;
+  gap: 3px 8px;
+  padding: 9px 10px;
+  border: 1px solid #ececf0;
+  border-radius: 10px;
+  background: #fff;
+}
+.file-grid > .file-audio-entry > .file-audio-name {
+  grid-column: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  min-width: 0;
+  padding: 0;
+  text-align: left;
+  color: #6799be;
+}
+.file-audio-name > span {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+.file-audio-name strong {
+  font-size: 12px;
+}
+.file-audio-name small {
+  font-size: 9px;
+}
+.file-grid > .file-audio-entry > .file-audio-download {
+  grid-column: 2;
+  grid-row: 1;
+  display: grid;
+  place-items: center;
+  color: #9dabc3;
+}
+.file-grid > .file-audio-entry audio {
+  grid-column: 1 / -1;
+  width: 100%;
+  height: 34px;
+}
