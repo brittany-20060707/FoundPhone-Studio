@@ -113,7 +113,7 @@ export function WeiboSkin(p: Props) {
     return (
       <div className="catalog-skin weibo-ui">
         <Header p={p} />
-        <div className="weibo-music-player"><iframe title="网易云音乐歌曲播放器" src="https://music.163.com/outchain/player?type=2&id=2745752426&auto=1&height=66" allow="autoplay; encrypted-media" loading="eager" /></div>
+        
         <div className="weibo-lock-screen">
           <div className="weibo-lock-icon" aria-hidden="true">🔒</div>
           <h2>微博已锁定</h2>
