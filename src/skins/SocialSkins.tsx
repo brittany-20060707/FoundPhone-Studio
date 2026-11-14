@@ -93,6 +93,56 @@ function WeiboActions({ p, item }: { p: Props; item: Item }) {
 }
 export function WeiboSkin(p: Props) {
   const { items } = useContent(p, "我");
+  const [unlocked, setUnlocked] = useState(false);
+  const [pin, setPin] = useState("");
+  const [error, setError] = useState(false);
+  const enterDigit = (digit: string) => {
+    if (pin.length >= 4) return;
+    const next = pin + digit;
+    setPin(next);
+    setError(false);
+    if (next.length === 4) {
+      if (next === "0214") setUnlocked(true);
+      else {
+        setError(true);
+        setPin("");
+      }
+    }
+  };
+  if (!unlocked) {
+    return (
+      <div className="catalog-skin weibo-ui">
+        <Header p={p} />
+        <div className="weibo-lock-screen">
+          <div className="weibo-lock-icon" aria-hidden="true">🔒</div>
+          <h2>微博已锁定</h2>
+          <p className="weibo-lock-hint">密码提示：于我而言重要的他</p>
+          <div className="weibo-pin-dots" aria-label={`已输入 ${pin.length} 位密码`}>
+            {[0, 1, 2, 3].map((index) => (
+              <span key={index} className={index < pin.length ? "filled" : ""} />
+            ))}
+          </div>
+          {error && <p className="weibo-lock-error" role="alert">密码错误，请重试</p>}
+          <div className="weibo-pin-pad">
+            {["1","2","3","4","5","6","7","8","9","⌫","0","清除"].map((key) => (
+              <button
+                key={key}
+                type="button"
+                aria-label={key === "⌫" ? "删除一位" : key === "清除" ? "清除密码" : key}
+                onClick={() => {
+                  if (key === "⌫") { setPin((value) => value.slice(0, -1)); setError(false); }
+                  else if (key === "清除") { setPin(""); setError(false); }
+                  else enterDigit(key);
+                }}
+              >
+                {key}
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
+    );
+  }
   return (
     <div className="catalog-skin weibo-ui">
       <Header p={p} />
