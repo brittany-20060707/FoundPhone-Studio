@@ -4859,12 +4859,20 @@
   color: #777;
   font-size: 11px;
 }
-.weibo-music-controls button {
-  padding: 4px 12px;
+.weibo-music-controls > div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.weibo-music-controls button,
+.weibo-music-controls a {
+  padding: 4px 10px;
   border-radius: 14px;
   background: #e88a38;
   color: #fff;
-  font-size: 11px;
+  font-size: 10px;
+  text-decoration: none;
+  white-space: nowrap;
 }
 .weibo-music-player iframe {
   display: block;
