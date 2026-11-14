@@ -102,7 +102,7 @@ export function WeiboSkin(p: Props) {
     setPin(next);
     setError(false);
     if (next.length === 4) {
-      if (next === "0214") setUnlocked(true);
+      if (next === "0511") setUnlocked(true);
       else {
         setError(true);
         setPin("");
