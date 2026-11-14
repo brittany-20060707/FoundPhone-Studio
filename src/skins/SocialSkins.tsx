@@ -114,7 +114,7 @@ export function WeiboSkin(p: Props) {
           <div className="weibo-profile">
             <Avatar name={p.owner ?? "我"} />
             <h2>{p.owner ?? "我"}</h2>
-            <span>{items.length} 条微博</span>
+            <span>@count1essfaults · {items.length} 条微博</span>
           </div>
         ) : (
           <>
@@ -130,10 +130,11 @@ export function WeiboSkin(p: Props) {
             </div>
           </>
         )}
-        {list.map((i) => (
+        {(tab === "我" ? list : list.filter((i) => meta(i, "private") !== "true")).map((i) => (
           <article className="weibo-post" key={i.id}>
             <PostHeader p={p} item={i} />
             <button className="social-body" onClick={() => p.onItem(i)}>
+              {meta(i, "private") === "true" && <small className="weibo-private">🔒 仅自己可见</small>}
               <p>{i.body}</p>
               {i.media && <Media item={i} />}
             </button>
