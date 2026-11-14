@@ -60,7 +60,7 @@ function Actions({ p, item }: { p: Props; item: Item }) {
 function PostHeader({ item, p }: { item: Item; p: Props }) {
   return (
     <button className="social-author" onClick={() => p.onItem(item)}>
-      <Avatar name={item.sender} />
+      <Avatar name={item.sender} src={item.avatar} />
       <span>
         <strong>{item.sender}</strong>
         <small>{meta(item, "handle", item.time)}</small>
@@ -98,9 +98,9 @@ export function WeiboSkin(p: Props) {
       <Header p={p} />
       <div className="catalog-scroll">
         <div className="weibo-profile">
-          <Avatar name="Countless Fault" />
+          <Avatar name="count1essfaults" src={items[0]?.avatar} />
           <div className="weibo-profile-info">
-            <h2>Countless Fault</h2>
+            <h2>count1essfaults</h2>
             <span>ID: count1essfaults</span>
             <small>{items.length} 条微博</small>
           </div>
