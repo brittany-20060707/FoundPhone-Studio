@@ -536,9 +536,9 @@ export function MailSkin(p: Props) {
 export function ClockSkin(p: Props) {
   const { tab, setTab, items } = useContent(p, "闹钟");
   const personalAlarms: Item[] = [
-    { id: "personal-alarm-1000", title: "一天一苹果医生远离我", body: "一天一苹果医生远离我", time: "10:00", sender: "我", kind: "event", meta: { clock: "10:00" } },
-    { id: "personal-alarm-1600", title: "酸奶能促进消化哦", body: "酸奶能促进消化哦", time: "16:00", sender: "我", kind: "event", meta: { clock: "16:00" } },
-    { id: "personal-alarm-2300", title: "早睡！养代谢", body: "早睡！养代谢", time: "23:00", sender: "我", kind: "event", meta: { clock: "23:00" } },
+    { id: "personal-alarm-1000", title: "一天一苹果医生远离我", body: "一天一苹果医生远离我", time: "10:00", sender: "我", avatar: "", kind: "event", media: "", hidden: false, unlock: "", password: "", folder: "", favorite: false, outgoing: false, read: false, likes: 0, comments: [], richText: "", meta: { clock: "10:00" } },
+    { id: "personal-alarm-1600", title: "酸奶能促进消化哦", body: "酸奶能促进消化哦", time: "16:00", sender: "我", avatar: "", kind: "event", media: "", hidden: false, unlock: "", password: "", folder: "", favorite: false, outgoing: false, read: false, likes: 0, comments: [], richText: "", meta: { clock: "16:00" } },
+    { id: "personal-alarm-2300", title: "早睡！养代谢", body: "早睡！养代谢", time: "23:00", sender: "我", avatar: "", kind: "event", media: "", hidden: false, unlock: "", password: "", folder: "", favorite: false, outgoing: false, read: false, likes: 0, comments: [], richText: "", meta: { clock: "23:00" } },
   ];
   const [enabled, setEnabled] = useSkinState<string[]>(
     p,
