@@ -1962,6 +1962,61 @@
 .weibo-ui {
   --app-accent: #e88a38;
 }
+.weibo-hidden-audio {
+  display: none !important;
+}
+.weibo-player-wrap {
+  display: flex;
+  justify-content: center;
+  flex: 0 0 auto;
+  padding: 5px 0;
+  background: #fff;
+}
+.weibo-player-pill {
+  width: 68px;
+  height: 32px;
+  padding: 0 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  border: 1px solid #e6e6e6;
+  border-radius: 999px;
+  background: #f7f7f7;
+  color: #e5484d;
+  box-shadow: 0 1px 3px #00000012;
+}
+.weibo-player-wave {
+  height: 13px;
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+}
+.weibo-player-wave i {
+  width: 2px;
+  height: 4px;
+  border-radius: 2px;
+  background: currentColor;
+}
+.weibo-player-wave i:nth-child(2),
+.weibo-player-wave i:nth-child(4) {
+  height: 8px;
+}
+.weibo-player-wave.playing i {
+  animation: weibo-wave 700ms ease-in-out infinite alternate;
+}
+.weibo-player-wave.playing i:nth-child(2) {
+  animation-delay: 180ms;
+}
+.weibo-player-wave.playing i:nth-child(3) {
+  animation-delay: 320ms;
+}
+.weibo-player-wave.playing i:nth-child(4) {
+  animation-delay: 100ms;
+}
+@keyframes weibo-wave {
+  to { height: 12px; }
+}
 .weibo-sections {
   display: flex;
   justify-content: center;
