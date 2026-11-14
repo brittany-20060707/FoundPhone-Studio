@@ -4734,3 +4734,35 @@
 .netease-draft-song-share .netease-song-cover-art { width: 100%; border-radius: 0; }
 .netease-draft-song-share .netease-song-footer { padding: 8px 9px; }
 
+
+/* Keep Weibo account and author identity blocks flush left. */
+.weibo-ui .weibo-profile {
+  justify-content: flex-start !important;
+  align-items: center !important;
+  text-align: left !important;
+}
+.weibo-ui .weibo-profile > .catalog-avatar {
+  width: 58px;
+  height: 58px;
+  flex: 0 0 58px;
+  margin: 0 !important;
+}
+.weibo-ui .weibo-profile > .catalog-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+}
+.weibo-ui .weibo-profile-info {
+  margin: 0 auto 0 0 !important;
+  align-items: flex-start !important;
+  text-align: left !important;
+}
+.weibo-ui .social-author {
+  justify-content: flex-start !important;
+  text-align: left !important;
+}
+.weibo-ui .social-author > .catalog-avatar {
+  margin: 0 !important;
+  align-self: center;
+}
