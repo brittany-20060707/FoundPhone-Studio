@@ -676,7 +676,19 @@ export function RemindersSkin(p: Props) {
   );
 }
 export function FilesSkin(p: Props) {
-  const { tab, setTab, q, setQ, items } = useContent(p, "最近项目");
+  const { tab, setTab, q, setQ, items: storyItems } = useContent(p, "最近项目");
+  const audioBase = `${import.meta.env.BASE_URL}audio/`;
+  const personalAudioFiles: Item[] = [
+    { id: "personal-file-2022-11-17", title: "2022.11.17", body: "2022.11.17", richText: "", meta: { extension: "MP3 音频", size: "1.3 MB", filename: "2022.11.17.mp3" }, time: "2026-11-15", sender: "我", avatar: "", kind: "audio", media: `${audioBase}${encodeURIComponent("2022.11.17.mp3")}`, hidden: false, unlock: "", password: "", folder: "我的iPhone", favorite: false, outgoing: false, read: true, likes: 0, comments: [] },
+    { id: "personal-file-ni-a-ni-a", title: "你啊你啊", body: "你啊你啊", richText: "", meta: { extension: "MP3 音频", size: "805 KB", filename: "你啊你啊.mp3" }, time: "2026-11-15", sender: "我", avatar: "", kind: "audio", media: `${audioBase}${encodeURIComponent("你啊你啊.mp3")}`, hidden: false, unlock: "", password: "", folder: "我的iPhone", favorite: false, outgoing: false, read: true, likes: 0, comments: [] },
+    { id: "personal-file-yizhi-henan", title: "一直很安静", body: "一直很安静", richText: "", meta: { extension: "MP3 音频", size: "838 KB", filename: "一直很安静.mp3" }, time: "2026-11-15", sender: "我", avatar: "", kind: "audio", media: `${audioBase}${encodeURIComponent("一直很安静.mp3")}`, hidden: false, unlock: "", password: "", folder: "我的iPhone", favorite: false, outgoing: false, read: true, likes: 0, comments: [] },
+    { id: "personal-file-baby-horizon", title: "Baby‘s Horizon", body: "Baby‘s Horizon", richText: "", meta: { extension: "MP3 音频", size: "485 KB", filename: "Baby‘s Horizon.mp3" }, time: "2026-11-15", sender: "我", avatar: "", kind: "audio", media: `${audioBase}${encodeURIComponent("Baby‘s Horizon.mp3")}`, hidden: false, unlock: "", password: "", folder: "我的iPhone", favorite: false, outgoing: false, read: true, likes: 0, comments: [] },
+    { id: "personal-file-loving-you", title: "Loving You", body: "Loving You", richText: "", meta: { extension: "MP3 音频", size: "855 KB", filename: "Loving You.mp3" }, time: "2026-11-15", sender: "我", avatar: "", kind: "audio", media: `${audioBase}${encodeURIComponent("Loving You.mp3")}`, hidden: false, unlock: "", password: "", folder: "我的iPhone", favorite: false, outgoing: false, read: true, likes: 0, comments: [] },
+  ];
+  const items = [
+    ...storyItems.filter((item) => item.id !== "test-item-files" && item.title !== "测试内容"),
+    ...personalAudioFiles,
+  ];
   const [folder, setFolder] = useState("");
   const list = folder
     ? items.filter((i) => (i.folder || "我的iPhone") === folder)
@@ -698,29 +710,42 @@ export function FilesSkin(p: Props) {
           </div>
         ) : (
           <div className="file-grid">
-            {list.map((i) => (
-              <div key={i.id}>
-                <button onClick={() => p.onItem(i)}>
-                  {i.media ? <Media item={i} /> : <FileText size={49} />}
-                  <strong>{i.title}</strong>
-                  <small>
-                    {meta(i, "extension", "文件")} ·{" "}
-                    {meta(i, "size", i.time.slice(0, 10))}
-                  </small>
-                </button>
-                <button
-                  aria-label={`下载${i.title}文本`}
-                  onClick={() =>
-                    download(
-                      new Blob([i.body], { type: "text/plain" }),
-                      `${i.title}.txt`,
-                    )
-                  }
-                >
-                  <Download size={13} />
-                </button>
-              </div>
-            ))}
+            {list.map((i) =>
+              i.kind === "audio" ? (
+                <div className="file-audio-entry" key={i.id}>
+                  <button className="file-audio-name" onClick={() => p.onItem(i)}>
+                    <Music size={27} />
+                    <span><strong>{i.title}</strong><small>{meta(i, "extension", "MP3 音频")} · {meta(i, "size")}</small></span>
+                  </button>
+                  <a className="file-audio-download" href={i.media} download={meta(i, "filename", `${i.title}.mp3`)} aria-label={`下载${i.title}`}>
+                    <Download size={15} />
+                  </a>
+                  <audio controls preload="none" src={i.media} aria-label={`播放${i.title}`} />
+                </div>
+              ) : (
+                <div key={i.id}>
+                  <button onClick={() => p.onItem(i)}>
+                    {i.media ? <Media item={i} /> : <FileText size={49} />}
+                    <strong>{i.title}</strong>
+                    <small>
+                      {meta(i, "extension", "文件")} ·{" "}
+                      {meta(i, "size", i.time.slice(0, 10))}
+                    </small>
+                  </button>
+                  <button
+                    aria-label={`下载${i.title}文本`}
+                    onClick={() =>
+                      download(
+                        new Blob([i.body], { type: "text/plain" }),
+                        `${i.title}.txt`,
+                      )
+                    }
+                  >
+                    <Download size={13} />
+                  </button>
+                </div>
+              ),
+            )}
           </div>
         )}
         <Empty items={list} />
