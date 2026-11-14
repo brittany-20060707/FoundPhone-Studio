@@ -4766,3 +4766,78 @@
   margin: 0 !important;
   align-self: center;
 }
+
+.weibo-lock-screen {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 30px 34px;
+  background: linear-gradient(180deg, #f8f5f1 0%, #fff 55%, #f7f3ee 100%);
+  text-align: center;
+}
+.weibo-lock-icon {
+  font-size: 43px;
+  line-height: 1;
+  margin-bottom: 12px;
+}
+.weibo-lock-screen h2 {
+  margin: 0;
+  font-size: 21px;
+  color: #27231f;
+}
+.weibo-lock-hint {
+  margin: 11px 0 22px;
+  color: #89745e;
+  font-size: 13px;
+}
+.weibo-pin-dots {
+  display: flex;
+  gap: 16px;
+  min-height: 12px;
+  margin: 0 0 12px;
+}
+.weibo-pin-dots span {
+  width: 10px;
+  height: 10px;
+  border: 1.5px solid #aaa19a;
+  border-radius: 50%;
+}
+.weibo-pin-dots span.filled {
+  background: #e88a38;
+  border-color: #e88a38;
+}
+.weibo-lock-error {
+  height: 18px;
+  margin: 0 0 4px;
+  color: #d94a45;
+  font-size: 12px;
+}
+.weibo-pin-pad {
+  width: min(100%, 270px);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px 18px;
+  margin-top: 10px;
+}
+.weibo-pin-pad button {
+  height: 54px;
+  border-radius: 18px;
+  background: #f2ece5;
+  color: #302a25;
+  font-size: 21px;
+  font-weight: 500;
+  touch-action: manipulation;
+}
+.weibo-pin-pad button:active {
+  background: #e6d8ca;
+  transform: scale(.97);
+}
+.weibo-pin-pad button:nth-last-child(3),
+.weibo-pin-pad button:last-child {
+  font-size: 13px;
+  color: #806e5b;
+}
