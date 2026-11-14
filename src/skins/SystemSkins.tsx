@@ -535,14 +535,27 @@ export function MailSkin(p: Props) {
 }
 export function ClockSkin(p: Props) {
   const { tab, setTab, items } = useContent(p, "闹钟");
-  const [enabled, setEnabled] = useSkinState<string[]>(p, "alarms", []),
-    [seconds, setSeconds] = useState(0),
+  const personalAlarms: Item[] = [
+    { id: "personal-alarm-1000", title: "一天一苹果医生远离我", body: "一天一苹果医生远离我", time: "10:00", sender: "我", kind: "event", meta: { clock: "10:00" } },
+    { id: "personal-alarm-1600", title: "酸奶能促进消化哦", body: "酸奶能促进消化哦", time: "16:00", sender: "我", kind: "event", meta: { clock: "16:00" } },
+    { id: "personal-alarm-2300", title: "早睡！养代谢", body: "早睡！养代谢", time: "23:00", sender: "我", kind: "event", meta: { clock: "23:00" } },
+  ];
+  const [enabled, setEnabled] = useSkinState<string[]>(
+    p,
+    "personal-alarms-v1",
+    personalAlarms.map((alarm) => alarm.id),
+  );
+  const [seconds, setSeconds] = useState(0),
     [running, setRunning] = useState(false);
   useEffect(() => {
     if (!running) return;
     const timer = setInterval(() => setSeconds((s) => s + 1), 1000);
     return () => clearInterval(timer);
   }, [running]);
+  const alarmItems = [
+    ...items.filter((item) => item.id !== "test-item-clock" && item.title !== "测试内容"),
+    ...personalAlarms,
+  ];
   return (
     <div className="catalog-skin native-clock">
       <Header p={p} />
@@ -569,7 +582,7 @@ export function ClockSkin(p: Props) {
             </div>
           </div>
         ) : (
-          items.map((i) => (
+          (tab === "闹钟" ? alarmItems : items).map((i) => (
             <div className="alarm-row" key={i.id}>
               <button onClick={() => p.onItem(i)}>
                 <time>{meta(i, "clock", i.time.slice(-5))}</time>
