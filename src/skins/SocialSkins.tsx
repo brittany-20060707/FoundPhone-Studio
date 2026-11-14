@@ -19,6 +19,8 @@ import {
   Users,
   Share2,
   ThumbsUp,
+  Play,
+  Pause,
 } from "lucide-react";
 import { useRef, useState } from "react";
 import type { Item } from "../schema";
@@ -96,15 +98,14 @@ export function WeiboSkin(p: Props) {
   const [unlocked, setUnlocked] = useState(false);
   const [pin, setPin] = useState("");
   const [error, setError] = useState(false);
-  const [playError, setPlayError] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef<HTMLAudioElement>(null);
   const audioSrc = `${import.meta.env.BASE_URL}audio/${encodeURIComponent("卢广仲 - 太阳与地球 (Sun & Earth).mp3")}`;
 
   const playSong = () => {
     const audio = audioRef.current;
     if (!audio) return;
-    setPlayError(false);
-    audio.play().catch(() => setPlayError(true));
+    audio.play().then(() => setIsPlaying(true)).catch(() => setIsPlaying(false));
   };
 
   const enterDigit = (digit: string) => {
@@ -128,7 +129,7 @@ export function WeiboSkin(p: Props) {
   return (
     <div className="catalog-skin weibo-ui">
       <Header p={p} />
-      <audio ref={audioRef} src={audioSrc} preload="none" controls={unlocked} />
+      <audio className="weibo-hidden-audio" ref={audioRef} src={audioSrc} preload="none" onPlay={() => setIsPlaying(true)} onPause={() => setIsPlaying(false)} onEnded={() => setIsPlaying(false)} />
       {!unlocked ? (
         <div className="weibo-lock-screen">
           <div className="weibo-lock-icon" aria-hidden="true">🔒</div>
@@ -159,12 +160,19 @@ export function WeiboSkin(p: Props) {
         </div>
       ) : (
         <>
-          <div className="weibo-music-player">
-            <div className="weibo-music-controls">
-              <span>卢广仲 · 太阳与地球（Sun &amp; Earth）</span>
-              <button type="button" onClick={playSong}>▶ 播放歌曲</button>
-            </div>
-            {playError && <p role="status">播放被浏览器拦截，请点击播放器中的播放键。</p>}
+          <div className="weibo-player-wrap">
+            <button
+              className="weibo-player-pill"
+              type="button"
+              aria-label={isPlaying ? "暂停音乐" : "播放音乐"}
+              onClick={() => {
+                if (isPlaying) audioRef.current?.pause();
+                else playSong();
+              }}
+            >
+              {isPlaying ? <Pause size={15} fill="currentColor" /> : <Play size={15} fill="currentColor" />}
+              <span className={isPlaying ? "weibo-player-wave playing" : "weibo-player-wave"} aria-hidden="true"><i /><i /><i /><i /></span>
+            </button>
           </div>
           <div className="catalog-scroll">
             <div className="weibo-profile">
