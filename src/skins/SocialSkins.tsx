@@ -148,7 +148,7 @@ export function WeiboSkin(p: Props) {
   return (
     <div className="catalog-skin weibo-ui">
       <Header p={p} />
-      <div className="weibo-music-player"><div className="weibo-music-controls"><span>网易云音乐 · 太阳与地球</span><button type="button" onClick={() => setPlayerAttempt((n) => n + 1)}>▶ 播放</button></div><iframe key={playerAttempt} title="网易云音乐歌曲播放器" src="https://music.163.com/outchain/player?type=2&id=2745752426&auto=1&height=66" allow="autoplay; encrypted-media" loading="eager" /></div>
+      <div className="weibo-music-player"><div className="weibo-music-controls"><span>网易云音乐 · 太阳与地球</span><div><button type="button" onClick={() => setPlayerAttempt((n) => n + 1)}>▶ 重试播放</button><a href="https://music.163.com/song?id=2745752426" target="_blank" rel="noreferrer">在网易云打开</a></div></div><iframe key={playerAttempt} title="网易云音乐歌曲播放器" src="https://music.163.com/outchain/player?type=2&id=2745752426&auto=1&height=66" allow="autoplay; encrypted-media" loading="eager" /></div>
       <div className="catalog-scroll">
         <div className="weibo-profile">
           <Avatar name="count1essfaults" src={items[0]?.avatar} />
