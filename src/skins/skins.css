@@ -4841,3 +4841,20 @@
   font-size: 13px;
   color: #806e5b;
 }
+
+.weibo-music-player {
+  flex: 0 0 82px;
+  height: 82px;
+  padding: 4px 10px;
+  overflow: hidden;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+}
+.weibo-music-player iframe {
+  display: block;
+  width: 100%;
+  height: 74px;
+  border: 0;
+  border-radius: 8px;
+  background: #fff;
+}
