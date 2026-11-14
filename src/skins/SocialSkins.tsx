@@ -57,13 +57,13 @@ function Actions({ p, item }: { p: Props; item: Item }) {
     </div>
   );
 }
-function PostHeader({ item, p }: { item: Item; p: Props }) {
+function PostHeader({ item, p, showTime = false }: { item: Item; p: Props; showTime?: boolean }) {
   return (
     <button className="social-author" onClick={() => p.onItem(item)}>
       <Avatar name={item.sender} src={item.avatar} />
       <span>
         <strong>{item.sender}</strong>
-        <small>{meta(item, "handle", item.time)}</small>
+        <small>{showTime ? item.time.slice(0, 10).replaceAll("-", ".") : meta(item, "handle", item.time)}</small>
       </span>
     </button>
   );
@@ -157,7 +157,7 @@ export function WeiboSkin(p: Props) {
         </div>
         {items.map((i) => (
           <article className="weibo-post" key={i.id}>
-            <PostHeader p={p} item={i} />
+            <PostHeader p={p} item={i} showTime />
             <button className="social-body" onClick={() => p.onItem(i)}>
               {meta(i, "private") === "true" && <small className="weibo-private">🔒 仅自己可见</small>}
               <p>{i.body}</p>
