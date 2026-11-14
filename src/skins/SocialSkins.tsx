@@ -92,45 +92,20 @@ function WeiboActions({ p, item }: { p: Props; item: Item }) {
   );
 }
 export function WeiboSkin(p: Props) {
-  const { tab, setTab, q, setQ, items } = useContent(p, "关注");
-  const [feed, setFeed] = useState("全部");
-  const list = feed === "全部" ? items : items.filter((i) => i.folder === feed);
+  const { items } = useContent(p, "我");
   return (
     <div className="catalog-skin weibo-ui">
       <Header p={p} />
-      <div className="weibo-sections">
-        {["关注", "发现", "我"].map((t) => (
-          <button
-            key={t}
-            className={tab === t ? "selected" : ""}
-            onClick={() => setTab(t)}
-          >
-            {t}
-          </button>
-        ))}
-      </div>
       <div className="catalog-scroll">
-        {tab === "我" ? (
-          <div className="weibo-profile">
-            <Avatar name={p.owner ?? "我"} />
-            <h2>{items[0]?.sender ?? p.owner ?? "我"}</h2>
-            <span>@count1essfaults · {items.length} 条微博</span>
+        <div className="weibo-profile">
+          <Avatar name="Countless Fault" />
+          <div className="weibo-profile-info">
+            <h2>Countless Fault</h2>
+            <span>ID: count1essfaults</span>
+            <small>{items.length} 条微博</small>
           </div>
-        ) : (
-          <>
-            <SearchBox value={q} set={setQ} />
-            <div className="weibo-feed-filter">
-              {["全部", ...groupItems(items).filter((g) => g !== "未分类")].map(
-                (g) => (
-                  <button key={g} onClick={() => setFeed(g)}>
-                    {g}
-                  </button>
-                ),
-              )}
-            </div>
-          </>
-        )}
-        {(tab === "我" ? list : list.filter((i) => meta(i, "private") !== "true")).map((i) => (
+        </div>
+        {items.map((i) => (
           <article className="weibo-post" key={i.id}>
             <PostHeader p={p} item={i} />
             <button className="social-body" onClick={() => p.onItem(i)}>
@@ -141,7 +116,7 @@ export function WeiboSkin(p: Props) {
             <WeiboActions p={p} item={i} />
           </article>
         ))}
-        <Empty items={list} />
+        <Empty items={items} />
       </div>
     </div>
   );
