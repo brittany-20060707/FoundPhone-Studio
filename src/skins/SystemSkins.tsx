@@ -720,7 +720,7 @@ export function FilesSkin(p: Props) {
                     <Music size={27} />
                     <span><strong>{i.title}</strong><small>{meta(i, "extension", "MP3 音频")} · {meta(i, "size")}</small></span>
                   </button>
-                  <audio controls controlsList="nodownload" disablePictureInPicture preload="none" onContextMenu={(event) => event.preventDefault()} src={i.media} aria-label={`播放${i.title}`} />
+                  <audio controls controlsList="nodownload" preload="none" onContextMenu={(event) => event.preventDefault()} src={i.media} aria-label={`播放${i.title}`} />
                 </div>
               ) : (
                 <div key={i.id}>
