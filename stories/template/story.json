@@ -3,7 +3,7 @@
   "id": "ui-test-phone-v2",
   "title": "捡手机",
   "description": "仅用于界面测试，不含剧情",
-  "revision": 11,
+  "revision": 12,
   "phone": {
     "owner": "机主",
     "date": "2026-11-08",
@@ -88,6 +88,12 @@
     "kakao"
   ],
   "contacts": [
+    {
+      "id": "test-contact",
+      "name": "测试联系人",
+      "phone": "",
+      "bio": "这是一条测试内容。"
+    },
     {
       "id": "contact-11",
       "name": "11",
