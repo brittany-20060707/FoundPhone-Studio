@@ -11,11 +11,11 @@ function StoryPlayer() {
     const abort = new AbortController();
     fetch(
       new URLSearchParams(location.search).get("preview") === "test"
-        ? "./test-work.json"
+        ? `./test-work.json?v=${Date.now()}`
         : new URLSearchParams(location.search).get("template") === "blank"
-          ? "./blank-work.json"
+          ? `./blank-work.json?v=${Date.now()}`
           : "./work.json",
-      { signal: abort.signal },
+      { signal: abort.signal, cache: "no-store" },
     )
       .then((r) => {
         if (!r.ok) throw Error("缺少作品文件，请运行 npm run story:build");
