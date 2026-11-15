@@ -3,7 +3,7 @@
   "id": "ui-test-phone-v2",
   "title": "捡手机",
   "description": "仅用于界面测试，不含剧情",
-  "revision": 18,
+  "revision": 19,
   "phone": {
     "owner": "机主",
     "date": "2026-11-08",
@@ -135,14 +135,14 @@
       "id": "wechat-mom",
       "name": "妈咪",
       "phone": "",
-      "avatar": "uploads/mom-avatar-v2.jpg",
+      "avatar": "uploads/mom-avatar-final.jpg",
       "bio": ""
     },
     {
       "id": "wechat-sihan",
       "name": "思罕",
       "phone": "",
-      "avatar": "uploads/sihan-avatar.jpg",
+      "avatar": "uploads/sihan-avatar-final.jpg",
       "bio": ""
     }
   ],
@@ -525,7 +525,7 @@
           "body": "瑞瑞啊",
           "kind": "text",
           "media": "",
-          "avatar": "uploads/mom-avatar-v2.jpg"
+          "avatar": "uploads/mom-avatar-final.jpg"
         },
         {
           "id": "mom-aug11-2",
@@ -534,7 +534,7 @@
           "body": "妈咪好久没见你，你怎么瘦了那么多？",
           "kind": "text",
           "media": "",
-          "avatar": "uploads/mom-avatar-v2.jpg"
+          "avatar": "uploads/mom-avatar-final.jpg"
         },
         {
           "id": "mom-aug11-3",
@@ -543,7 +543,7 @@
           "body": "妈咪看到胳膊都细成一个长条了",
           "kind": "text",
           "media": "",
-          "avatar": "uploads/mom-avatar-v2.jpg"
+          "avatar": "uploads/mom-avatar-final.jpg"
         },
         {
           "id": "mom-aug11-4",
@@ -552,7 +552,7 @@
           "body": "不要对自己那么苛刻，等你回家想吃什么妈妈都给你做好不好",
           "kind": "text",
           "media": "",
-          "avatar": "uploads/mom-avatar-v2.jpg"
+          "avatar": "uploads/mom-avatar-final.jpg"
         },
         {
           "id": "mom-aug11-5",
@@ -579,7 +579,7 @@
           "body": "好，乖宝宝",
           "kind": "text",
           "media": "",
-          "avatar": "uploads/mom-avatar-v2.jpg"
+          "avatar": "uploads/mom-avatar-final.jpg"
         },
         {
           "id": "mom-0924-1",
@@ -606,7 +606,7 @@
           "body": "去吧去吧，辛苦了宝贝，买自己喜欢的东西能让你觉得开心的话，就多买点",
           "kind": "text",
           "media": "",
-          "avatar": "uploads/mom-avatar-v2.jpg"
+          "avatar": "uploads/mom-avatar-final.jpg"
         },
         {
           "id": "mom-0924-4",
@@ -615,7 +615,7 @@
           "body": "钱不够要给妈妈讲",
           "kind": "text",
           "media": "",
-          "avatar": "uploads/mom-avatar-v2.jpg"
+          "avatar": "uploads/mom-avatar-final.jpg"
         },
         {
           "id": "mom-0924-5",
@@ -642,7 +642,7 @@
           "body": "妈妈挣钱就是为了给宝贝花的啊，看到宝宝能有底气买任何自己喜欢的东西，妈妈就觉得特别开心和幸福",
           "kind": "text",
           "media": "",
-          "avatar": "uploads/mom-avatar-v2.jpg"
+          "avatar": "uploads/mom-avatar-final.jpg"
         },
         {
           "id": "mom-0924-8",
@@ -660,7 +660,7 @@
           "body": "（发来一张长长的文字图片）",
           "kind": "text",
           "media": "",
-          "avatar": "uploads/mom-avatar-v2.jpg"
+          "avatar": "uploads/mom-avatar-final.jpg"
         },
         {
           "id": "mom-1018-2",
@@ -678,7 +678,7 @@
           "body": "想起你小时候就说自己想开演唱会来着",
           "kind": "text",
           "media": "",
-          "avatar": "uploads/mom-avatar-v2.jpg"
+          "avatar": "uploads/mom-avatar-final.jpg"
         },
         {
           "id": "mom-1018-4",
@@ -687,7 +687,7 @@
           "body": "还说要让妈妈坐第一排",
           "kind": "text",
           "media": "",
-          "avatar": "uploads/mom-avatar-v2.jpg"
+          "avatar": "uploads/mom-avatar-final.jpg"
         },
         {
           "id": "mom-1018-5",
@@ -705,7 +705,7 @@
           "body": "好呀",
           "kind": "text",
           "media": "",
-          "avatar": "uploads/mom-avatar-v2.jpg"
+          "avatar": "uploads/mom-avatar-final.jpg"
         },
         {
           "id": "mom-1018-7",
@@ -714,7 +714,7 @@
           "body": "不过妈妈已经坐过很多次第一排了",
           "kind": "text",
           "media": "",
-          "avatar": "uploads/mom-avatar-v2.jpg"
+          "avatar": "uploads/mom-avatar-final.jpg"
         },
         {
           "id": "mom-1018-8",
@@ -732,7 +732,7 @@
           "body": "你小时候在客厅唱歌的时候呀",
           "kind": "text",
           "media": "",
-          "avatar": "uploads/mom-avatar-v2.jpg"
+          "avatar": "uploads/mom-avatar-final.jpg"
         },
         {
           "id": "mom-1018-10",
@@ -741,7 +741,7 @@
           "body": "妈妈一直都会是你最忠实的听众",
           "kind": "text",
           "media": "",
-          "avatar": "uploads/mom-avatar-v2.jpg"
+          "avatar": "uploads/mom-avatar-final.jpg"
         },
         {
           "id": "mom-1018-11",
@@ -768,7 +768,7 @@
           "body": "嗯？？？什么情况",
           "kind": "text",
           "media": "",
-          "avatar": "uploads/mom-avatar-v2.jpg"
+          "avatar": "uploads/mom-avatar-final.jpg"
         },
         {
           "id": "mom-1014-3",
@@ -804,7 +804,7 @@
           "body": "哈哈哈哈哈哈 按国咪那个性格，这可不像他会说出口的话",
           "kind": "text",
           "media": "",
-          "avatar": "uploads/mom-avatar-v2.jpg"
+          "avatar": "uploads/mom-avatar-final.jpg"
         },
         {
           "id": "mom-1014-7",
@@ -813,7 +813,7 @@
           "body": "好吧好吧，这个新妹妹确实很可爱呀，不过回去你可要和张建国好好解释",
           "kind": "text",
           "media": "",
-          "avatar": "uploads/mom-avatar-v2.jpg"
+          "avatar": "uploads/mom-avatar-final.jpg"
         },
         {
           "id": "mom-1014-8",
@@ -822,7 +822,7 @@
           "body": "别让人家一觉睡醒莫名当哥哥了🤣",
           "kind": "text",
           "media": "",
-          "avatar": "uploads/mom-avatar-v2.jpg"
+          "avatar": "uploads/mom-avatar-final.jpg"
         },
         {
           "id": "mom-1014-9",
@@ -849,7 +849,7 @@
           "body": "宝贝啊，妈妈看到瑞瑞的新歌得了白金单曲啊",
           "kind": "text",
           "media": "",
-          "avatar": "uploads/mom-avatar-v2.jpg"
+          "avatar": "uploads/mom-avatar-final.jpg"
         },
         {
           "id": "mom-1025-2",
@@ -858,7 +858,7 @@
           "body": "妈咪好为你骄傲啊，我们瑞瑞怎么那么棒",
           "kind": "text",
           "media": "",
-          "avatar": "uploads/mom-avatar-v2.jpg"
+          "avatar": "uploads/mom-avatar-final.jpg"
         },
         {
           "id": "mom-1025-3",
@@ -894,7 +894,7 @@
           "body": "宝贝，大胆去做你喜欢的，放心去追求你认为美丽的东西吧",
           "kind": "text",
           "media": "",
-          "avatar": "uploads/mom-avatar-v2.jpg"
+          "avatar": "uploads/mom-avatar-final.jpg"
         },
         {
           "id": "mom-1025-7",
@@ -903,7 +903,7 @@
           "body": "音乐和爱你的人，永远不会背叛你的 🫂",
           "kind": "text",
           "media": "",
-          "avatar": "uploads/mom-avatar-v2.jpg"
+          "avatar": "uploads/mom-avatar-final.jpg"
         }
       ]
     },
@@ -941,7 +941,7 @@
           "body": "就是有点想家了",
           "kind": "text",
           "media": "",
-          "avatar": "uploads/sihan-avatar.jpg"
+          "avatar": "uploads/sihan-avatar-final.jpg"
         },
         {
           "id": "sihan-j18-4",
@@ -954,12 +954,12 @@
         },
         {
           "id": "sihan-j18-5",
-          "senderId": "wechat-sihan",
+          "senderId": "owner",
           "time": "2026-06-18T13:21",
           "body": "哎，我跟你讲，我也是好想家好想爸爸妈妈，哎当然还有国咪，等忙完结束就可以见到了！",
           "kind": "text",
           "media": "",
-          "avatar": "uploads/sihan-avatar.jpg"
+          "avatar": "uploads/owner-avatar.jpg"
         },
         {
           "id": "sihan-j18-6",
@@ -972,12 +972,12 @@
         },
         {
           "id": "sihan-j18-7",
-          "senderId": "wechat-sihan",
+          "senderId": "owner",
           "time": "2026-06-18T13:21",
           "body": "虽然我们本身就经常见不到家人，可能会有人觉得习以为常，但这只是就说明我们思罕是一个重感情的孩子",
           "kind": "text",
           "media": "",
-          "avatar": "uploads/sihan-avatar.jpg"
+          "avatar": "uploads/owner-avatar.jpg"
         },
         {
           "id": "sihan-j18-8",
@@ -990,12 +990,12 @@
         },
         {
           "id": "sihan-j18-9",
-          "senderId": "wechat-sihan",
+          "senderId": "owner",
           "time": "2026-06-18T13:21",
           "body": "如果觉得孤单的话就来找我嘛，下午请你吃北京那家特别火的三文鱼三明治，我刚好也想吃好久了",
           "kind": "text",
           "media": "",
-          "avatar": "uploads/sihan-avatar.jpg"
+          "avatar": "uploads/owner-avatar.jpg"
         },
         {
           "id": "sihan-j18-10",
@@ -1031,7 +1031,7 @@
           "body": "不要难过了哦，我要来挠你痒痒了",
           "kind": "text",
           "media": "",
-          "avatar": "uploads/sihan-avatar.jpg"
+          "avatar": "uploads/sihan-avatar-final.jpg"
         },
         {
           "id": "sihan-j18-14",
@@ -1040,7 +1040,7 @@
           "body": "啊啊啊哈哈哈哈哈哈不要",
           "kind": "text",
           "media": "",
-          "avatar": "uploads/sihan-avatar.jpg"
+          "avatar": "uploads/sihan-avatar-final.jpg"
         },
         {
           "id": "sihan-j18-15",
@@ -1049,7 +1049,7 @@
           "body": "😳",
           "kind": "text",
           "media": "",
-          "avatar": "uploads/sihan-avatar.jpg"
+          "avatar": "uploads/sihan-avatar-final.jpg"
         },
         {
           "id": "sihan-j18-16",
@@ -1058,7 +1058,7 @@
           "body": "谢谢函瑞哥哥。",
           "kind": "text",
           "media": "",
-          "avatar": "uploads/sihan-avatar.jpg"
+          "avatar": "uploads/sihan-avatar-final.jpg"
         },
         {
           "id": "sihan-j18-17",
@@ -1094,7 +1094,7 @@
           "body": "马上回来了！",
           "kind": "text",
           "media": "",
-          "avatar": "uploads/sihan-avatar.jpg"
+          "avatar": "uploads/sihan-avatar-final.jpg"
         },
         {
           "id": "sihan-j22-4",
@@ -1103,7 +1103,7 @@
           "body": "舞蹈老师在陪我加练🥲",
           "kind": "text",
           "media": "",
-          "avatar": "uploads/sihan-avatar.jpg"
+          "avatar": "uploads/sihan-avatar-final.jpg"
         },
         {
           "id": "sihan-j22-5",
@@ -1157,7 +1157,7 @@
           "body": "好👌",
           "kind": "text",
           "media": "",
-          "avatar": "uploads/sihan-avatar.jpg"
+          "avatar": "uploads/sihan-avatar-final.jpg"
         },
         {
           "id": "sihan-j5-1",
@@ -1166,7 +1166,7 @@
           "body": "函瑞哥",
           "kind": "text",
           "media": "",
-          "avatar": "uploads/sihan-avatar.jpg"
+          "avatar": "uploads/sihan-avatar-final.jpg"
         },
         {
           "id": "sihan-j5-2",
@@ -1175,7 +1175,7 @@
           "body": "你今天回来睡吗",
           "kind": "text",
           "media": "",
-          "avatar": "uploads/sihan-avatar.jpg"
+          "avatar": "uploads/sihan-avatar-final.jpg"
         },
         {
           "id": "sihan-j5-3",
@@ -1188,12 +1188,12 @@
         },
         {
           "id": "sihan-j5-4",
-          "senderId": "wechat-sihan",
+          "senderId": "owner",
           "time": "2026-07-05T22:50",
           "body": "诶哟不好意思思罕我才看到，我不得行了吧，王楷杰一直在这里跳舞，我们俩没看时间",
           "kind": "text",
           "media": "",
-          "avatar": "uploads/sihan-avatar.jpg"
+          "avatar": "uploads/owner-avatar.jpg"
         },
         {
           "id": "sihan-j5-5",
@@ -1211,7 +1211,7 @@
           "body": "好😁",
           "kind": "text",
           "media": "",
-          "avatar": "uploads/sihan-avatar.jpg"
+          "avatar": "uploads/sihan-avatar-final.jpg"
         },
         {
           "id": "sihan-j5-7",
@@ -1238,7 +1238,7 @@
           "body": "函瑞哥",
           "kind": "text",
           "media": "",
-          "avatar": "uploads/sihan-avatar.jpg"
+          "avatar": "uploads/sihan-avatar-final.jpg"
         },
         {
           "id": "sihan-a9-2",
@@ -1247,7 +1247,7 @@
           "body": "你也没睡着吗",
           "kind": "text",
           "media": "",
-          "avatar": "uploads/sihan-avatar.jpg"
+          "avatar": "uploads/sihan-avatar-final.jpg"
         },
         {
           "id": "sihan-a9-3",
@@ -1274,7 +1274,7 @@
           "body": "你是不是有点不开心啊",
           "kind": "text",
           "media": "",
-          "avatar": "uploads/sihan-avatar.jpg"
+          "avatar": "uploads/sihan-avatar-final.jpg"
         },
         {
           "id": "sihan-a9-6",
@@ -1301,7 +1301,7 @@
           "body": "我觉得你给自己压力太大了。",
           "kind": "text",
           "media": "",
-          "avatar": "uploads/sihan-avatar.jpg"
+          "avatar": "uploads/sihan-avatar-final.jpg"
         },
         {
           "id": "sihan-a9-9",
@@ -1310,7 +1310,7 @@
           "body": "不要一直紧绷着",
           "kind": "text",
           "media": "",
-          "avatar": "uploads/sihan-avatar.jpg"
+          "avatar": "uploads/sihan-avatar-final.jpg"
         },
         {
           "id": "sihan-a9-10",
@@ -1319,7 +1319,7 @@
           "body": "函瑞哥你是不是觉得快公演了所以焦虑呀",
           "kind": "text",
           "media": "",
-          "avatar": "uploads/sihan-avatar.jpg"
+          "avatar": "uploads/sihan-avatar-final.jpg"
         },
         {
           "id": "sihan-a9-11",
@@ -1328,7 +1328,7 @@
           "body": "我们都训练了练习了那么多次，准备的很充分了，一定会很顺利的",
           "kind": "text",
           "media": "",
-          "avatar": "uploads/sihan-avatar.jpg"
+          "avatar": "uploads/sihan-avatar-final.jpg"
         },
         {
           "id": "sihan-a9-12",
@@ -1337,7 +1337,7 @@
           "body": "😛",
           "kind": "text",
           "media": "",
-          "avatar": "uploads/sihan-avatar.jpg"
+          "avatar": "uploads/sihan-avatar-final.jpg"
         },
         {
           "id": "sihan-a9-13",
@@ -1346,7 +1346,7 @@
           "body": "如果有什么别的事也可以和我说，我也想替你分担一些",
           "kind": "text",
           "media": "",
-          "avatar": "uploads/sihan-avatar.jpg"
+          "avatar": "uploads/sihan-avatar-final.jpg"
         },
         {
           "id": "sihan-a9-14",
@@ -1373,7 +1373,7 @@
           "body": "好～函瑞哥哥晚安",
           "kind": "text",
           "media": "",
-          "avatar": "uploads/sihan-avatar.jpg"
+          "avatar": "uploads/sihan-avatar-final.jpg"
         },
         {
           "id": "sihan-a9-17",
@@ -1427,7 +1427,7 @@
           "body": "🤔🫣函瑞哥我也想你了",
           "kind": "text",
           "media": "",
-          "avatar": "uploads/sihan-avatar.jpg"
+          "avatar": "uploads/sihan-avatar-final.jpg"
         },
         {
           "id": "sihan-s30-6",
@@ -1436,7 +1436,7 @@
           "body": "前两天刚去看了演唱会，和家里人一起去的😁",
           "kind": "text",
           "media": "",
-          "avatar": "uploads/sihan-avatar.jpg"
+          "avatar": "uploads/sihan-avatar-final.jpg"
         },
         {
           "id": "sihan-s30-7",
@@ -1445,7 +1445,7 @@
           "body": "感觉自己演和坐在台下看的感觉真是完全不一样",
           "kind": "text",
           "media": "",
-          "avatar": "uploads/sihan-avatar.jpg"
+          "avatar": "uploads/sihan-avatar-final.jpg"
         },
         {
           "id": "sihan-s30-8",
@@ -1463,7 +1463,7 @@
           "body": "下次我们一起去啊函瑞哥哥",
           "kind": "text",
           "media": "",
-          "avatar": "uploads/sihan-avatar.jpg"
+          "avatar": "uploads/sihan-avatar-final.jpg"
         },
         {
           "id": "sihan-s30-10",
@@ -1472,7 +1472,7 @@
           "body": "希望能快一点见到你",
           "kind": "text",
           "media": "",
-          "avatar": "uploads/sihan-avatar.jpg"
+          "avatar": "uploads/sihan-avatar-final.jpg"
         },
         {
           "id": "sihan-s30-11",
@@ -1490,7 +1490,7 @@
           "body": "函瑞哥哥，生日快乐🎂",
           "kind": "text",
           "media": "",
-          "avatar": "uploads/sihan-avatar.jpg"
+          "avatar": "uploads/sihan-avatar-final.jpg"
         },
         {
           "id": "sihan-o18-2",
@@ -1499,7 +1499,7 @@
           "body": "这一年里还是很照顾我，虽然我自认为我已经长大了，也可以保护和帮助函瑞哥一些东西吧，但是还是很感谢你，就是一直陪着我和鼓励我",
           "kind": "text",
           "media": "",
-          "avatar": "uploads/sihan-avatar.jpg"
+          "avatar": "uploads/sihan-avatar-final.jpg"
         },
         {
           "id": "sihan-o18-3",
@@ -1508,7 +1508,7 @@
           "body": "虽然我知道让你少一点压力是很难的事，那就希望你多一点开心吧🤗",
           "kind": "text",
           "media": "",
-          "avatar": "uploads/sihan-avatar.jpg"
+          "avatar": "uploads/sihan-avatar-final.jpg"
         },
         {
           "id": "sihan-o18-4",
@@ -1553,7 +1553,7 @@
           "body": "谢谢函瑞哥🥺",
           "kind": "text",
           "media": "",
-          "avatar": "uploads/sihan-avatar.jpg"
+          "avatar": "uploads/sihan-avatar-final.jpg"
         },
         {
           "id": "sihan-n8-5",
@@ -1562,7 +1562,7 @@
           "body": "你真的是总能令我感到安心的存在",
           "kind": "text",
           "media": "",
-          "avatar": "uploads/sihan-avatar.jpg"
+          "avatar": "uploads/sihan-avatar-final.jpg"
         },
         {
           "id": "sihan-n8-6",
@@ -1571,7 +1571,7 @@
           "body": "谢谢你。",
           "kind": "text",
           "media": "",
-          "avatar": "uploads/sihan-avatar.jpg"
+          "avatar": "uploads/sihan-avatar-final.jpg"
         },
         {
           "id": "sihan-n8-7",
