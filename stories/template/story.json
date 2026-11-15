@@ -3,7 +3,7 @@
   "id": "ui-test-phone-v2",
   "title": "捡手机",
   "description": "仅用于界面测试，不含剧情",
-  "revision": 15,
+  "revision": 16,
   "phone": {
     "owner": "机主",
     "date": "2026-11-08",
@@ -136,6 +136,13 @@
       "name": "妈咪",
       "phone": "",
       "avatar": "uploads/mom-avatar.jpg",
+      "bio": ""
+    },
+    {
+      "id": "wechat-sihan",
+      "name": "思罕",
+      "phone": "",
+      "avatar": "uploads/sihan-avatar.jpg",
       "bio": ""
     }
   ],
@@ -897,6 +904,683 @@
           "kind": "text",
           "media": "",
           "avatar": "uploads/mom-avatar.jpg"
+        }
+      ]
+    },
+    {
+      "id": "wechat-sihan-chat",
+      "app": "wechat",
+      "title": "思罕",
+      "participants": [
+        "owner",
+        "wechat-sihan"
+      ],
+      "messages": [
+        {
+          "id": "sihan-j18-1",
+          "senderId": "owner",
+          "time": "2026-06-18T13:21",
+          "body": "思罕，是不是有点不开心呀",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/owner-avatar.jpg"
+        },
+        {
+          "id": "sihan-j18-2",
+          "senderId": "owner",
+          "time": "2026-06-18T13:21",
+          "body": "刚才看你一直没讲话",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/owner-avatar.jpg"
+        },
+        {
+          "id": "sihan-j18-3",
+          "senderId": "wechat-sihan",
+          "time": "2026-06-18T13:21",
+          "body": "就是有点想家了",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/sihan-avatar.jpg"
+        },
+        {
+          "id": "sihan-j18-4",
+          "senderId": "owner",
+          "time": "2026-06-18T13:21",
+          "body": "12″",
+          "kind": "audio",
+          "media": "",
+          "avatar": "uploads/owner-avatar.jpg"
+        },
+        {
+          "id": "sihan-j18-5",
+          "senderId": "wechat-sihan",
+          "time": "2026-06-18T13:21",
+          "body": "哎，我跟你讲，我也是好想家好想爸爸妈妈，哎当然还有国咪，等忙完结束就可以见到了！",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/sihan-avatar.jpg"
+        },
+        {
+          "id": "sihan-j18-6",
+          "senderId": "owner",
+          "time": "2026-06-18T13:21",
+          "body": "9″",
+          "kind": "audio",
+          "media": "",
+          "avatar": "uploads/owner-avatar.jpg"
+        },
+        {
+          "id": "sihan-j18-7",
+          "senderId": "wechat-sihan",
+          "time": "2026-06-18T13:21",
+          "body": "虽然我们本身就经常见不到家人，可能会有人觉得习以为常，但这只是就说明我们思罕是一个重感情的孩子",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/sihan-avatar.jpg"
+        },
+        {
+          "id": "sihan-j18-8",
+          "senderId": "owner",
+          "time": "2026-06-18T13:21",
+          "body": "10″",
+          "kind": "audio",
+          "media": "",
+          "avatar": "uploads/owner-avatar.jpg"
+        },
+        {
+          "id": "sihan-j18-9",
+          "senderId": "wechat-sihan",
+          "time": "2026-06-18T13:21",
+          "body": "如果觉得孤单的话就来找我嘛，我下午请你吃北京那家特别火的三文鱼三明治，我刚好也想吃好久了",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/sihan-avatar.jpg"
+        },
+        {
+          "id": "sihan-j18-10",
+          "senderId": "owner",
+          "time": "2026-06-18T13:21",
+          "body": "我们一起品鉴一下",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/owner-avatar.jpg"
+        },
+        {
+          "id": "sihan-j18-11",
+          "senderId": "owner",
+          "time": "2026-06-18T13:21",
+          "body": "",
+          "kind": "image",
+          "media": "uploads/thoughts-cat.jpg",
+          "avatar": "uploads/owner-avatar.jpg"
+        },
+        {
+          "id": "sihan-j18-12",
+          "senderId": "owner",
+          "time": "2026-06-18T13:21",
+          "body": "5″",
+          "kind": "audio",
+          "media": "",
+          "avatar": "uploads/owner-avatar.jpg"
+        },
+        {
+          "id": "sihan-j18-13",
+          "senderId": "wechat-sihan",
+          "time": "2026-06-18T13:21",
+          "body": "不要难过了哦，我要来挠你痒痒了",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/sihan-avatar.jpg"
+        },
+        {
+          "id": "sihan-j18-14",
+          "senderId": "wechat-sihan",
+          "time": "2026-06-18T13:21",
+          "body": "啊啊啊哈哈哈哈哈哈不要",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/sihan-avatar.jpg"
+        },
+        {
+          "id": "sihan-j18-15",
+          "senderId": "wechat-sihan",
+          "time": "2026-06-18T13:21",
+          "body": "😳",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/sihan-avatar.jpg"
+        },
+        {
+          "id": "sihan-j18-16",
+          "senderId": "wechat-sihan",
+          "time": "2026-06-18T13:21",
+          "body": "谢谢函瑞哥哥。",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/sihan-avatar.jpg"
+        },
+        {
+          "id": "sihan-j18-17",
+          "senderId": "owner",
+          "time": "2026-06-18T13:21",
+          "body": "诶哟，和我还说谢谢！",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/owner-avatar.jpg"
+        },
+        {
+          "id": "sihan-j22-1",
+          "senderId": "owner",
+          "time": "2026-06-22T20:58",
+          "body": "我们思罕咋还没回来睡觉呀",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/owner-avatar.jpg"
+        },
+        {
+          "id": "sihan-j22-2",
+          "senderId": "owner",
+          "time": "2026-06-22T20:58",
+          "body": "张函瑞都不习惯身边没有吵闹的感觉了",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/owner-avatar.jpg"
+        },
+        {
+          "id": "sihan-j22-3",
+          "senderId": "wechat-sihan",
+          "time": "2026-06-22T20:58",
+          "body": "马上回来了！",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/sihan-avatar.jpg"
+        },
+        {
+          "id": "sihan-j22-4",
+          "senderId": "wechat-sihan",
+          "time": "2026-06-22T20:58",
+          "body": "舞蹈老师在陪我加练🥲",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/sihan-avatar.jpg"
+        },
+        {
+          "id": "sihan-j22-5",
+          "senderId": "owner",
+          "time": "2026-06-22T20:58",
+          "body": "teeth吗？",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/owner-avatar.jpg"
+        },
+        {
+          "id": "sihan-j22-6",
+          "senderId": "owner",
+          "time": "2026-06-22T20:58",
+          "body": "那张函瑞帮不到你了",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/owner-avatar.jpg"
+        },
+        {
+          "id": "sihan-j22-7",
+          "senderId": "owner",
+          "time": "2026-06-22T20:58",
+          "body": "不过有别的还想要我陪你一起练的",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/owner-avatar.jpg"
+        },
+        {
+          "id": "sihan-j22-8",
+          "senderId": "owner",
+          "time": "2026-06-22T20:58",
+          "body": "下次和我讲",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/owner-avatar.jpg"
+        },
+        {
+          "id": "sihan-j22-9",
+          "senderId": "owner",
+          "time": "2026-06-22T20:58",
+          "body": "不要总是自己一个人嘛！",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/owner-avatar.jpg"
+        },
+        {
+          "id": "sihan-j22-10",
+          "senderId": "wechat-sihan",
+          "time": "2026-06-22T20:58",
+          "body": "好👌",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/sihan-avatar.jpg"
+        },
+        {
+          "id": "sihan-j5-1",
+          "senderId": "wechat-sihan",
+          "time": "2026-07-05T21:22",
+          "body": "函瑞哥",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/sihan-avatar.jpg"
+        },
+        {
+          "id": "sihan-j5-2",
+          "senderId": "wechat-sihan",
+          "time": "2026-07-05T21:22",
+          "body": "你今天回来睡吗",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/sihan-avatar.jpg"
+        },
+        {
+          "id": "sihan-j5-3",
+          "senderId": "owner",
+          "time": "2026-07-05T22:50",
+          "body": "9″",
+          "kind": "audio",
+          "media": "",
+          "avatar": "uploads/owner-avatar.jpg"
+        },
+        {
+          "id": "sihan-j5-4",
+          "senderId": "wechat-sihan",
+          "time": "2026-07-05T22:50",
+          "body": "诶哟不好意思思罕我才看到，我不得行了吧，王楷杰一直在这里跳舞，我们俩没看时间",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/sihan-avatar.jpg"
+        },
+        {
+          "id": "sihan-j5-5",
+          "senderId": "owner",
+          "time": "2026-07-05T22:50",
+          "body": "来了哈！",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/owner-avatar.jpg"
+        },
+        {
+          "id": "sihan-j5-6",
+          "senderId": "wechat-sihan",
+          "time": "2026-07-05T22:50",
+          "body": "好😁",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/sihan-avatar.jpg"
+        },
+        {
+          "id": "sihan-j5-7",
+          "senderId": "owner",
+          "time": "2026-07-05T22:50",
+          "body": "我们思罕一个人睡不着是不是",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/owner-avatar.jpg"
+        },
+        {
+          "id": "sihan-j5-8",
+          "senderId": "owner",
+          "time": "2026-07-05T22:50",
+          "body": "马上回来！",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/owner-avatar.jpg"
+        },
+        {
+          "id": "sihan-a9-1",
+          "senderId": "wechat-sihan",
+          "time": "2026-08-09T00:43",
+          "body": "函瑞哥",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/sihan-avatar.jpg"
+        },
+        {
+          "id": "sihan-a9-2",
+          "senderId": "wechat-sihan",
+          "time": "2026-08-09T00:43",
+          "body": "你也没睡着吗",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/sihan-avatar.jpg"
+        },
+        {
+          "id": "sihan-a9-3",
+          "senderId": "owner",
+          "time": "2026-08-09T00:43",
+          "body": "我突然想到没有泡美瞳",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/owner-avatar.jpg"
+        },
+        {
+          "id": "sihan-a9-4",
+          "senderId": "owner",
+          "time": "2026-08-09T00:43",
+          "body": "这么晚还不睡，我以为你睡着了",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/owner-avatar.jpg"
+        },
+        {
+          "id": "sihan-a9-5",
+          "senderId": "wechat-sihan",
+          "time": "2026-08-09T00:43",
+          "body": "你是不是有点不开心啊",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/sihan-avatar.jpg"
+        },
+        {
+          "id": "sihan-a9-6",
+          "senderId": "owner",
+          "time": "2026-08-09T00:43",
+          "body": "怎么这么说",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/owner-avatar.jpg"
+        },
+        {
+          "id": "sihan-a9-7",
+          "senderId": "owner",
+          "time": "2026-08-09T00:43",
+          "body": "没关系，就是有点焦虑然后有点失眠",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/owner-avatar.jpg"
+        },
+        {
+          "id": "sihan-a9-8",
+          "senderId": "wechat-sihan",
+          "time": "2026-08-09T00:43",
+          "body": "我觉得你给自己压力太大了。",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/sihan-avatar.jpg"
+        },
+        {
+          "id": "sihan-a9-9",
+          "senderId": "wechat-sihan",
+          "time": "2026-08-09T00:43",
+          "body": "不要一直紧绷着",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/sihan-avatar.jpg"
+        },
+        {
+          "id": "sihan-a9-10",
+          "senderId": "wechat-sihan",
+          "time": "2026-08-09T00:43",
+          "body": "函瑞哥你是不是觉得快公演了所以焦虑呀",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/sihan-avatar.jpg"
+        },
+        {
+          "id": "sihan-a9-11",
+          "senderId": "wechat-sihan",
+          "time": "2026-08-09T00:43",
+          "body": "我们都训练了练习了那么多次，准备的很充分了，一定会很顺利的",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/sihan-avatar.jpg"
+        },
+        {
+          "id": "sihan-a9-12",
+          "senderId": "wechat-sihan",
+          "time": "2026-08-09T00:43",
+          "body": "😛",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/sihan-avatar.jpg"
+        },
+        {
+          "id": "sihan-a9-13",
+          "senderId": "wechat-sihan",
+          "time": "2026-08-09T00:43",
+          "body": "如果有什么别的事也可以和我说，我也想替你分担一些",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/sihan-avatar.jpg"
+        },
+        {
+          "id": "sihan-a9-14",
+          "senderId": "owner",
+          "time": "2026-08-09T00:43",
+          "body": "哎呀张函瑞真的好感动嘛，我感觉我们思罕真的是长大了都是大孩子了，都让我思罕来安慰我了，我都好感慨呀。",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/owner-avatar.jpg"
+        },
+        {
+          "id": "sihan-a9-15",
+          "senderId": "owner",
+          "time": "2026-08-09T00:43",
+          "body": "不过张函瑞特别谢谢思罕，有了你的陪伴我就已经觉得安心多了呀，我们都快快睡觉好不好嘛，快公演了可怕长痘痘",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/owner-avatar.jpg"
+        },
+        {
+          "id": "sihan-a9-16",
+          "senderId": "wechat-sihan",
+          "time": "2026-08-09T00:43",
+          "body": "好～函瑞哥哥晚安",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/sihan-avatar.jpg"
+        },
+        {
+          "id": "sihan-a9-17",
+          "senderId": "owner",
+          "time": "2026-08-09T00:43",
+          "body": "晚安💤",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/owner-avatar.jpg"
+        },
+        {
+          "id": "sihan-s30-1",
+          "senderId": "owner",
+          "time": "2026-09-30T20:51",
+          "body": "思罕最近玩得开不开心呀",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/owner-avatar.jpg"
+        },
+        {
+          "id": "sihan-s30-2",
+          "senderId": "owner",
+          "time": "2026-09-30T20:51",
+          "body": "要好好陪陪家人，他们平时在深圳肯定会很想你，虽然不知道是福是祸吧，可是确实让我们多了一段和家人相处团聚的机会，我们还是要来之则安之，珍惜这段宝贵的时光",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/owner-avatar.jpg"
+        },
+        {
+          "id": "sihan-s30-3",
+          "senderId": "owner",
+          "time": "2026-09-30T20:51",
+          "body": "不过我知道我们思罕本身就是一个很孝顺很好的孩子，也不用我去说什么",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/owner-avatar.jpg"
+        },
+        {
+          "id": "sihan-s30-4",
+          "senderId": "owner",
+          "time": "2026-09-30T20:51",
+          "body": "就是有点思念我们思罕了哈哈哈哈哈所以就来发一些有意义的文字",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/owner-avatar.jpg"
+        },
+        {
+          "id": "sihan-s30-5",
+          "senderId": "wechat-sihan",
+          "time": "2026-09-30T20:51",
+          "body": "🤔🫣函瑞哥我也想你了",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/sihan-avatar.jpg"
+        },
+        {
+          "id": "sihan-s30-6",
+          "senderId": "wechat-sihan",
+          "time": "2026-09-30T20:51",
+          "body": "前两天刚去看了演唱会，和家里人一起去的😁",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/sihan-avatar.jpg"
+        },
+        {
+          "id": "sihan-s30-7",
+          "senderId": "wechat-sihan",
+          "time": "2026-09-30T20:51",
+          "body": "感觉自己演和坐在台下看的感觉真是完全不一样",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/sihan-avatar.jpg"
+        },
+        {
+          "id": "sihan-s30-8",
+          "senderId": "owner",
+          "time": "2026-09-30T20:51",
+          "body": "哇！张函瑞也好想看live",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/owner-avatar.jpg"
+        },
+        {
+          "id": "sihan-s30-9",
+          "senderId": "wechat-sihan",
+          "time": "2026-09-30T20:51",
+          "body": "下次我们一起去啊函瑞哥哥",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/sihan-avatar.jpg"
+        },
+        {
+          "id": "sihan-s30-10",
+          "senderId": "wechat-sihan",
+          "time": "2026-09-30T20:51",
+          "body": "希望能快一点见到你",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/sihan-avatar.jpg"
+        },
+        {
+          "id": "sihan-s30-11",
+          "senderId": "owner",
+          "time": "2026-09-30T20:51",
+          "body": "哈哈哈哈我们思罕可爱的哟，我也是呀",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/owner-avatar.jpg"
+        },
+        {
+          "id": "sihan-o18-1",
+          "senderId": "wechat-sihan",
+          "time": "2026-10-18T00:00",
+          "body": "函瑞哥哥，生日快乐🎂",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/sihan-avatar.jpg"
+        },
+        {
+          "id": "sihan-o18-2",
+          "senderId": "wechat-sihan",
+          "time": "2026-10-18T00:00",
+          "body": "这一年里还是很照顾我，虽然我自认为我已经长大了，也可以保护和帮助函瑞哥一些东西吧，但是还是很感谢你，就是一直陪着我和鼓励我",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/sihan-avatar.jpg"
+        },
+        {
+          "id": "sihan-o18-3",
+          "senderId": "wechat-sihan",
+          "time": "2026-10-18T00:00",
+          "body": "虽然我知道让你少一点压力是很难的事，那就希望你多一点开心吧🤗",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/sihan-avatar.jpg"
+        },
+        {
+          "id": "sihan-o18-4",
+          "senderId": "owner",
+          "time": "2026-10-18T00:00",
+          "body": "谢谢思罕呀🥺我们都要变成更优秀的，更幸福，更开心的人",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/owner-avatar.jpg"
+        },
+        {
+          "id": "sihan-n8-1",
+          "senderId": "owner",
+          "time": "2026-11-08T00:00",
+          "body": "生日快乐呀思罕，我们15岁的大孩子啦",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/owner-avatar.jpg"
+        },
+        {
+          "id": "sihan-n8-2",
+          "senderId": "owner",
+          "time": "2026-11-08T00:00",
+          "body": "呆在家的日子也过得太快了，这么快也到你的生日了",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/owner-avatar.jpg"
+        },
+        {
+          "id": "sihan-n8-3",
+          "senderId": "owner",
+          "time": "2026-11-08T00:00",
+          "body": "虽然都没有陪在我们思罕身边，但是张函瑞知道思罕有在好好成长，个子和声音都像更成熟的方向进化了，当然，我们思罕也越来越变成了有担当、有责任感、有目标的男孩子，张函瑞真的觉得十分欣慰吧，也特别高兴看到你的成长。但是无论你长多大，有孩子气的一面或者脆弱的一面还是可以展示给张瑞哥看。我会一直陪伴你呀！希望你慢点长大吧，多多享受自己的成长🫂",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/owner-avatar.jpg"
+        },
+        {
+          "id": "sihan-n8-4",
+          "senderId": "wechat-sihan",
+          "time": "2026-11-08T00:00",
+          "body": "谢谢函瑞哥🥺",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/sihan-avatar.jpg"
+        },
+        {
+          "id": "sihan-n8-5",
+          "senderId": "wechat-sihan",
+          "time": "2026-11-08T00:00",
+          "body": "你真的是总能令我感到安心的存在",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/sihan-avatar.jpg"
+        },
+        {
+          "id": "sihan-n8-6",
+          "senderId": "wechat-sihan",
+          "time": "2026-11-08T00:00",
+          "body": "谢谢你。",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/sihan-avatar.jpg"
+        },
+        {
+          "id": "sihan-n8-7",
+          "senderId": "owner",
+          "time": "2026-11-08T00:00",
+          "body": "",
+          "kind": "image",
+          "media": "uploads/thoughts-sticker.jpg",
+          "avatar": "uploads/owner-avatar.jpg"
         }
       ]
     }
