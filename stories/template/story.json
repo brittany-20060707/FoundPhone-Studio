@@ -3,7 +3,7 @@
   "id": "ui-test-phone-v2",
   "title": "捡手机",
   "description": "仅用于界面测试，不含剧情",
-  "revision": 14,
+  "revision": 15,
   "phone": {
     "owner": "机主",
     "date": "2026-11-08",
@@ -129,6 +129,13 @@
       "name": "Jonathan",
       "phone": "",
       "avatar": "uploads/jonathan-avatar.jpg",
+      "bio": ""
+    },
+    {
+      "id": "wechat-mom",
+      "name": "妈咪",
+      "phone": "",
+      "avatar": "uploads/mom-avatar.jpg",
       "bio": ""
     }
   ],
@@ -492,6 +499,404 @@
           "kind": "text",
           "media": "",
           "avatar": "uploads/owner-avatar.jpg"
+        }
+      ]
+    },
+    {
+      "id": "wechat-mom",
+      "app": "wechat",
+      "title": "妈咪",
+      "participants": [
+        "owner",
+        "wechat-mom"
+      ],
+      "messages": [
+        {
+          "id": "mom-aug11-1",
+          "senderId": "wechat-mom",
+          "time": "2026-08-11T18:35",
+          "body": "瑞瑞啊",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/mom-avatar.jpg"
+        },
+        {
+          "id": "mom-aug11-2",
+          "senderId": "wechat-mom",
+          "time": "2026-08-11T18:35",
+          "body": "妈咪好久没见你，你怎么瘦了那么多？",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/mom-avatar.jpg"
+        },
+        {
+          "id": "mom-aug11-3",
+          "senderId": "wechat-mom",
+          "time": "2026-08-11T18:35",
+          "body": "妈咪看到胳膊都细成一个长条了",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/mom-avatar.jpg"
+        },
+        {
+          "id": "mom-aug11-4",
+          "senderId": "wechat-mom",
+          "time": "2026-08-11T18:35",
+          "body": "不要对自己那么苛刻，等你回家想吃什么妈妈都给你做好不好",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/mom-avatar.jpg"
+        },
+        {
+          "id": "mom-aug11-5",
+          "senderId": "owner",
+          "time": "2026-08-11T18:35",
+          "body": "好～妈咪，没事的",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/owner-avatar.jpg"
+        },
+        {
+          "id": "mom-aug11-6",
+          "senderId": "owner",
+          "time": "2026-08-11T18:35",
+          "body": "我答应妈妈等公演结束以后一定好好吃饭🥣",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/owner-avatar.jpg"
+        },
+        {
+          "id": "mom-aug11-7",
+          "senderId": "wechat-mom",
+          "time": "2026-08-11T18:35",
+          "body": "好，乖宝宝",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/mom-avatar.jpg"
+        },
+        {
+          "id": "mom-0924-1",
+          "senderId": "owner",
+          "time": "2026-09-24T20:38",
+          "body": "妈咪！",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/owner-avatar.jpg"
+        },
+        {
+          "id": "mom-0924-2",
+          "senderId": "owner",
+          "time": "2026-09-24T20:38",
+          "body": "明天我想去逛街，我又想买香水了…",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/owner-avatar.jpg"
+        },
+        {
+          "id": "mom-0924-3",
+          "senderId": "wechat-mom",
+          "time": "2026-09-24T20:38",
+          "body": "去吧去吧，辛苦了宝贝，买自己喜欢的东西能让你觉得开心的话，就多买点",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/mom-avatar.jpg"
+        },
+        {
+          "id": "mom-0924-4",
+          "senderId": "wechat-mom",
+          "time": "2026-09-24T20:38",
+          "body": "钱不够要给妈妈讲",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/mom-avatar.jpg"
+        },
+        {
+          "id": "mom-0924-5",
+          "senderId": "owner",
+          "time": "2026-09-24T20:38",
+          "body": "妈咪你最好了🥺",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/owner-avatar.jpg"
+        },
+        {
+          "id": "mom-0924-6",
+          "senderId": "owner",
+          "time": "2026-09-24T20:38",
+          "body": "明明自己也很辛苦，可是还是无条件的支持我",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/owner-avatar.jpg"
+        },
+        {
+          "id": "mom-0924-7",
+          "senderId": "wechat-mom",
+          "time": "2026-09-24T20:38",
+          "body": "妈妈挣钱就是为了给宝贝花的啊，看到宝宝能有底气买任何自己喜欢的东西，妈妈就觉得特别开心和幸福",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/mom-avatar.jpg"
+        },
+        {
+          "id": "mom-0924-8",
+          "senderId": "owner",
+          "time": "2026-09-24T20:38",
+          "body": "（发送了一个爱心小猫贴纸）",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/owner-avatar.jpg"
+        },
+        {
+          "id": "mom-1018-1",
+          "senderId": "wechat-mom",
+          "time": "2026-10-18T10:18",
+          "body": "（发来一张长长的文字图片）",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/mom-avatar.jpg"
+        },
+        {
+          "id": "mom-1018-2",
+          "senderId": "owner",
+          "time": "2026-10-18T10:18",
+          "body": "谢谢妈咪🥺🥺🐱🐱",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/owner-avatar.jpg"
+        },
+        {
+          "id": "mom-1018-3",
+          "senderId": "wechat-mom",
+          "time": "2026-10-18T10:18",
+          "body": "想起你小时候就说自己想开演唱会来着",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/mom-avatar.jpg"
+        },
+        {
+          "id": "mom-1018-4",
+          "senderId": "wechat-mom",
+          "time": "2026-10-18T10:18",
+          "body": "还说要让妈妈坐第一排",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/mom-avatar.jpg"
+        },
+        {
+          "id": "mom-1018-5",
+          "senderId": "owner",
+          "time": "2026-10-18T10:18",
+          "body": "哈哈哈哈，我下次一定让妈妈坐第一排听我唱歌",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/owner-avatar.jpg"
+        },
+        {
+          "id": "mom-1018-6",
+          "senderId": "wechat-mom",
+          "time": "2026-10-18T10:18",
+          "body": "好呀",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/mom-avatar.jpg"
+        },
+        {
+          "id": "mom-1018-7",
+          "senderId": "wechat-mom",
+          "time": "2026-10-18T10:18",
+          "body": "不过妈妈已经坐过很多次第一排了",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/mom-avatar.jpg"
+        },
+        {
+          "id": "mom-1018-8",
+          "senderId": "owner",
+          "time": "2026-10-18T10:18",
+          "body": "啊？",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/owner-avatar.jpg"
+        },
+        {
+          "id": "mom-1018-9",
+          "senderId": "wechat-mom",
+          "time": "2026-10-18T10:18",
+          "body": "你小时候在客厅唱歌的时候呀",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/mom-avatar.jpg"
+        },
+        {
+          "id": "mom-1018-10",
+          "senderId": "wechat-mom",
+          "time": "2026-10-18T10:18",
+          "body": "妈妈一直都会是你最忠实的听众",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/mom-avatar.jpg"
+        },
+        {
+          "id": "mom-1018-11",
+          "senderId": "owner",
+          "time": "2026-10-18T10:18",
+          "body": "妈妈🥺🥺",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/owner-avatar.jpg"
+        },
+        {
+          "id": "mom-1014-1",
+          "senderId": "owner",
+          "time": "2026-10-14T15:36",
+          "body": "妈咪，我给你讲哦，昨天晚上张建国突然给我托梦了",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/owner-avatar.jpg"
+        },
+        {
+          "id": "mom-1014-2",
+          "senderId": "wechat-mom",
+          "time": "2026-10-14T15:36",
+          "body": "嗯？？？什么情况",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/mom-avatar.jpg"
+        },
+        {
+          "id": "mom-1014-3",
+          "senderId": "owner",
+          "time": "2026-10-14T15:36",
+          "body": "他和我说，平时哥哥出去工作，就没有人陪他玩了，然后他就和我讲，他想要一个妹妹",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/owner-avatar.jpg"
+        },
+        {
+          "id": "mom-1014-4",
+          "senderId": "owner",
+          "time": "2026-10-14T15:36",
+          "body": "然后我给你讲哦，好巧不巧，今天张函瑞去录生日物料的时候，有只小猫她跟了我一路，我走到那她跟到哪😭😭😭",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/owner-avatar.jpg"
+        },
+        {
+          "id": "mom-1014-5",
+          "senderId": "owner",
+          "time": "2026-10-14T15:36",
+          "body": "你说这是不是上天的旨意",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/owner-avatar.jpg"
+        },
+        {
+          "id": "mom-1014-6",
+          "senderId": "wechat-mom",
+          "time": "2026-10-14T15:36",
+          "body": "哈哈哈哈哈哈 按国咪那个性格，这可不像他会说出口的话",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/mom-avatar.jpg"
+        },
+        {
+          "id": "mom-1014-7",
+          "senderId": "wechat-mom",
+          "time": "2026-10-14T15:36",
+          "body": "好吧好吧，这个新妹妹确实很可爱呀，不过回去你可要和张建国好好解释",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/mom-avatar.jpg"
+        },
+        {
+          "id": "mom-1014-8",
+          "senderId": "wechat-mom",
+          "time": "2026-10-14T15:36",
+          "body": "别让人家一觉睡醒莫名当哥哥了🤣",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/mom-avatar.jpg"
+        },
+        {
+          "id": "mom-1014-9",
+          "senderId": "owner",
+          "time": "2026-10-14T15:36",
+          "body": "（发送了一张小猫贴纸）",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/owner-avatar.jpg"
+        },
+        {
+          "id": "mom-1014-10",
+          "senderId": "owner",
+          "time": "2026-10-14T15:36",
+          "body": "我会言传身教国咪让他做个好哥哥的",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/owner-avatar.jpg"
+        },
+        {
+          "id": "mom-1025-1",
+          "senderId": "wechat-mom",
+          "time": "2026-10-25T18:16",
+          "body": "宝贝啊，妈妈看到瑞瑞的新歌得了白金单曲啊",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/mom-avatar.jpg"
+        },
+        {
+          "id": "mom-1025-2",
+          "senderId": "wechat-mom",
+          "time": "2026-10-25T18:16",
+          "body": "妈咪好为你骄傲啊，我们瑞瑞怎么那么棒",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/mom-avatar.jpg"
+        },
+        {
+          "id": "mom-1025-3",
+          "senderId": "owner",
+          "time": "2026-10-25T18:16",
+          "body": "诶呀，妈咪，我看到了🥺",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/owner-avatar.jpg"
+        },
+        {
+          "id": "mom-1025-4",
+          "senderId": "owner",
+          "time": "2026-10-25T18:16",
+          "body": "这是我第一次全程制作自己的单曲，其实真的花了很多很多心思吧。",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/owner-avatar.jpg"
+        },
+        {
+          "id": "mom-1025-5",
+          "senderId": "owner",
+          "time": "2026-10-25T18:16",
+          "body": "所以真的好幸福，好谢谢大家，这首歌是我们共同的荣耀",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/owner-avatar.jpg"
+        },
+        {
+          "id": "mom-1025-6",
+          "senderId": "wechat-mom",
+          "time": "2026-10-25T18:16",
+          "body": "宝贝，大胆去做你喜欢的，放心去追求你认为美丽的东西吧",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/mom-avatar.jpg"
+        },
+        {
+          "id": "mom-1025-7",
+          "senderId": "wechat-mom",
+          "time": "2026-10-25T18:16",
+          "body": "音乐和爱你的人，永远不会背叛你的 🫂",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/mom-avatar.jpg"
         }
       ]
     }
