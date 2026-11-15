@@ -75,12 +75,18 @@ function Avatar({
 }
 function ItemMedia({ item }: { item: Item }) {
   const src = mediaSource(item.media);
-  if (item.kind === "audio" && !src) {
+  if (item.kind === "audio") {
+    const transcript = item.meta?.transcript;
     return (
-      <span className="skin-voice-note" aria-label={`语音消息 ${item.body}`}>
-        <Mic size={15} />
-        <span>{item.body || "语音消息"}</span>
-      </span>
+      <div className="skin-audio-message">
+        <span className="skin-voice-note" aria-label={`语音消息 ${item.body}`}>
+          <Mic size={15} />
+          <span>{item.body || "语音消息"}</span>
+        </span>
+        {transcript && (
+          <div className="skin-audio-transcript">{transcript}</div>
+        )}
+      </div>
     );
   }
   return src ? (
