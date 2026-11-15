@@ -184,6 +184,7 @@ export function ContactsSkin(p: Props) {
 export function PhotosSkin(p: Props) {
   const { tab, setTab, q, setQ, items } = useContent(p, "图库");
   const [album, setAlbum] = useState("");
+  const albumPhotos = ["微信图片_20261115132502_122_82.jpg","微信图片_20261115132503_123_82.jpg","微信图片_20261115132504_124_82.jpg","微信图片_20261115132505_125_82.jpg","微信图片_20261115132505_126_82.jpg","微信图片_20261115132506_127_82.jpg","微信图片_20261115132507_128_82.jpg","微信图片_20261115132508_129_82.jpg","微信图片_20261115132509_130_82.jpg","微信图片_20261115132510_131_82.jpg","微信图片_20261115132511_132_82.jpg","微信图片_20261115132512_133_82.jpg","微信图片_20261115132514_134_82.jpg","微信图片_20261115132516_135_82.jpg","微信图片_20261115132517_136_82.jpg","微信图片_20261115132519_137_82.jpg","微信图片_20261115132520_138_82.jpg","微信图片_20261115132523_139_82.jpg","微信图片_20261115132525_140_82.jpg","微信图片_20261115132527_141_82.jpg","微信图片_20261115132531_142_82.jpg"];
   const list =
     tab === "收藏"
       ? items.filter((i) => i.favorite)
@@ -213,6 +214,7 @@ export function PhotosSkin(p: Props) {
           <>
             <SearchBox value={q} set={setQ} />
             <div className="photo-mosaic">
+              {albumPhotos.map((name) => <img key={name} src={import.meta.env.BASE_URL + "photos/" + encodeURIComponent(name)} alt={name} loading="lazy" />)}
               {list.map((i) => (
                 <button
                   aria-label={`查看${i.title}`}
