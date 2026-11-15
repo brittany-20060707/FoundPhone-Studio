@@ -59,7 +59,7 @@ function Avatar({
 }) {
   return (
     <span className={`skin-avatar ${round ? "round" : ""}`}>
-      {safeMedia(src)?.startsWith("data:image/") ? (
+      {safeMedia(src) ? (
         <img src={safeMedia(src)} alt="" />
       ) : (
         name.slice(0, 1)
@@ -98,12 +98,14 @@ function MessageList({
 }) {
   return (
     <div className={`skin-messages ${whatsapp ? "wa-wallpaper" : ""}`}>
-      <div className="skin-date">{items[0]?.time.slice(0, 10)}</div>
-      {items.map((i) => (
+      {items.map((i, index) => (
         <div
           key={i.id}
           className={`skin-message ${i.outgoing ? "outgoing" : ""}`}
         >
+          {(index === 0 || i.time.slice(0, 16) !== items[index - 1].time.slice(0, 16)) && (
+            <div className="skin-date">{i.time.slice(0, 16).replace("T", " ")}</div>
+          )}
           {!whatsapp && !i.outgoing && (
             <Avatar name={i.sender} src={i.avatar} />
           )}
