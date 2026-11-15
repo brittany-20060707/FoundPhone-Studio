@@ -1008,16 +1008,10 @@
           "body": "5″",
           "kind": "audio",
           "media": "",
-          "avatar": "uploads/owner-avatar.jpg"
-        },
-        {
-          "id": "sihan-j18-13",
-          "senderId": "wechat-sihan",
-          "time": "2026-06-18T13:21",
-          "body": "不要难过了哦，我要来挠你痒痒了",
-          "kind": "text",
-          "media": "",
-          "avatar": ""
+          "avatar": "uploads/owner-avatar.jpg",
+          "meta": {
+            "transcript": "不要难过了哦，我要来挠你痒痒了"
+          }
         },
         {
           "id": "sihan-j18-14",
