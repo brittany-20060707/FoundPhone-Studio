@@ -26,7 +26,6 @@ import {
   Wallet,
 } from "lucide-react";
 import { useEffect, useState } from "react";
-import { download } from "../io";
 import { safeMedia, type Item } from "../schema";
 import {
   Add,
