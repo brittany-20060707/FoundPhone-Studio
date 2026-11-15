@@ -3,7 +3,7 @@
   "id": "ui-test-phone-v2",
   "title": "捡手机",
   "description": "仅用于界面测试，不含剧情",
-  "revision": 9,
+  "revision": 10,
   "phone": {
     "owner": "机主",
     "date": "2026-11-08",
@@ -120,6 +120,42 @@
     },
     {
       "id": "contact-妈妈",
+      "name": "妈妈",
+      "phone": "150xxxx4321",
+      "bio": ""
+    },
+    {
+      "id": "contact-eleven",
+      "name": "11",
+      "phone": "138xxxx0319",
+      "bio": ""
+    },
+    {
+      "id": "contact-zhang-guiyuan",
+      "name": "张桂源",
+      "phone": "133xxxx0511",
+      "bio": ""
+    },
+    {
+      "id": "contact-chen-sihan",
+      "name": "陈思罕",
+      "phone": "176xxxx2048",
+      "bio": ""
+    },
+    {
+      "id": "contact-wang-lujie",
+      "name": "王橹杰",
+      "phone": "155xxxx1209",
+      "bio": ""
+    },
+    {
+      "id": "contact-dad",
+      "name": "爸爸",
+      "phone": "136xxxx1234",
+      "bio": ""
+    },
+    {
+      "id": "contact-mom",
       "name": "妈妈",
       "phone": "150xxxx4321",
       "bio": ""
