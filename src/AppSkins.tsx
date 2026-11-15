@@ -48,6 +48,12 @@ export type SkinProps = {
   thread: string;
   onThread: (s: string) => void;
 };
+function mediaSource(value: string) {
+  const src = safeMedia(value);
+  return src.startsWith("uploads/")
+    ? `${import.meta.env.BASE_URL}${src}`
+    : src;
+}
 function Avatar({
   name,
   round = false,
@@ -59,8 +65,8 @@ function Avatar({
 }) {
   return (
     <span className={`skin-avatar ${round ? "round" : ""}`}>
-      {safeMedia(src) ? (
-        <img src={safeMedia(src)} alt="" />
+      {mediaSource(src) ? (
+        <img src={mediaSource(src)} alt="" />
       ) : (
         name.slice(0, 1)
       )}
@@ -68,7 +74,7 @@ function Avatar({
   );
 }
 function ItemMedia({ item }: { item: Item }) {
-  const src = safeMedia(item.media);
+  const src = mediaSource(item.media);
   return src ? (
     item.kind === "audio" ? (
       <audio controls src={src} />
@@ -82,6 +88,10 @@ function ItemMedia({ item }: { item: Item }) {
       <span>{item.title}</span>
     </div>
   );
+}
+function formatChatDate(value: string) {
+  const match = /^(\\d{4})-(\\d{2})-(\\d{2})[T ](\\d{2}):(\\d{2})/.exec(value);
+  return match ? `${match[1]}年${match[2]}月${match[3]}日 ${match[4]}:${match[5]}` : value;
 }
 function MessageList({
   items,
@@ -101,7 +111,7 @@ function MessageList({
       {items.map((i, index) => (
         <div key={i.id} style={{ display: "contents" }}>
           {(index === 0 || i.time.slice(0, 16) !== items[index - 1].time.slice(0, 16)) && (
-            <div className="skin-date" style={{ flex: "0 0 100%", textAlign: "center" }}>{i.time.slice(0, 16).replace("T", " ")}</div>
+            <div className="skin-date" style={{ flex: "0 0 100%", textAlign: "center" }}>{formatChatDate(i.time)}</div>
           )}
           <div className={`skin-message ${i.outgoing ? "outgoing" : ""}`}>
           {!whatsapp && !i.outgoing && (
