@@ -4024,6 +4024,16 @@ label {
   object-fit: contain;
   border-radius: 3px;
 }
+.skin-voice-note {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 9px;
+  min-width: 48px;
+  padding: 1px 2px;
+  white-space: nowrap;
+  color: inherit;
+}
 .skin-bubble audio {
   width: 180px;
   height: 35px;
