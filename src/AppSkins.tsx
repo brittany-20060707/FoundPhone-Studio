@@ -51,7 +51,7 @@ export type SkinProps = {
 function mediaSource(value: string) {
   const src = safeMedia(value);
   return src.startsWith("uploads/")
-    ? `${import.meta.env.BASE_URL}${src}`
+    ? `${import.meta.env.BASE_URL}${src}?v=20261115-2`
     : src;
 }
 function Avatar({
@@ -81,7 +81,7 @@ function ItemMedia({ item }: { item: Item }) {
     ) : item.kind === "video" ? (
       <video controls playsInline src={src} />
     ) : (
-      <img loading="lazy" alt={item.title} src={src} />
+      <img alt={item.title} src={src} />
     )
   ) : (
     <div className="skin-photo">
