@@ -4935,3 +4935,32 @@ label {
   background: #e34f58;
   transform: rotate(135deg);
 }
+
+.skin-audio-message {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 7px;
+  width: 100%;
+}
+.skin-audio-message .skin-voice-note {
+  min-width: 72px;
+  gap: 12px;
+  font-size: 13px;
+}
+.skin-audio-transcript {
+  align-self: stretch;
+  width: min(270px, calc(100vw - 118px));
+  max-width: 100%;
+  padding: 10px 12px;
+  border-radius: 7px;
+  background: #f0f0f0;
+  color: #222;
+  font-size: 13px;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.skin-message.outgoing:has(.skin-audio-transcript) .skin-bubble {
+  max-width: min(300px, calc(100vw - 78px));
+}
