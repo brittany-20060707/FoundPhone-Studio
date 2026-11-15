@@ -21,6 +21,7 @@ import {
   Bookmark,
   MoreHorizontal,
   Mic,
+  Volume2,
   Smile,
   Grid,
   CheckCheck,
@@ -80,7 +81,7 @@ function ItemMedia({ item }: { item: Item }) {
     return (
       <div className="skin-audio-message">
         <span className="skin-voice-note" aria-label={`语音消息 ${item.body}`}>
-          <Mic size={15} />
+          <Volume2 size={15} />
           <span>{item.body || "语音消息"}</span>
         </span>
         {transcript && (
