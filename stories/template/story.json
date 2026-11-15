@@ -3,7 +3,7 @@
   "id": "ui-test-phone-v2",
   "title": "捡手机",
   "description": "仅用于界面测试，不含剧情",
-  "revision": 16,
+  "revision": 17,
   "phone": {
     "owner": "机主",
     "date": "2026-11-08",
@@ -135,7 +135,7 @@
       "id": "wechat-mom",
       "name": "妈咪",
       "phone": "",
-      "avatar": "uploads/mom-avatar.jpg",
+      "avatar": "uploads/mom-avatar-v2.jpg",
       "bio": ""
     },
     {
@@ -525,7 +525,7 @@
           "body": "瑞瑞啊",
           "kind": "text",
           "media": "",
-          "avatar": "uploads/mom-avatar.jpg"
+          "avatar": "uploads/mom-avatar-v2.jpg"
         },
         {
           "id": "mom-aug11-2",
@@ -534,7 +534,7 @@
           "body": "妈咪好久没见你，你怎么瘦了那么多？",
           "kind": "text",
           "media": "",
-          "avatar": "uploads/mom-avatar.jpg"
+          "avatar": "uploads/mom-avatar-v2.jpg"
         },
         {
           "id": "mom-aug11-3",
@@ -543,7 +543,7 @@
           "body": "妈咪看到胳膊都细成一个长条了",
           "kind": "text",
           "media": "",
-          "avatar": "uploads/mom-avatar.jpg"
+          "avatar": "uploads/mom-avatar-v2.jpg"
         },
         {
           "id": "mom-aug11-4",
@@ -552,7 +552,7 @@
           "body": "不要对自己那么苛刻，等你回家想吃什么妈妈都给你做好不好",
           "kind": "text",
           "media": "",
-          "avatar": "uploads/mom-avatar.jpg"
+          "avatar": "uploads/mom-avatar-v2.jpg"
         },
         {
           "id": "mom-aug11-5",
@@ -579,7 +579,7 @@
           "body": "好，乖宝宝",
           "kind": "text",
           "media": "",
-          "avatar": "uploads/mom-avatar.jpg"
+          "avatar": "uploads/mom-avatar-v2.jpg"
         },
         {
           "id": "mom-0924-1",
@@ -606,7 +606,7 @@
           "body": "去吧去吧，辛苦了宝贝，买自己喜欢的东西能让你觉得开心的话，就多买点",
           "kind": "text",
           "media": "",
-          "avatar": "uploads/mom-avatar.jpg"
+          "avatar": "uploads/mom-avatar-v2.jpg"
         },
         {
           "id": "mom-0924-4",
@@ -615,7 +615,7 @@
           "body": "钱不够要给妈妈讲",
           "kind": "text",
           "media": "",
-          "avatar": "uploads/mom-avatar.jpg"
+          "avatar": "uploads/mom-avatar-v2.jpg"
         },
         {
           "id": "mom-0924-5",
@@ -642,15 +642,15 @@
           "body": "妈妈挣钱就是为了给宝贝花的啊，看到宝宝能有底气买任何自己喜欢的东西，妈妈就觉得特别开心和幸福",
           "kind": "text",
           "media": "",
-          "avatar": "uploads/mom-avatar.jpg"
+          "avatar": "uploads/mom-avatar-v2.jpg"
         },
         {
           "id": "mom-0924-8",
           "senderId": "owner",
           "time": "2026-09-24T20:38",
-          "body": "（发送了一个爱心小猫贴纸）",
-          "kind": "text",
-          "media": "",
+          "body": "",
+          "kind": "image",
+          "media": "uploads/mom-sticker-heart-v2.jpg",
           "avatar": "uploads/owner-avatar.jpg"
         },
         {
@@ -660,7 +660,7 @@
           "body": "（发来一张长长的文字图片）",
           "kind": "text",
           "media": "",
-          "avatar": "uploads/mom-avatar.jpg"
+          "avatar": "uploads/mom-avatar-v2.jpg"
         },
         {
           "id": "mom-1018-2",
@@ -678,7 +678,7 @@
           "body": "想起你小时候就说自己想开演唱会来着",
           "kind": "text",
           "media": "",
-          "avatar": "uploads/mom-avatar.jpg"
+          "avatar": "uploads/mom-avatar-v2.jpg"
         },
         {
           "id": "mom-1018-4",
@@ -687,7 +687,7 @@
           "body": "还说要让妈妈坐第一排",
           "kind": "text",
           "media": "",
-          "avatar": "uploads/mom-avatar.jpg"
+          "avatar": "uploads/mom-avatar-v2.jpg"
         },
         {
           "id": "mom-1018-5",
@@ -705,7 +705,7 @@
           "body": "好呀",
           "kind": "text",
           "media": "",
-          "avatar": "uploads/mom-avatar.jpg"
+          "avatar": "uploads/mom-avatar-v2.jpg"
         },
         {
           "id": "mom-1018-7",
@@ -714,7 +714,7 @@
           "body": "不过妈妈已经坐过很多次第一排了",
           "kind": "text",
           "media": "",
-          "avatar": "uploads/mom-avatar.jpg"
+          "avatar": "uploads/mom-avatar-v2.jpg"
         },
         {
           "id": "mom-1018-8",
@@ -732,7 +732,7 @@
           "body": "你小时候在客厅唱歌的时候呀",
           "kind": "text",
           "media": "",
-          "avatar": "uploads/mom-avatar.jpg"
+          "avatar": "uploads/mom-avatar-v2.jpg"
         },
         {
           "id": "mom-1018-10",
@@ -741,7 +741,7 @@
           "body": "妈妈一直都会是你最忠实的听众",
           "kind": "text",
           "media": "",
-          "avatar": "uploads/mom-avatar.jpg"
+          "avatar": "uploads/mom-avatar-v2.jpg"
         },
         {
           "id": "mom-1018-11",
@@ -768,7 +768,7 @@
           "body": "嗯？？？什么情况",
           "kind": "text",
           "media": "",
-          "avatar": "uploads/mom-avatar.jpg"
+          "avatar": "uploads/mom-avatar-v2.jpg"
         },
         {
           "id": "mom-1014-3",
@@ -804,7 +804,7 @@
           "body": "哈哈哈哈哈哈 按国咪那个性格，这可不像他会说出口的话",
           "kind": "text",
           "media": "",
-          "avatar": "uploads/mom-avatar.jpg"
+          "avatar": "uploads/mom-avatar-v2.jpg"
         },
         {
           "id": "mom-1014-7",
@@ -813,7 +813,7 @@
           "body": "好吧好吧，这个新妹妹确实很可爱呀，不过回去你可要和张建国好好解释",
           "kind": "text",
           "media": "",
-          "avatar": "uploads/mom-avatar.jpg"
+          "avatar": "uploads/mom-avatar-v2.jpg"
         },
         {
           "id": "mom-1014-8",
@@ -822,15 +822,15 @@
           "body": "别让人家一觉睡醒莫名当哥哥了🤣",
           "kind": "text",
           "media": "",
-          "avatar": "uploads/mom-avatar.jpg"
+          "avatar": "uploads/mom-avatar-v2.jpg"
         },
         {
           "id": "mom-1014-9",
           "senderId": "owner",
           "time": "2026-10-14T15:36",
-          "body": "（发送了一张小猫贴纸）",
-          "kind": "text",
-          "media": "",
+          "body": "",
+          "kind": "image",
+          "media": "uploads/mom-sticker-kitty-v2.jpg",
           "avatar": "uploads/owner-avatar.jpg"
         },
         {
@@ -849,7 +849,7 @@
           "body": "宝贝啊，妈妈看到瑞瑞的新歌得了白金单曲啊",
           "kind": "text",
           "media": "",
-          "avatar": "uploads/mom-avatar.jpg"
+          "avatar": "uploads/mom-avatar-v2.jpg"
         },
         {
           "id": "mom-1025-2",
@@ -858,7 +858,7 @@
           "body": "妈咪好为你骄傲啊，我们瑞瑞怎么那么棒",
           "kind": "text",
           "media": "",
-          "avatar": "uploads/mom-avatar.jpg"
+          "avatar": "uploads/mom-avatar-v2.jpg"
         },
         {
           "id": "mom-1025-3",
@@ -894,7 +894,7 @@
           "body": "宝贝，大胆去做你喜欢的，放心去追求你认为美丽的东西吧",
           "kind": "text",
           "media": "",
-          "avatar": "uploads/mom-avatar.jpg"
+          "avatar": "uploads/mom-avatar-v2.jpg"
         },
         {
           "id": "mom-1025-7",
@@ -903,7 +903,7 @@
           "body": "音乐和爱你的人，永远不会背叛你的 🫂",
           "kind": "text",
           "media": "",
-          "avatar": "uploads/mom-avatar.jpg"
+          "avatar": "uploads/mom-avatar-v2.jpg"
         }
       ]
     },
