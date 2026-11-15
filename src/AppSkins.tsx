@@ -99,13 +99,11 @@ function MessageList({
   return (
     <div className={`skin-messages ${whatsapp ? "wa-wallpaper" : ""}`}>
       {items.map((i, index) => (
-        <div
-          key={i.id}
-          className={`skin-message ${i.outgoing ? "outgoing" : ""}`}
-        >
+        <div key={i.id} style={{ display: "contents" }}>
           {(index === 0 || i.time.slice(0, 16) !== items[index - 1].time.slice(0, 16)) && (
-            <div className="skin-date">{i.time.slice(0, 16).replace("T", " ")}</div>
+            <div className="skin-date" style={{ flex: "0 0 100%", textAlign: "center" }}>{i.time.slice(0, 16).replace("T", " ")}</div>
           )}
+          <div className={`skin-message ${i.outgoing ? "outgoing" : ""}`}>
           {!whatsapp && !i.outgoing && (
             <Avatar name={i.sender} src={i.avatar} />
           )}
@@ -129,6 +127,7 @@ function MessageList({
             </small>
           </button>
           {!whatsapp && i.outgoing && <Avatar name={i.sender} src={i.avatar} />}
+          </div>
         </div>
       ))}
     </div>
