@@ -90,9 +90,7 @@ function ItemMedia({ item }: { item: Item }) {
     );
   }
   return src ? (
-    item.kind === "audio" ? (
-      <audio controls src={src} />
-    ) : item.kind === "video" ? (
+    item.kind === "video" ? (
       <video controls playsInline src={src} />
     ) : (
       <img alt={item.title} src={src} />
