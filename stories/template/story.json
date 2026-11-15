@@ -3,7 +3,7 @@
   "id": "ui-test-phone-v2",
   "title": "捡手机",
   "description": "仅用于界面测试，不含剧情",
-  "revision": 13,
+  "revision": 14,
   "phone": {
     "owner": "机主",
     "date": "2026-11-08",
@@ -123,9 +123,379 @@
       "name": "妈妈",
       "phone": "150xxxx4321",
       "bio": ""
+    },
+    {
+      "id": "jonathan",
+      "name": "Jonathan",
+      "phone": "",
+      "avatar": "uploads/jonathan-avatar.jpg",
+      "bio": ""
     }
   ],
-  "chats": [],
+  "chats": [
+    {
+      "id": "wechat-jonathan",
+      "app": "wechat",
+      "title": "Jonathan",
+      "participants": [
+        "owner",
+        "jonathan"
+      ],
+      "messages": [
+        {
+          "id": "j-aug17-1",
+          "senderId": "jonathan",
+          "time": "2026-08-17T23:53",
+          "body": "诶，张函瑞，我还没来得及跟你说，你今天attention那个妆，oh my gosh，太绝了真的，就是很有氛围，you know",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/jonathan-avatar.jpg"
+        },
+        {
+          "id": "j-aug17-2",
+          "senderId": "jonathan",
+          "time": "2026-08-17T23:53",
+          "body": "然后，你也辛苦了！我们都辛苦了，好好休息😴",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/jonathan-avatar.jpg"
+        },
+        {
+          "id": "j-aug17-3",
+          "senderId": "owner",
+          "time": "2026-08-17T23:53",
+          "body": "诶呀哈哈哈哈哈哈哈哈 谢谢我们Jonathan的夸奖🙈",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/owner-avatar.jpg"
+        },
+        {
+          "id": "j-aug17-4",
+          "senderId": "owner",
+          "time": "2026-08-17T23:53",
+          "body": "陈奕恒今天也是#老公王来了 好吧",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/owner-avatar.jpg"
+        },
+        {
+          "id": "j-aug17-5",
+          "senderId": "jonathan",
+          "time": "2026-08-17T23:53",
+          "body": "😳😳😳这个是，什么意思，就是，I can't absolutely understand，就是，你，怎么叫我这个",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/jonathan-avatar.jpg"
+        },
+        {
+          "id": "j-aug17-6",
+          "senderId": "owner",
+          "time": "2026-08-17T23:53",
+          "body": "啊哈哈哈哈没有！这只是一个tag说你帅的意思",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/owner-avatar.jpg"
+        },
+        {
+          "id": "j-aug17-7",
+          "senderId": "jonathan",
+          "time": "2026-08-17T23:53",
+          "body": "😳😳哦哦。",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/jonathan-avatar.jpg"
+        },
+        {
+          "id": "j-aug17-8",
+          "senderId": "jonathan",
+          "time": "2026-08-17T23:53",
+          "body": "我还以为。就是。没事",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/jonathan-avatar.jpg"
+        },
+        {
+          "id": "j-sep24-1",
+          "senderId": "jonathan",
+          "time": "2026-09-24T22:09",
+          "body": "你知道吧，我今天去逛街，然后我买了盲盒，我抽到就感觉这个很像你，就是一只猫",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/jonathan-avatar.jpg"
+        },
+        {
+          "id": "j-sep24-2",
+          "senderId": "jonathan",
+          "time": "2026-09-24T22:09",
+          "body": "",
+          "kind": "image",
+          "media": "uploads/jonathan-plush.jpg",
+          "avatar": "uploads/jonathan-avatar.jpg"
+        },
+        {
+          "id": "j-sep24-3",
+          "senderId": "owner",
+          "time": "2026-09-24T22:09",
+          "body": "依旧labubu",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/owner-avatar.jpg"
+        },
+        {
+          "id": "j-sep24-4",
+          "senderId": "owner",
+          "time": "2026-09-24T22:09",
+          "body": "我们陈奕恒labubu梦男来的吧！",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/owner-avatar.jpg"
+        },
+        {
+          "id": "j-sep24-5",
+          "senderId": "jonathan",
+          "time": "2026-09-24T22:09",
+          "body": "这个真的很可爱啊，就是，i really like it，但是我就是准备把它送给你，因为它真的很像你",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/jonathan-avatar.jpg"
+        },
+        {
+          "id": "j-sep24-6",
+          "senderId": "jonathan",
+          "time": "2026-09-24T22:09",
+          "body": "不过张函瑞，梦男是什么意思啊",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/jonathan-avatar.jpg"
+        },
+        {
+          "id": "j-sep24-7",
+          "senderId": "owner",
+          "time": "2026-09-24T22:09",
+          "body": "就是你非常喜欢一个事物，然后你很 cherish it/him/her，你就可以说你是ta的梦男",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/owner-avatar.jpg"
+        },
+        {
+          "id": "j-sep24-8",
+          "senderId": "jonathan",
+          "time": "2026-09-24T22:09",
+          "body": "哦哦哦 那我是张函瑞的梦男😁😁😁",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/jonathan-avatar.jpg"
+        },
+        {
+          "id": "j-sep24-9",
+          "senderId": "jonathan",
+          "time": "2026-09-24T22:09",
+          "body": "Cause I like you, you know what I mean 😁😁",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/jonathan-avatar.jpg"
+        },
+        {
+          "id": "j-sep24-10",
+          "senderId": "owner",
+          "time": "2026-09-24T22:09",
+          "body": "(^_^)…啊啊啊啊",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/owner-avatar.jpg"
+        },
+        {
+          "id": "j-sep24-11",
+          "senderId": "jonathan",
+          "time": "2026-09-24T22:09",
+          "body": "怎么了呀？就是，不能这么说吗",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/jonathan-avatar.jpg"
+        },
+        {
+          "id": "j-sep24-12",
+          "senderId": "owner",
+          "time": "2026-09-24T22:09",
+          "body": "我们Jonathan开心就好",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/owner-avatar.jpg"
+        },
+        {
+          "id": "j-sep24-13",
+          "senderId": "owner",
+          "time": "2026-09-24T22:09",
+          "body": "不过谢谢你的礼物呀JoJo，我很喜欢！！",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/owner-avatar.jpg"
+        },
+        {
+          "id": "j-sep24-14",
+          "senderId": "jonathan",
+          "time": "2026-09-24T22:09",
+          "body": "你喜欢就好，就是你开心的话，我也很开心🥳",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/jonathan-avatar.jpg"
+        },
+        {
+          "id": "j-oct18-1",
+          "senderId": "jonathan",
+          "time": "2026-10-18T00:00",
+          "body": "17岁生日快乐张函瑞！Happy birthday to our pretty boy. 就是你居然都17岁了，感觉时间过得好快啊，我们就是居然已经陪伴彼此那么那么久了你知道吧",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/jonathan-avatar.jpg"
+        },
+        {
+          "id": "j-oct18-2",
+          "senderId": "jonathan",
+          "time": "2026-10-18T00:00",
+          "body": "就是我感觉一定要发语音和你说这个生日快乐，因为就是 you know that you can hear my voice，然后就是，我出去玩，在很多地方，我给你带了很多很多礼物，就是等我们见面的时候我都带给你",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/jonathan-avatar.jpg"
+        },
+        {
+          "id": "j-oct18-3",
+          "senderId": "jonathan",
+          "time": "2026-10-18T00:00",
+          "body": "就是你17岁的这一年，我们也一起经历了很多，就是很有意义的经历，比如我们一起拍了戏，但是你知道吧，你在拍戏当时就总是不自信，然后我就感觉你总是在否定自己。oh my gosh why did you do that? 你就是很棒好吧，你演的真的很好，包括你的专业，真的就是 perfect you know bro, you have to trust yourself",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/jonathan-avatar.jpg"
+        },
+        {
+          "id": "j-oct18-4",
+          "senderId": "jonathan",
+          "time": "2026-10-18T00:00",
+          "body": "哦对了，但是，我和你说，就是我给你的那些就是不算生日礼物，只是我觉得很适合你，或者就是，给大家一起买的，然后一些东西，所以你想要什么生日礼物也可以和我说",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/jonathan-avatar.jpg"
+        },
+        {
+          "id": "j-oct18-5",
+          "senderId": "jonathan",
+          "time": "2026-10-18T00:00",
+          "body": "😁😁😁😁",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/jonathan-avatar.jpg"
+        },
+        {
+          "id": "j-oct18-6",
+          "senderId": "owner",
+          "time": "2026-10-18T00:00",
+          "body": "天呐，这么这么长的一段",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/owner-avatar.jpg"
+        },
+        {
+          "id": "j-oct18-7",
+          "senderId": "owner",
+          "time": "2026-10-18T00:00",
+          "body": "我们陈奕恒真的好用心好真诚🥺🥺🥺",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/owner-avatar.jpg"
+        },
+        {
+          "id": "j-oct18-8",
+          "senderId": "owner",
+          "time": "2026-10-18T00:00",
+          "body": "有你的这份心就完全足够了呀",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/owner-avatar.jpg"
+        },
+        {
+          "id": "j-oct18-9",
+          "senderId": "owner",
+          "time": "2026-10-18T00:00",
+          "body": "🐱我知道了，我会努力变得越来越自信和强大的",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/owner-avatar.jpg"
+        },
+        {
+          "id": "j-oct18-10",
+          "senderId": "owner",
+          "time": "2026-10-18T00:00",
+          "body": "Thank u sooooo much",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/owner-avatar.jpg"
+        },
+        {
+          "id": "j-oct18-11",
+          "senderId": "jonathan",
+          "time": "2026-10-18T00:00",
+          "body": "😁😁❤️❤️",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/jonathan-avatar.jpg"
+        },
+        {
+          "id": "j-oct31-1",
+          "senderId": "owner",
+          "time": "2026-10-31T19:10",
+          "body": "Breathe — FKA twigs",
+          "kind": "audio",
+          "media": "",
+          "avatar": "uploads/owner-avatar.jpg"
+        },
+        {
+          "id": "j-oct31-2",
+          "senderId": "jonathan",
+          "time": "2026-10-31T19:10",
+          "body": "😳😳",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/jonathan-avatar.jpg"
+        },
+        {
+          "id": "j-oct31-3",
+          "senderId": "jonathan",
+          "time": "2026-10-31T19:10",
+          "body": "绝了你知道吧，我已经加入我的歌单了，就是你推的歌我都特别喜欢你知道吗",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/jonathan-avatar.jpg"
+        },
+        {
+          "id": "j-oct31-4",
+          "senderId": "owner",
+          "time": "2026-10-31T19:10",
+          "body": "嘿嘿😺肉好胀知道呀，能和我有相似歌品的人完全是特别幸运吧！",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/owner-avatar.jpg"
+        },
+        {
+          "id": "j-oct31-5",
+          "senderId": "jonathan",
+          "time": "2026-10-31T19:10",
+          "body": "哦对了，左奇函也是，虽然他听的中文歌比较多你知道吧，但是我就是感觉你俩歌品很好，就是有的时候都觉得你俩歌品就是，听的歌有点相似你知道吧",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/jonathan-avatar.jpg"
+        },
+        {
+          "id": "j-oct31-6",
+          "senderId": "owner",
+          "time": "2026-10-31T19:10",
+          "body": "哈哈，以前会和他一起听歌",
+          "kind": "text",
+          "media": "",
+          "avatar": "uploads/owner-avatar.jpg"
+        }
+      ]
+    }
+  ],
   "content": {
     "phone": [],
     "contacts": [],
