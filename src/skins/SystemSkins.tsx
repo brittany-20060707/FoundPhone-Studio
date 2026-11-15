@@ -697,6 +697,10 @@ export function FilesSkin(p: Props) {
     <div className="catalog-skin native-files">
       <Header p={p} />
       <div className="catalog-scroll">
+      <div className="kepler-player">
+        <strong>克卜勒</strong>
+        <audio controls preload="none" src={import.meta.env.BASE_URL + "audio/" + encodeURIComponent("克卜勒.mp3")} />
+      </div>
         <h1>{folder || tab}</h1>
         <SearchBox value={q} set={setQ} />
         {tab === "浏览" && !folder ? (
@@ -732,17 +736,7 @@ export function FilesSkin(p: Props) {
                       {meta(i, "size", i.time.slice(0, 10))}
                     </small>
                   </button>
-                  <button
-                    aria-label={`下载${i.title}文本`}
-                    onClick={() =>
-                      download(
-                        new Blob([i.body], { type: "text/plain" }),
-                        `${i.title}.txt`,
-                      )
-                    }
-                  >
-                    <Download size={13} />
-                  </button>
+                  
                 </div>
               ),
             )}
