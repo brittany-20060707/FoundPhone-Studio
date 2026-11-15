@@ -4940,13 +4940,17 @@ label {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  gap: 7px;
+  gap: 2px;
   width: 100%;
 }
 .skin-audio-message .skin-voice-note {
   min-width: 72px;
   gap: 12px;
-  font-size: 13px;
+  padding: 8px 12px;
+  border-radius: 5px;
+  background: #95ec69;
+  color: #111;
+  font-size: 14px;
 }
 .skin-audio-transcript {
   align-self: stretch;
@@ -4954,7 +4958,7 @@ label {
   max-width: 100%;
   padding: 10px 12px;
   border-radius: 7px;
-  background: #f0f0f0;
+  background: #fff;
   color: #222;
   font-size: 13px;
   line-height: 1.6;
@@ -4963,4 +4967,6 @@ label {
 }
 .skin-message.outgoing:has(.skin-audio-transcript) .skin-bubble {
   max-width: min(300px, calc(100vw - 78px));
+  padding: 0;
+  background: transparent;
 }
