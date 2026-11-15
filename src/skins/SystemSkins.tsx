@@ -682,6 +682,7 @@ export function FilesSkin(p: Props) {
   const { tab, setTab, q, setQ, items: storyItems } = useContent(p, "最近项目");
   const audioBase = `${import.meta.env.BASE_URL}audio/`;
   const personalAudioFiles: Item[] = [
+    { id: "personal-file-kepler", title: "克卜勒", body: "克卜勒", richText: "", meta: { extension: "MP3 音频", size: "945 KB", filename: "克卜勒.mp3" }, time: "2026-11-15", sender: "我", avatar: "", kind: "audio", media: audioBase + encodeURIComponent("克卜勒.mp3"), hidden: false, unlock: "", password: "", folder: "我的iPhone", favorite: false, outgoing: false, read: true, likes: 0, comments: [] },
     { id: "personal-file-2022-11-17", title: "2022.11.17", body: "2022.11.17", richText: "", meta: { extension: "MP3 音频", size: "1.3 MB", filename: "2022.11.17.mp3" }, time: "2026-11-15", sender: "我", avatar: "", kind: "audio", media: `${audioBase}${encodeURIComponent("2022.11.17.mp3")}`, hidden: false, unlock: "", password: "", folder: "我的iPhone", favorite: false, outgoing: false, read: true, likes: 0, comments: [] },
     { id: "personal-file-ni-a-ni-a", title: "你啊你啊", body: "你啊你啊", richText: "", meta: { extension: "MP3 音频", size: "805 KB", filename: "你啊你啊.mp3" }, time: "2026-11-15", sender: "我", avatar: "", kind: "audio", media: `${audioBase}${encodeURIComponent("你啊你啊.mp3")}`, hidden: false, unlock: "", password: "", folder: "我的iPhone", favorite: false, outgoing: false, read: true, likes: 0, comments: [] },
     { id: "personal-file-yizhi-henan", title: "一直很安静", body: "一直很安静", richText: "", meta: { extension: "MP3 音频", size: "838 KB", filename: "一直很安静.mp3" }, time: "2026-11-15", sender: "我", avatar: "", kind: "audio", media: `${audioBase}${encodeURIComponent("一直很安静.mp3")}`, hidden: false, unlock: "", password: "", folder: "我的iPhone", favorite: false, outgoing: false, read: true, likes: 0, comments: [] },
@@ -700,10 +701,6 @@ export function FilesSkin(p: Props) {
     <div className="catalog-skin native-files">
       <Header p={p} />
       <div className="catalog-scroll">
-      <div className="kepler-player">
-        <strong>克卜勒</strong>
-        <audio controls preload="none" src={import.meta.env.BASE_URL + "audio/" + encodeURIComponent("克卜勒.mp3")} />
-      </div>
         <h1>{folder || tab}</h1>
         <SearchBox value={q} set={setQ} />
         {tab === "浏览" && !folder ? (
@@ -724,9 +721,6 @@ export function FilesSkin(p: Props) {
                     <Music size={27} />
                     <span><strong>{i.title}</strong><small>{meta(i, "extension", "MP3 音频")} · {meta(i, "size")}</small></span>
                   </button>
-                  <a className="file-audio-download" href={i.media} download={meta(i, "filename", `${i.title}.mp3`)} aria-label={`下载${i.title}`}>
-                    <Download size={15} />
-                  </a>
                   <audio controls preload="none" src={i.media} aria-label={`播放${i.title}`} />
                 </div>
               ) : (
