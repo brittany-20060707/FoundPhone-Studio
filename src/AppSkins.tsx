@@ -51,7 +51,7 @@ export type SkinProps = {
 function mediaSource(value: string) {
   const src = safeMedia(value);
   return src.startsWith("uploads/")
-    ? `${import.meta.env.BASE_URL}${src}?v=20261115-2`
+    ? `${import.meta.env.BASE_URL}${src}?v=20261115-3`
     : src;
 }
 function Avatar({
@@ -75,6 +75,14 @@ function Avatar({
 }
 function ItemMedia({ item }: { item: Item }) {
   const src = mediaSource(item.media);
+  if (item.kind === "audio" && !src) {
+    return (
+      <span className="skin-voice-note" aria-label={`语音消息 ${item.body}`}>
+        <Mic size={15} />
+        <span>{item.body || "语音消息"}</span>
+      </span>
+    );
+  }
   return src ? (
     item.kind === "audio" ? (
       <audio controls src={src} />
