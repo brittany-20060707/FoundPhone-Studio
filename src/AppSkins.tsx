@@ -103,8 +103,8 @@ function ItemMedia({ item }: { item: Item }) {
   );
 }
 function formatChatDate(value: string) {
-  const match = /^(\\d{4})-(\\d{2})-(\\d{2})[T ](\\d{2}):(\\d{2})/.exec(value);
-  return match ? `${match[1]}年${match[2]}月${match[3]}日 ${match[4]}:${match[5]}` : value;
+  const match = /^(\d{4})-(\d{2})-(\d{2})[T ](\d{2}):(\d{2})/.exec(value);
+  return match ? `${match[1]}年${match[2]}月${match[3]}日 ${match[4]}:${match[5]}` : value.replace("T", " ");
 }
 function MessageList({
   items,
@@ -144,10 +144,12 @@ function MessageList({
             ) : (
               i.body
             )}
-            <small className={whatsapp ? undefined : "wx-message-time"}>
-              {i.time.slice(-5)}{" "}
-              {whatsapp && i.outgoing && <CheckCheck size={11} />}
-            </small>
+            {whatsapp && (
+              <small>
+                {i.time.slice(-5)}{" "}
+                {i.outgoing && <CheckCheck size={11} />}
+              </small>
+            )}
           </button>
           {!whatsapp && i.outgoing && <Avatar name={i.sender} src={i.avatar} />}
           </div>
