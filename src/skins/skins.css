@@ -97,6 +97,7 @@
   color: inherit;
 }
 .catalog-avatar {
+  overflow: hidden;
   width: 38px;
   height: 38px;
   display: grid;
@@ -4984,4 +4985,11 @@
   grid-column: 1 / -1;
   width: 100%;
   height: 34px;
+}
+
+.catalog-avatar-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
 }
